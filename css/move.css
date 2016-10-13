@@ -284,6 +284,8 @@ h2 {
     margin-right: 5px;
 }
 
+
+
 .divisor2 {
     border-right: 1px solid #dadada;
 }
@@ -315,6 +317,16 @@ img.icon_change {
     -webkit-transform: rotate(90deg);
 }
 
+/* desafios */
+
+.tabs .tab {
+   min-width: 0px !important;
+}
+
+.des-icon {
+    width: 60%;
+    margin-right: 5px;
+}
 
  /*
 #circle canvas {

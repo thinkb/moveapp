@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Move</title>
+    <!-- CSS  -->
+     <script src="plugins/loading/pace.js"></script>
+     <link href="plugins/loading/pace-theme-bounce.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/move.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+
+</head>
+
+<body>
+  <div class="hide-on-load">
+  <nav class="headeruser" role="navigation">
+      <div class="nav-wrapper container">
+          <ul class="status">
+              <li class="nivel fromfont animated pulse"><span class="number_nav">0</span>Nível</li>
+              <li class="pd fromfont animated pulse"><span class="number_nav">0</span>pt</li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+              <!--<li><a href="#">Navbar Link</a></li> -->
+          </ul>
+          <ul id="nav-mobile" class="side-nav">
+              <div class="status-settings">
+                  <div class="profile_big "><img class="profile_pic_big" src="images/profile.png" />
+                      <h5 class="user_name">Nome</h5>
+                      <ul class="status_internal">
+                          <li class="pd_internal animated pulse"><span class="number_nav">0</span>pt   </li>
+                          <li class="days_internal animated pulse"><span class="number_nav">0</span>dias de treino</li>
+                      </ul>
+                  </div>
+              </div>
+              <!--<p class="desc-level">0 pd até<br><span class="pad-level"> o próximo </span></p> -->
+
+              <ul class="data-status">
+                  <li class="status-titles">5 - Mestre</li>
+                  <li class="status-titles">4 - Medalista</li>
+                  <li class="status-titles">3 - Pequeno Atleta</li>
+                  <li class="status-titles  active-status">2 - Ativo</li>
+                  <li class="status-titles ">1 - Novato</li>
+                  <li class="status-titles">0 - Oh Preguiça!</li>
+                  <li class="status-titles">-1 - Dorminhoco</li>
+              </ul>
+
+               <div class="progress">
+                    <div class="determinate" style="width: 50%"></div>
+                </div>
+
+              <a href="" class="btn_area">Minha área</a>
+              <a href="" class="btn_sair">sair</a>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse animated fadeinLeft">
+              <div class="profile "><img class="profile_pic" src="images/profile.png" /></div>
+          </a>
+      </div>
+  </nav>
+  <div class="section content_app" id="index-banner">
+ <!-- conteudo da pagina -->
+ <div class="row">
+     <div class="col s12">
+       <ul class="tabs">
+         <li class="tab col s3"><a href="#test1"><img class="des-icon" src="css/assets/menuicon.svg"></a></li>
+         <li class="tab col s3"><a class="active" href="#test2"><img class="des-icon" src="css/assets/guepardo_none.svg"></a></li>
+         <li class="tab col s3"><a href="#test3"><img class="des-icon" src="css/assets/lebre_none.svg"></a></li>
+         <li class="tab col s3"><a href="#test4"><img class="des-icon" src="css/assets/cachorro_none.svg"></a></li>
+         <li class="tab col s3"><a href="#test5"><img class="des-icon" src="css/assets/amigocicon_none.svg"></a></li>
+       </ul>
+     </div>
+     <div id="test1" class="col s12">Test 1</div>
+     <div id="test2" class="col s12">Test 2</div>
+     <div id="test3" class="col s12">Test 3</div>
+     <div id="test4" class="col s12">Test 4</div>
+     <div id="test5" class="col s12">Test 4</div>
+   </div>
+ <!-- fim conteudo -->
+
+
+  </div>
+  <!-- MENU -->
+  <div class="menu_toolbar">
+      <div class="">
+          <div class="ant-pad row">
+              <div class="col center s4 divisor">
+                  <a href=""> <img class="icon_toolbar center" src="css/assets/amigosicon_blue.svg">
+                      <p class="toolbar_text center">Amigos</p>
+                  </a>
+              </div>
+              <div class="col center s4 divisor">
+                  <a href=""> <img class="icon_toolbar center" src="css/assets/desafioicon_blue.svg">
+                      <p class="toolbar_text center">Desafios</p>
+                  </a>
+              </div>
+              <div class="col center s4">
+                  <a href=""> <img class="icon_toolbar center" src="css/assets/conquistasicon_blue.svg">
+                      <p class="toolbar_text center">Conquistas</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+      </div>
+  <!-- /MENU -->
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="plugins/circle_progressbar/circle-progress.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script>
+
+  $(document).ready(function(){
+   $('ul.tabs').tabs('select_tab', 'tab_id');
+ });
+
+  </script>
+  <script type="text/javascript">
+
+        if (screen.width > 500) {
+          window.location = "prehome.html";
+        }
+
+
+  </script>
+
+  <script type="text/javascript">
+
+      paceOptions = {
+        // Disable the 'elements' source
+          elements: {
+              selectors: ['#circle']
+            }
+
+      }
+
+  </script>
+</body>
+
+</html>
