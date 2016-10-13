@@ -93,7 +93,7 @@ nav .button-collapse {
 }
 
 .number_nav {
-    color: yellow;
+    color: #f0ce17;
     padding: 3px
 }
 
@@ -260,7 +260,7 @@ a.btn_sair {
 h2 {
     font-family: 'From Where You Are';
     font-size: 1.54rem;
-    color: #00a5c1;
+    color: #2eadcf;
 }
 
 .data-single {
