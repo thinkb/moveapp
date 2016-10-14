@@ -56,8 +56,11 @@ body {
 /* Top Bar */
 
 nav {
-    height: 80px;
-    background-color: #00a5c1;
+  height: 11%;
+  background-color: #00a5c1;
+  top: 0px;
+  position: fixed;
+  z-index: 700;
 }
 
 nav .button-collapse {
@@ -243,30 +246,37 @@ a.btn_sair {
 }
 
 .content_app {
-    background-color: #fff;
-    height: 460px;
-    margin: 20px;
-    border-radius: 5%;
+  background-color: #fff;
+  height: 100%;
+  margin: 5px;
+  position: relative;
+  margin-top: 22%;
+  border-radius: 5%;
+
     -webkit-box-shadow: 7px 13px 14px -4px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 7px 13px 14px -4px rgba(0, 0, 0, 0.1);
     box-shadow: 7px 13px 14px -4px rgba(0, 0, 0, 0.1);
 }
 
 .title_challenge {
-    margin-top: -35px;
     border-bottom: #dadada 2px solid;
+    margin: 0px !important;
 }
 
 h2 {
     font-family: 'From Where You Are';
-    font-size: 1.54rem;
+    font-size: 17px;
     color: #2eadcf;
+    margin:0px;
 }
 
 .data-single {
     font-family: "From Where You Are";
     font-size: 12px;
     color: #5e4c95;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
 }
 
 .highlight-data {
@@ -274,27 +284,27 @@ h2 {
     color: #00a5c1;
 }
 
-.icon_category {
-    margin-left: -10%;
-    width: 15%;
-}
-
 .mini-icon {
     width: 30%;
     margin-right: 5px;
+    float: left;
 }
-
 
 
 .divisor2 {
-    border-right: 1px solid #dadada;
+    border-right: 2px solid #dadada;
 }
 
 .gif_animation_center {
-    width: 60%;
     position: absolute;
-    margin-left: -275px;
-    margin-top: 60px;
+        width: 100%;
+
+}
+.animation {
+  position: absolute;
+    margin-top: 10%;
+    height: 200px;
+    width: 200px;
 }
 
 .btn-move {
@@ -317,6 +327,12 @@ img.icon_change {
     -webkit-transform: rotate(90deg);
 }
 
+.circle{
+  z-index: 10;
+  position: absolute;
+}
+
+
 /* desafios */
 
 .tabs .tab {
@@ -326,6 +342,11 @@ img.icon_change {
 .des-icon {
     width: 60%;
     margin-right: 5px;
+}
+
+.title-desafio{
+  	margin-top:3%;
+  	margin-left:2%;
 }
 
  /*
