@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Move - Cadastre-se ;)</title>
+    <!-- CSS  -->
+     <script src="plugins/loading/pace.js"></script>
+     <link href="plugins/loading/pace-theme-bounce.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/move.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+</head>
+
+<body>
+  <div class="hide-on-load bgpurble ">
+    <div class="section content_app" id="index-banner">
+   <div class="row">
+   </div>
+ </div>
+  </div>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="plugins/circle_progressbar/circle-progress.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script>
+      $('#circle').circleProgress({
+          value: 0.30,
+          size: 250,
+          fill: {
+              gradient: ["#f0ce17", "#ffb500"]
+          }
+          , thickness: 10 / 1
+      , });
+  </script>
+  <script type="text/javascript">
+
+        if (screen.width > 500) {
+          window.location = "prehome.html";
+        }
+
+
+  </script>
+
+  <script type="text/javascript">
+
+      paceOptions = {
+        // Disable the 'elements' source
+          elements: {
+              selectors: ['#circle']
+            }
+
+      }
+
+  </script>
+</body>
+
+</html>
