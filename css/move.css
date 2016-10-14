@@ -349,6 +349,25 @@ img.icon_change {
   	margin-left:2%;
 }
 
+.list-desafio{
+  border-bottom: #dadada 2px solid;
+}
+.list-desafio p {
+  color:#8b8e90;
+  font-size: 16px;
+  font-family: "Mikado Regular";
+}
+.lebre{
+  color:#d04386 !important;
+}
+
+h3{
+    font-family: 'From Where You Are';
+    font-size: 17px;
+    margin: 0px;
+}
+
+
  /*
 #circle canvas {
     margin-left: 4%;
