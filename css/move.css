@@ -147,20 +147,42 @@ nav .button-collapse {
     margin-top:-10px;
 }
 
-.progress {
-    transform:rotate(-90deg);
-    -ms-transform:rotate(-90deg); /* IE 9 */
-    -webkit-transform:rotate(-90deg);
-    margin-left: -35%;
-    height:35px;
-    border-radius: 20px;
-    background-color:#dadada;
-    margin-top: -53%;
+.vertical {
+    transform:rotate(-90deg) !important;
+    -ms-transform:rotate(-90deg) !important; /* IE 9 */
+    -webkit-transform:rotate(-90deg) !important;
+    margin-left: -35% !important;
+    height:35px !important;
+    border-radius: 20px !important;
+    background-color:#dadada !important;
+    margin-top: -53% !important;
 }
 
 .progress .determinate{
-        background-color:#00a5c1;
     border-radius:30px;
+}
+
+.horizontal{
+  border-radius: 20px !important;
+  background-color:#dadada !important;
+  width: 100%;
+  height:12px !important;
+}
+
+.progress .blue{
+    background-color:#00a5c1 !important;
+}
+
+.progress .pink{
+    background-color:#d04386 !important;
+}
+
+.progress .purple{
+    background-color:#5e5ca7 !important;
+}
+
+.progress .orange{
+    background-color:#f79d1f !important;
 }
 
 .data-status {
@@ -351,14 +373,26 @@ img.icon_change {
 
 .list-desafio{
   border-bottom: #dadada 2px solid;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .list-desafio p {
   color:#8b8e90;
   font-size: 16px;
   font-family: "Mikado Regular";
+  margin: 0px;
 }
 .lebre{
   color:#d04386 !important;
+}
+
+.guepardo{
+  color:#5e5ca7 !important;
+}
+
+.cachorro{
+  color:#f79d1f !important;
 }
 
 h3{
@@ -367,6 +401,16 @@ h3{
     margin: 0px;
 }
 
+.semmargin{
+  margin: 0px;
+}
+
+.icoplus{
+  font-family: 'Mikado Bold';
+  font-size: 50px;
+  margin-top: -25px;
+  position: absolute;
+}
 
  /*
 #circle canvas {
