@@ -21,7 +21,7 @@ router.route('/users')
   }).post(function(req, res){
     console.log('post');
 
-    db.push({name:'haha'});
+    db.push(req.body);
 
     res.json({message: "Usuario cadastrado com sucesso"});
   });

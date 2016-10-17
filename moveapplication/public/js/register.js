@@ -1,19 +1,37 @@
-var count = 0;
 $('#registerNext').click(function(){
 
-  if(count==0) {
+  if($('#registerDiv1').css('display') != 'none') {
     $('#registerDiv1').hide();
     $('#registerDiv2').show();
-    count++
-  }
+    $('#registerDiv3').hide();
+  } else {
+    if($('#registerDiv2').css('display') != 'none'){
+      $('#registerDiv1').hide();
+      $('#registerDiv2').hide();
+      $('#registerDiv3').show();
+      $("#registerNext").text('Fim!');
+    } else {
+      if ($('#registerDiv3').css('display') != 'none') {
 
-  if(count==1) {
-    $('#registerDiv2').hide();
-    $('#registerDiv3').show();
-    count++
-  }
-  if(count==3) {
+        var user = {
+          name: $('#name').val(),
+          last: $('#last').val(),
+          age: $('#age').val(),
+          email: $('#email').val(),
+          nick: $('#nick').val(),
+          pwd: $('#pwd').val(),
+          sport: $('#sport').val(),
+          sloth: $('#sloth').val()
+        };
 
+        console.log(user);
+
+        $.post( "/move/users", user, function( data ) {
+          console.log( data );
+        }, "json");
+
+      }
+    }
   }
 
 });
