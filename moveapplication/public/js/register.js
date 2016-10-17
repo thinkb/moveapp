@@ -1,3 +1,23 @@
+$('#backButton').click(function(){
+
+  if($('#registerDiv1').css('display') != 'none') {
+    $('#myMainDiv').empty();
+    $('#myMainDiv').load('index.html');
+  } else {
+    if($('#registerDiv2').css('display') != 'none'){
+      $('#registerDiv1').show();
+      $('#registerDiv2').hide();
+      $('#registerDiv3').hide();
+    } else {
+      if ($('#registerDiv3').css('display') != 'none') {
+        $('#registerDiv1').hide();
+        $('#registerDiv2').show();
+        $('#registerDiv3').hide();
+      }
+    }
+  }
+});
+
 $('#registerNext').click(function(){
 
   if($('#registerDiv1').css('display') != 'none') {
@@ -28,6 +48,8 @@ $('#registerNext').click(function(){
 
         $.post( "/move/users", user, function( data ) {
           console.log( data );
+          $('#myMainDiv').empty();
+          $('#myMainDiv').load('index.html');
         }, "json");
 
       }
