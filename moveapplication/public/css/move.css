@@ -281,8 +281,15 @@ a.btn_sair {
 
 .toolbar_text {
   font-family: 'Mikado Regular';
-  color: #0e5f72;
   text-align: center;
+  color: #0e5f72 !important;
+  margin-top: -15px;
+  font-size: 1.3em;
+}
+.textmenu{
+  font-family: 'Mikado Regular';
+  text-align: center;
+  color: #FFF !important;
   margin-top: -15px;
   font-size: 1.3em;
 }
@@ -295,6 +302,13 @@ a.btn_sair {
 .divisor {
     border-right: 2px #2092b1 solid;
 }
+
+.menu-on{
+ background-color: #5e5ca7;
+ color:#f0ce17 !important;
+border-radius: 40px 40px 0px 0px;
+}
+
 
 .ant-pad.row {
     margin-bottom: 10px;

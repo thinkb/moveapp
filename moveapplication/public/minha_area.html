@@ -15,7 +15,7 @@
                             <li class="pd_internal animated pulse"><span class="number_nav">0</span>pt   </li>
                             <li class="days_internal animated pulse"><span class="number_nav">0</span>dias de treino</li>
                         </ul>
-                    </div>
+                </div>
                 </div>
                 <!--<p class="desc-level">0 pd até<br><span class="pad-level"> o próximo </span></p> -->
 
@@ -89,18 +89,18 @@
     <div class="menu_toolbar">
         <div class="">
             <div class="ant-pad row">
-                <div class="col center s4 divisor">
-                    <a href="#amigos" id="amigos-pag"> <img class="icon_toolbar center" src="css/assets/amigosicon_blue.svg">
+                <div id="menuitem1" class="col center s4 divisor">
+                    <a href="#amigos" id="amigos-pag"> <img id="iconmenu1" class="icon_toolbar center" src="css/assets/amigosicon_blue.svg">
                         <p class="toolbar_text center">Amigos</p>
                     </a>
                 </div>
-                <div class="col center s4 divisor">
-                    <a href="#desafios" id="desafios-pag"> <img class="icon_toolbar center" src="css/assets/desafioicon_blue.svg">
+                <div id="menuitem2" class="col center s4 divisor">
+                    <a href="#desafios" id="desafios-pag"> <img id="iconmenu2" class="icon_toolbar center" src="css/assets/desafioicon_blue.svg">
                         <p class="toolbar_text center">Desafios</p>
                     </a>
                 </div>
-                <div class="col center s4">
-                    <a href="#conquistas" id="conquistas-pag"> <img class="icon_toolbar center" src="css/assets/conquistasicon_blue.svg">
+                <div id="menuitem3" class="col center s4">
+                    <a href="#conquistas" id="conquistas-pag"> <img id="iconmenu3" class="icon_toolbar center" src="css/assets/conquistasicon_blue.svg">
                         <p class="toolbar_text center">Conquistas</p>
                     </a>
                 </div>
@@ -111,15 +111,20 @@
     <!-- /MENU -->
     <!--  Scripts-->
 <script src='/js/minha_area.js'> </script>
+<script>
+  $(document).ready(function(){
+   $('ul.tabs').tabs('select_tab', 'tab_id');
+  });
+</script>
 
-      <script type="text/javascript">
+<script type="text/javascript">
         $(document).ready(function(){
          // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
          $('.modal-trigger').leanModal();
         });
-      </script>
+  </script>
 
-      <script type="text/javascript">
+<script type="text/javascript">
 
           paceOptions = {
             // Disable the 'elements' source
@@ -128,5 +133,5 @@
                 }
           }
 
-      </script>
+</script>
         <!-- modal -->
