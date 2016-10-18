@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <title>Bootstrap Example</title>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <title>Move</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link href="css/move.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link href="plugins/loading/pace-theme-bounce.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <script src="plugins/loading/pace.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="js/materialize.js"></script>
+   <script src="js/init.js"></script>
+   <script src="plugins/circle_progressbar/circle-progress.js"></script>
   </head>
 
-  <body>
-
+  <body class="paternpurple" >
+  <div class="hide-on-load">
     <div class="container" id='myMainDiv'>
-
-      <div class="row">
-        <div class="col-xs-4">
-          <span>Jogar</span>
+      <div class="row center">
+        <div class="switch">
+          <label class="sw">
+            Jogar
+            <input type="checkbox">
+            <span class="lever"></span>
+            Pais e professores
+          </label>
+        </div>
+      </div>
+    <div class="section content_app center" >
+        <div class="row logo center">
+          <img src="css/assets/logo_purple.svg">
+        </div>
+        <div class="row semmargin">
+          <p>Entre para começar a brincar</p>
         </div>
 
-        <div class="col-xs-4">
-          <div>Switch</div>
+        <div class="row semmargin">
+          <input type="text" placeholder="Apelido"></input>
+        </div>
+        <div class="row semmargin">
+          <input type="text" placeholder="Senha"></input>
+        </div>
+        </form>
+        <div class="row">
+          <button class="waves-effect waves-light btn"><i class="material-icons right">keyboard_arrow_right</i>Entrar</button>
+        </div>
+      </div>
+
+        <div class="row">
+          <p class="write">Ainda não tem cadastro?</p>
+          <button id='beginRegister' class="waves-effect waves-light btn"> Cadastre-se</button>
         </div>
 
-        <div class="col-xs-4">
-          <span>Pais e Professores</span>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div>Logo</div>
-        <p>Entre para começar a brincar</p>
-      </div>
-
-      <div class="row">
-        <input type="text" placeholder="Apelido"></input>
-      </div>
-      <div class="row">
-        <input type="text" placeholder="Senha"></input>
-      </div>
-      <div class="row">
-        <button>Entrar</button>
-      </div>
-
-      <div class="row">
-        <p>Ainda não tem cadastro?</p>
-        <button id='beginRegister'>Cadastre-se</button>
-      </div>
-
-    </div>
-
+  </div>
     <script src='/js/index.js'> </script>
-
+  </div>
   </body>
+
 </html>
 
   <!-- <script>

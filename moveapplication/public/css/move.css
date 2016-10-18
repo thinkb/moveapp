@@ -17,6 +17,11 @@ body {
     background-color: #f4f5f6;
 }
 
+.paternpurple {
+    background-image:url(assets/pattern-blue.png);
+}
+
+
 @font-face {
     font-family: 'From Where You Are';
     src: url('fonts/fromwhereyouare-webfont.woff2') format('woff2'),
@@ -53,6 +58,13 @@ body {
 
 }
 
+p{
+font-family: "Mikado Regular";
+font-size: 1.4em;
+color:#616161;
+font-weight: 600;
+
+}
 
 .icon-block {
   padding: 0 15px;
@@ -280,7 +292,6 @@ a.btn_sair {
   height: 100%;
   margin: 5px;
   position: relative;
-  margin-top: 22%;
   border-radius: 5%;
 
     -webkit-box-shadow: 7px 13px 14px -4px rgba(0, 0, 0, 0.1);
@@ -288,9 +299,21 @@ a.btn_sair {
     box-shadow: 7px 13px 14px -4px rgba(0, 0, 0, 0.1);
 }
 
+.app_margin {
+  margin-top: 22%;
+}
+
+
 .title_challenge {
     border-bottom: #dadada 2px solid;
     margin: 0px !important;
+}
+
+h1 {
+    font-family: 'From Where You Are';
+    font-size: 2em;
+    color: #2eadcf;
+    margin:0px;
 }
 
 h2 {
@@ -298,6 +321,10 @@ h2 {
     font-size: 17px;
     color: #2eadcf;
     margin:0px;
+}
+
+.cadastro{
+  margin-left: -5px;
 }
 
 .data-single {
@@ -419,6 +446,59 @@ h3{
   margin-top: -25px;
   position: absolute;
 }
+
+
+.logo{
+  width: 45%;
+}
+
+.sw{
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+
+  /* FORM WIZARD  */
+  .wizard-group{
+    z-index: 3;
+
+  }
+
+  .wizard{
+    font-family: 'From Where You Are';
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    font-size: 2em;
+    padding-top: 5px
+
+  }
+  .wizard-on{
+    background-color: #5E5CA8;
+    color:#FFF;
+    border: 3px solid #4c4a9c;
+  }
+
+    .wizard-off{
+    background-color: #FFF;
+    color:#5E5CA8;
+    border: 3px solid #5E5CA8;
+  }
+
+    .wizard-complete{
+    background-color: #B3D035;
+    color:#FFF;
+    border: 3px solid #a5c12b;
+  }
+  .linha{
+    background-color: #5E5CA8;
+    width: 100%;
+    content: '';
+    height: 3px;
+    z-index: 1;
+    position: relative;
+    color: #5E5CA8;
+    margin-bottom: 20px;
+  }
 
  /*
 #circle canvas {

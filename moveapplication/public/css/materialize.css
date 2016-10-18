@@ -3426,11 +3426,6 @@ input[type=range] + .thumb {
   }
 }
 
-.container .row {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-}
-
 .section {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -4856,7 +4851,7 @@ small {
 .btn, .btn-large,
 .btn-flat {
   border: none;
-  border-radius: 2px;
+  border-radius: 20px;
   display: inline-block;
   height: 36px;
   line-height: 36px;
@@ -4922,7 +4917,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #5E5CA8;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
@@ -4930,7 +4925,7 @@ small {
 }
 
 .btn:hover, .btn-large:hover {
-  background-color: #2bbbad;
+  background-color: #5E5CA8;
 }
 
 .btn-floating {
@@ -4943,7 +4938,7 @@ small {
   height: 37px;
   line-height: 37px;
   padding: 0;
-  background-color: #26a69a;
+  background-color: #5E5CA8;
   border-radius: 50%;
   transition: .3s;
   cursor: pointer;
@@ -4960,7 +4955,7 @@ small {
 }
 
 .btn-floating:hover {
-  background-color: #26a69a;
+  background-color: #5E5CA8;
 }
 
 .btn-floating:before {
@@ -5607,7 +5602,7 @@ textarea.materialize-textarea {
   height: 3rem;
   width: 90%;
   font-size: 1.3rem;
-  color: #7b7b7b;
+  color: #30AED1;
   margin: 0 0 20px 0;
   padding-left: 10px;
   padding-right: 10px;
@@ -6367,21 +6362,21 @@ form p:last-child {
 }
 
 .switch label input[type=checkbox]:checked + .lever {
-  background-color: #84c7c1;
+  background-color: #FFF;
 }
 
 .switch label input[type=checkbox]:checked + .lever:after {
-  background-color: #26a69a;
-  left: 24px;
+  background-color: #30AED1;
+  left: 22px;
 }
 
 .switch label .lever {
   content: "";
   display: inline-block;
   position: relative;
-  width: 40px;
-  height: 15px;
-  background-color: #818181;
+  width: 50px;
+  height: 30px;
+  background-color: #FFF;
   border-radius: 15px;
   margin-right: 10px;
   transition: background 0.3s ease;
@@ -6393,13 +6388,13 @@ form p:last-child {
   content: "";
   position: absolute;
   display: inline-block;
-  width: 21px;
-  height: 21px;
-  background-color: #F1F1F1;
+  width: 28px;
+  height: 28px;
+  background-color: #5E5CA8;
   border-radius: 21px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
-  left: -5px;
-  top: -3px;
+  left: 2px;
+  top: 1.5px;
   transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
 }
 

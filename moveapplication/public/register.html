@@ -1,85 +1,89 @@
-<div class="row">
-  <div class="col-xs-2">
-    <button id='backButton'> Back </button>
+<div class="section content_app center" >  
+  <div class="row">
+    <div class="col s2">
+      <a id='backButton'> <img src="css/assets/seta_yellow_back.svg"> </a>
+    </div>
+
+    <div class="col s10">
+      <h1 class="cadastro">Cadastro</h1>
+    </div>
+  </div>
+ 
+  <div class="row wizard-group">
+
+    <div class="col s4">
+      <div class="wizard wizard-on">1</div>
+       
+    </div>
+
+    <div class="col s4">
+      <div  class="wizard wizard-off">2</div>
+    </div>
+
+    <div class="col s4">
+      <div  class="wizard wizard-complete">3</div>
+    </div>
   </div>
 
-  <div class="col-xs-10">
-    <span>Cadastro</span>
-  </div>
-</div>
+  <div id='registerDiv1'>
 
-<div class="row">
-  <div class="col-xs-4">
-    <div>1</div>
+    <div class="row semmargin">
+        <input id='name' type='text' placeholder="Qual seu nome?"></input>
+    </div>
+
+    <div class="row semmargin">
+        <input id='last' type='text' placeholder="Qual seu sobrenome?"></input>
+    </div>
+
+    <div class="row semmargin">
+        <input id='age' type='text' placeholder="Qual sua idade?"></input>
+    </div>
+
+    <div class="row semmargin">
+        <input id='email' type='text' placeholder="Email do responsável"></input>
+    </div>
+
   </div>
 
-  <div class="col-xs-4">
-    <div>2</div>
+  <div id='registerDiv2' class="slideInLeft" style='display: none'>
+
+    <div class="row semmargin">
+      <input id='nick' type='text' placeholder="Qual seu apelido?"></input>
+    </div>
+
+    <div class="row semmargin">
+      <input id='pwd' type='text' placeholder="Digite uma senha"></input>
+    </div>
+
+    <div class="row semmargin">
+      <input id='pwd2' type='text' placeholder="Digite a senha novamente"></input>
+    </div>
+
+    <div class="row semmargin">
+      <input id='sport' type='text' placeholder="Esporte favorito"></input>
+    </div>
+
   </div>
 
-  <div class="col-xs-4">
-    <div>3</div>
-  </div>
-</div>
+  <div id='registerDiv3' style='display: none'>
 
-<div id='registerDiv1'>
+    <div class="row">
+      <span> Adote uma preguiça! </span>
+    </div>
+
+    <div class="row">
+      <input id='sloth' type='text' placeholder="Dê um nome fofo para ela"></input>
+    </div>
+
+    <div class="row">
+      <div> Imagem da preguiça </div>
+    </div>
+
+  </div>
 
   <div class="row">
-      <input id='name' type='text' placeholder="Qual seu nome?"></input>
+    <a id='registerNext' class="waves-effect waves-light btn" ><i class="material-icons right">keyboard_arrow_right</i> Próximo </a>
   </div>
-
-  <div class="row">
-      <input id='last' type='text' placeholder="Qual seu sobrenome?"></input>
-  </div>
-
-  <div class="row">
-      <input id='age' type='text' placeholder="Qual sua idade?"></input>
-  </div>
-
-  <div class="row">
-      <input id='email' type='text' placeholder="Email do responsável"></input>
-  </div>
-
-</div>
-
-<div id='registerDiv2' style='display: none'>
-
-  <div class="row">
-    <input id='nick' type='text' placeholder="Qual seu apelido?"></input>
-  </div>
-
-  <div class="row">
-    <input id='pwd' type='text' placeholder="Digite uma senha"></input>
-  </div>
-
-  <div class="row">
-    <input id='pwd2' type='text' placeholder="Digite a senha novamente"></input>
-  </div>
-
-  <div class="row">
-    <input id='sport' type='text' placeholder="Esporte favorito"></input>
-  </div>
-
-</div>
-
-<div id='registerDiv3' style='display: none'>
-
-  <div class="row">
-    <span> Adote uma preguiça! </span>
-  </div>
-
-  <div class="row">
-    <input id='sloth' type='text' placeholder="Dê um nome fofo para ela"></input>
-  </div>
-
-  <div class="row">
-    <div> Imagem da preguiça </div>
-  </div>
-
-</div>
-
-<div class="row">
-  <button id='registerNext'>Próximo</button>
 </div>
 
 <script src='/js/register.js'> </script>
