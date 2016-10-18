@@ -61,9 +61,17 @@ body {
 p{
 font-family: "Mikado Regular";
 font-size: 1.4em;
-color:#616161;
-font-weight: 600;
+color:#868686;
+}
 
+i{
+  color:#F1CF17;
+  font-size: 2.3em !important;
+  margin-right: -20px;
+}
+
+.write{
+  color: #FFF !important;
 }
 
 .icon-block {
@@ -189,21 +197,26 @@ nav .button-collapse {
   height:12px !important;
 }
 
-.progress .blue{
+.blue{
     background-color:#00a5c1 !important;
 }
 
-.progress .pink{
+.pink{
     background-color:#d04386 !important;
 }
 
-.progress .purple{
+.purple{
     background-color:#5e5ca7 !important;
 }
 
-.progress .orange{
+.orange{
     background-color:#f79d1f !important;
 }
+
+.greenv{
+    background-color:#B3D035 !important;
+}
+
 
 .data-status {
     font-family: 'Mikado Regular';
@@ -290,7 +303,8 @@ a.btn_sair {
 .content_app {
   background-color: #fff;
   height: 100%;
-  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
   border-radius: 5%;
 
@@ -324,7 +338,8 @@ h2 {
 }
 
 .cadastro{
-  margin-left: -5px;
+  margin-left: -20%;
+  margin-top: 10px;
 }
 
 .data-single {
@@ -347,6 +362,10 @@ h2 {
     float: left;
 }
 
+.back-icon{
+  width: 40px;
+  margin-right: 5px;
+}
 
 .divisor2 {
     border-right: 2px solid #dadada;
@@ -430,6 +449,7 @@ img.icon_change {
   color:#f79d1f !important;
 }
 
+
 h3{
     font-family: 'From Where You Are';
     font-size: 17px;
@@ -450,14 +470,32 @@ h3{
 
 .logo{
   width: 45%;
+  margin-bottom: -30px;
 }
 
+
+.sw-margin{
+  margin-top: 5%;
+  margin-left: -20%;
+}
 .sw{
-    font-size: 1.3rem;
-    color: #ffffff;
-  }
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-family: "Mikado Medium"
+}
+.break-word {
+word-wrap: break-word;
+width: 100px;
+line-height: 90%;
+position: absolute;
+text-align: left;
+}
 
   /* FORM WIZARD  */
+
+  .row .wizard-element{
+    padding-left: 10%;
+  }
   .wizard-group{
     z-index: 3;
 
@@ -499,6 +537,15 @@ h3{
     color: #5E5CA8;
     margin-bottom: 20px;
   }
+
+::-webkit-input-placeholder {
+    color: #2EADCF;
+}
+
+:-moz-placeholder {
+   color: #2EADCF;
+}
+
 
  /*
 #circle canvas {

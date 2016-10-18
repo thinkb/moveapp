@@ -1,0 +1,150 @@
+<nav class="headeruser" role="navigation">
+       <div class="nav-wrapper container">
+            <ul class="status">
+                <li class="nivel fromfont animated pulse"><span class="number_nav">0</span>Nível</li>
+                <li class="pd fromfont animated pulse"><span class="number_nav">0</span>pt</li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <!--<li><a href="#">Navbar Link</a></li> -->
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <div class="status-settings">
+                    <div class="profile_big "><img class="profile_pic_big" src="images/profile.png" />
+                        <h5 class="user_name">Nome</h5>
+                        <ul class="status_internal">
+                            <li class="pd_internal animated pulse"><span class="number_nav">0</span>pt   </li>
+                            <li class="days_internal animated pulse"><span class="number_nav">0</span>dias de treino</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<p class="desc-level">0 pd até<br><span class="pad-level"> o próximo </span></p> -->
+
+                <ul class="data-status">
+                    <li class="status-titles">5 - Mestre</li>
+                    <li class="status-titles">4 - Medalista</li>
+                    <li class="status-titles">3 - Pequeno Atleta</li>
+                    <li class="status-titles  active-status">2 - Ativo</li>
+                    <li class="status-titles ">1 - Novato</li>
+                    <li class="status-titles">0 - Oh Preguiça!</li>
+                    <li class="status-titles">-1 - Dorminhoco</li>
+                </ul>
+                <div>
+                 <div class="progress vertical">
+                      <div class="determinate blue" style="width: 50%"></div>
+                  </div>
+
+                <a href="#home" class="btn_area">Minha área</a>
+                <a href="" class="btn_sair">sair</a>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse animated fadeinLeft">
+                <div class="profile "><img class="profile_pic" src="images/profile.png" /></div>
+            </a>
+        </div>
+    </nav>
+
+  <!-- Angular conteudo dinamico -->
+  <div class="section content_app" id="index-banner">
+    <div class="container">
+        <div class="row title_challenge">
+          <div class="col s2">
+            <img class="icon_category" src="css/assets/guepardo.svg">
+          </div>
+          <div class="col s10">
+              <h2 class="title-desafio">Nome do Desafio</h2>
+             
+          </div>
+
+        </div>
+        <div class="row center indicadores">
+            <!--indicadores -->
+            <div class="col center s4 divisor2">
+                <div class="friends_monitor single">
+                    <img class="mini-icon" src="css/assets/amigosicon_vp.svg">
+                    <p class="data-single"><span class="highlight-data">0</span>/0</p>
+                </div>
+            </div>
+            <div class="col center s4 divisor2">
+                <div class="time_monitor single">
+                    <img class="mini-icon" src="css/assets/timeicon.svg">
+                    <p class="data-single"><span class="highlight-data">0</span> dias</p>
+                </div>
+            </div>
+            <div class="col center s4 ">
+                <div class="pds_monitor single">
+                    <p class="data-single"><span class="highlight-data">0</span> de 0 pt</p>
+                </div>
+            </div>
+          </div>
+            <!-- Final dos indicadores -->
+          <div class="grafico-principal">
+            <div class="animation center">
+              <img class="gif_animation_center" src="css/assets/Animation/movie.png">
+            </div>
+            <div class="center" id="circle"></div>
+          </div>
+          <a href="" class="btn_area"><img class="icon_change" src="css/assets/changeicon.svg"></a>
+
+
+    </div>
+</div>
+
+    <!-- MENU -->
+    <div class="menu_toolbar">
+        <div class="">
+            <div class="ant-pad row">
+                <div class="col center s4 divisor">
+                    <a href="#amigos"> <img class="icon_toolbar center" src="css/assets/amigosicon_blue.svg">
+                        <p class="toolbar_text center">Amigos</p>
+                    </a>
+                </div>
+                <div class="col center s4 divisor">
+                    <a href="#desafios"> <img class="icon_toolbar center" src="css/assets/desafioicon_blue.svg">
+                        <p class="toolbar_text center">Desafios</p>
+                    </a>
+                </div>
+                <div class="col center s4">
+                    <a href="#home"> <img class="icon_toolbar center" src="css/assets/conquistasicon_blue.svg">
+                        <p class="toolbar_text center">Conquistas</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    <!-- /MENU -->
+    <!--  Scripts-->
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+         $('.modal-trigger').leanModal();
+        });
+      </script>
+
+      <script>
+
+      $(document).ready(function(){
+       $('ul.tabs').tabs('select_tab', 'tab_id');
+     });
+
+      </script>
+    <!--  <script type="text/javascript">
+
+            if (screen.width > 500) {
+              window.location = "prehome.html";
+            }
+
+
+      </script>
+-->
+      <script type="text/javascript">
+
+          paceOptions = {
+            // Disable the 'elements' source
+              elements: {
+                  selectors: ['#circle']
+                }
+          }
+
+      </script>
+        <!-- modal -->

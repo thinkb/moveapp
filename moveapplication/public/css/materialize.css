@@ -4922,6 +4922,10 @@ small {
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer;
+  font-family: "Mikado Medium";
+  margin-left: 10px;
+  margin-right: 10px;
+
 }
 
 .btn:hover, .btn-large:hover {
@@ -6374,8 +6378,8 @@ form p:last-child {
   content: "";
   display: inline-block;
   position: relative;
-  width: 50px;
-  height: 30px;
+  width: 52px;
+  height: 31px;
   background-color: #FFF;
   border-radius: 15px;
   margin-right: 10px;
