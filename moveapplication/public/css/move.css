@@ -300,9 +300,19 @@ a.btn_sair {
     margin-bottom: 10px;
 }
 
+.m-right{
+  padding-right: 10px;
+}
+
+.m-left{
+  padding-left: 10px;
+}
+
 .content_app {
   background-color: #fff;
   height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
@@ -406,6 +416,10 @@ img.icon_change {
 .circle{
   z-index: 10;
   position: absolute;
+}
+
+#main-intern-div{
+  margin-top: 22%;
 }
 
 
@@ -546,6 +560,13 @@ text-align: left;
    color: #2EADCF;
 }
 
+.anima-perso{
+  width: 50% !important;
+}
+
+.card-change{
+  margin-top: 20%;
+}
 
  /*
 #circle canvas {

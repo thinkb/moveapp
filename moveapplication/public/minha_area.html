@@ -42,16 +42,15 @@
         </div>
     </nav>
 
-  <!-- Angular conteudo dinamico -->
-  <div class="section content_app" id="index-banner">
-    <div class="container">
+  <div class="section content_app" id="main-intern-div">
+    <div class="content">
         <div class="row title_challenge">
           <div class="col s2">
             <img class="icon_category" src="css/assets/guepardo.svg">
           </div>
           <div class="col s10">
               <h2 class="title-desafio">Nome do Desafio</h2>
-             
+
           </div>
 
         </div>
@@ -83,8 +82,6 @@
             <div class="center" id="circle"></div>
           </div>
           <a href="" class="btn_area"><img class="icon_change" src="css/assets/changeicon.svg"></a>
-
-
     </div>
 </div>
 
@@ -93,17 +90,17 @@
         <div class="">
             <div class="ant-pad row">
                 <div class="col center s4 divisor">
-                    <a href="#amigos"> <img class="icon_toolbar center" src="css/assets/amigosicon_blue.svg">
+                    <a href="#amigos" id="amigos-pag"> <img class="icon_toolbar center" src="css/assets/amigosicon_blue.svg">
                         <p class="toolbar_text center">Amigos</p>
                     </a>
                 </div>
                 <div class="col center s4 divisor">
-                    <a href="#desafios"> <img class="icon_toolbar center" src="css/assets/desafioicon_blue.svg">
+                    <a href="#desafios" id="desafios-pag"> <img class="icon_toolbar center" src="css/assets/desafioicon_blue.svg">
                         <p class="toolbar_text center">Desafios</p>
                     </a>
                 </div>
                 <div class="col center s4">
-                    <a href="#home"> <img class="icon_toolbar center" src="css/assets/conquistasicon_blue.svg">
+                    <a href="#conquistas" id="conquistas-pag"> <img class="icon_toolbar center" src="css/assets/conquistasicon_blue.svg">
                         <p class="toolbar_text center">Conquistas</p>
                     </a>
                 </div>
@@ -113,6 +110,7 @@
         </div>
     <!-- /MENU -->
     <!--  Scripts-->
+<script src='/js/minha_area.js'> </script>
 
       <script type="text/javascript">
         $(document).ready(function(){
@@ -121,22 +119,6 @@
         });
       </script>
 
-      <script>
-
-      $(document).ready(function(){
-       $('ul.tabs').tabs('select_tab', 'tab_id');
-     });
-
-      </script>
-    <!--  <script type="text/javascript">
-
-            if (screen.width > 500) {
-              window.location = "prehome.html";
-            }
-
-
-      </script>
--->
       <script type="text/javascript">
 
           paceOptions = {
