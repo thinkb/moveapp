@@ -64,8 +64,7 @@ $('#registerNext').click(function(){
 
         console.log(user);
 
-        $.post( "/move/users", user, function( data ) {
-          console.log( data );
+        $.post( "/move/register", user, function( data ) {
           $('#myMainDiv').empty();
           $('#myMainDiv').load('minha_area.html');
           $('body').removeClass('paternpurple');
