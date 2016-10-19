@@ -69,3 +69,6 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 //
 //     //res.json('');
 //   });
+
+// bluemix api https://api.ng.bluemix.net
+// bluemix login -u famarcon@br.ibm.com -o famarcon@br.ibm.com -s dev
