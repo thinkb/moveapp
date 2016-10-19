@@ -62,8 +62,6 @@ $('#registerNext').click(function(){
 
         };
 
-        console.log(user);
-
         $.post( "/move/register", user, function( data ) {
           $('#myMainDiv').empty();
           $('#myMainDiv').load('minha_area.html');

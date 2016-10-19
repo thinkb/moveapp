@@ -10,13 +10,13 @@ $('#loginButton').click(function(){
 
   var login = {nick: nickLogin, pwd: pwdLogin};
 
-  $.post( "/move/login", login, function( res ) {
-    if(res==0){
-      alert("Usuário não cadastrado");
-    } else {
-      alert('Seguir para próxima página');
-    }
-  });
+  $.post( "/move/login", login)
+    .done(function(){
+      alert('Done');
+    })
+    .fail(function(){
+      alert("fail");
+    });
 
   // $('#myMainDiv').empty();
   // $('#myMainDiv').load('register.html');

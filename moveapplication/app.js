@@ -29,14 +29,14 @@ var router = express.Router();
 router.route('/login')
   .get(function(req, res){
     //res.json(db);
-  }).post(function(req, res){
-
+  })
+  .post(function(req, res) {
     var i;
     for(i=0; i<db.length; i++) {
       if(db[i].nick == req.body.nick && db[i].pwd == req.body.pwd) {
-        res.json(1);
+        res.sendStatus(200);
       } else {
-        res.json(0);
+        res.sendStatus(500);
       }
     }
   });
