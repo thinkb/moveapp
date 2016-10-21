@@ -55,8 +55,7 @@ router.route('/register')
     //res.json('');
 
   }).post(function(req, res){
-
-    users.insert(debugUser);
+    users.insert(req.body);
     console.log('Usuário cadastrado com sucesso!');
     res.json('');
   });
