@@ -7,9 +7,12 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
+    "assert": "^1.4.1",
     "body-parser": "1.15.2",
     "cfenv": "1.0.x",
-    "express": "4.13.x"
+    "express": "4.13.x",
+    "lokijs": "^1.4.1",
+    "tingodb": "^0.4.2"
   },
   "repository": {},
   "engines": {

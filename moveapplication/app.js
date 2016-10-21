@@ -1,11 +1,12 @@
 var express = require('express');
 var cfenv = require('cfenv');
 var bodyParser = require('body-parser');
+var loki = require('lokijs');
 
 var app = express();
 
-var db = [];
-
+var db = new loki('loki.json');
+var users = db.addCollection('users');
 var debugUser = {
   name: "Fabiano",
   last: "Moraes",
@@ -14,10 +15,17 @@ var debugUser = {
   nick: "fabiano",
   pwd: "fabs",
   sport: "comer",
-  sloth: "Lazy"
+  sloth: "Preguicinha"
 };
 
-db.push(debugUser);
+users.insert(debugUser);
+// var f = users.find({nick: 'fabiano'});
+// if(f.length!=0){
+//   console.log(f);
+// } else {
+//   console.log('no');
+// }
+
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser());
@@ -31,13 +39,13 @@ router.route('/login')
     //res.json(db);
   })
   .post(function(req, res) {
-    var i;
-    for(i=0; i<db.length; i++) {
-      if(db[i].nick == req.body.nick && db[i].pwd == req.body.pwd) {
-        res.sendStatus(200);
-      } else {
-        res.sendStatus(500);
-      }
+
+    var findResults = users.find({nick: req.body.nick, pwd: req.body.pwd});
+
+    if(findResults.length!=0){
+      res.sendStatus(200);
+    } else {
+      res.sendStatus(500);
     }
   });
 
@@ -48,7 +56,7 @@ router.route('/register')
 
   }).post(function(req, res){
 
-    db.push(req.body);
+    users.insert(debugUser);
     console.log('Usuário cadastrado com sucesso!');
     res.json('');
   });
