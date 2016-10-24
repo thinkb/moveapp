@@ -30,7 +30,7 @@
              </div>
             </div>
             <div class="col s2">
-              <a class="modal-trigger" href="#modal1"><span class="icoplus lebre"> + </span></a>
+              <a class="modal-trigger" href="#modal2"><span class="icoplus lebre"> + </span></a>
           </div>
        </div>
 
@@ -55,7 +55,7 @@
             </div>
            </div>
            <div class="col s2">
-             <a class="modal-trigger" href="#modal1"><span class="icoplus cachorro"> + </span></a>
+             <a class="modal-trigger" href="#modal2"><span class="icoplus cachorro"> + </span></a>
          </div>
       </div>
     </div>
@@ -79,7 +79,7 @@
            </div>
           </div>
           <div class="col s2">
-            <a class="modal-trigger" href="#modal1"><span class="icoplus guepardo"> + </span></a>
+            <a class="modal-trigger" href="#modal2"><span class="icoplus guepardo"> + </span></a>
         </div>
      </div>
 <!-- fim listagem de desafio ativo -->
@@ -94,7 +94,7 @@
                 <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
                 <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
                 <div class="col s2">
-                  <a class="modal-trigger" href="#modal1">
+                  <a class="modal-trigger" href="#modal2">
                   <img src="css/assets/seta_purple.svg">
                   </a>
                 </div>
@@ -107,7 +107,7 @@
                 <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
                 <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
                 <div class="col s2">
-                  <a class="modal-trigger" href="#modal1">
+                  <a class="modal-trigger" href="#modal2">
                   <img src="css/assets/seta_purple.svg">
                 </a>
                 </div>
@@ -124,7 +124,7 @@
                        <div class="col s2"> <img src="css/assets/lebreicon.svg">   </div>
                        <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
                        <div class="col s2">
-                         <a class="modal-trigger" href="#modal1">
+                         <a class="modal-trigger" href="#modal2">
                          <img src="css/assets/seta_pink.svg">
                          </a>
                        </div>
@@ -137,7 +137,7 @@
                        <div class="col s2"> <img src="css/assets/lebreicon.svg">   </div>
                        <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
                        <div class="col s2">
-                         <a class="modal-trigger" href="#modal1">
+                         <a class="modal-trigger" href="#modal2">
                          <img src="css/assets/seta_pink.svg">
                          </a>
                        </div>
@@ -154,7 +154,7 @@
            <div class="col s2"> <img src="css/assets/cachorroicon.svg"></div>
            <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
            <div class="col s2">
-             <a class="modal-trigger" href="#modal1">
+             <a class="modal-trigger" href="#modal2">
              <img src="css/assets/seta_orange.svg">
              </a>
            </div>
@@ -167,7 +167,7 @@
            <div class="col s2"> <img src="css/assets/cachorroicon.svg">   </div>
            <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
            <div class="col s2">
-             <a class="modal-trigger" href="#modal1">
+             <a class="modal-trigger" href="#modal2">
              <img src="css/assets/seta_orange.svg">
              </a>
            </div>
@@ -190,7 +190,7 @@
          <div class="col s2"> <img src="css/assets/lebreicon.svg">   </div>
          <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
          <div class="col s2">
-           <a class="modal-trigger" href="#modal1">
+           <a class="modal-trigger" href="#modal2">
            <img src="css/assets/seta_pink.svg">
            </a>
          </div>
@@ -208,7 +208,7 @@
          <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
          <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
          <div class="col s2">
-           <a class="modal-trigger" href="#modal1">
+           <a class="modal-trigger" href="#modal2">
            <img src="css/assets/seta_purple.svg">
            </a>
          </div>
@@ -223,7 +223,7 @@
 
 
 <!-- modais -->
- <div id="modal1" class="modal">
+ <div id="modal2" class="modal">
      <div class="modal-content">
        <h4>Modal Header</h4>
        <p>A bunch of text</p>
@@ -231,3 +231,13 @@
      <div class="modal-footer">
        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
      </div>
+<script>
+     $(document).ready(function(){
+       $('ul.tabs').tabs();
+     });
+
+     $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+      });
+</script>

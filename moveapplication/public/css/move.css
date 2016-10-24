@@ -219,6 +219,10 @@ nav .button-collapse {
     background-color:#00a5c1 !important;
 }
 
+.blue-text{
+    color:#00a5c1 !important;
+}
+
 .pink{
     background-color:#d04386 !important;
 }
@@ -231,14 +235,25 @@ nav .button-collapse {
     background-color:#5e5ca7 !important;
 }
 
+.purple-text{
+    color:#5e5ca7 !important;
+}
+
 .orange{
     background-color:#f79d1f !important;
+}
+
+.orange-text{
+  color:#f79d1f !important;
 }
 
 .greenv{
     background-color:#B3D035 !important;
 }
 
+.greenv-text{
+    color:#B3D035 !important;
+}
 
 .data-status {
     font-family: 'Mikado Regular';
@@ -597,6 +612,10 @@ text-align: left;
 
 .card-change{
   margin-top: 20%;
+}
+
+.sticker{
+  width: 45%;
 }
 
  /*

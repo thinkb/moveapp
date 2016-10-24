@@ -39,8 +39,8 @@
                 </ul>
               </div>
             </div>
-                <a href="#home" class="btn_area">Minha área</a>
-                <a href="" class="btn_sair">sair</a>
+                <a id="minhaarea_btn" href="#home" class="btn_area">Minha área</a>
+                <a id="logout_btn" href="" class="btn_sair">sair</a>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse animated fadeinLeft">
                 <div class="profile "><img class="profile_pic" src="images/profile.png" /></div>
@@ -97,18 +97,16 @@
 </div>
 </div>
 
-
-
- <!-- Modal Structure -->
- <div id="modal1" class="modal bottom-sheet">
-   <div class="modal-content">
-     <h2>Escolha um desafio já aceito para torna-lo ativo</h2>
-     <p>A bunch of text</p>
-   </div>
-   <div class="modal-footer">
-     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ok</a>
-   </div>
- </div>
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h2>Escolha um desafio já aceito para torna-lo ativo</h2>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ok</a>
+  </div>
+</div>
 
 
     <!-- MENU -->
@@ -137,28 +135,3 @@
     <!-- /MENU -->
     <!--  Scripts-->
 <script src='/js/minha_area.js'> </script>
-<script>
-$('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 240
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
-</script>
-
-<script>
-$(document).ready(function(){
-   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-   $('.modal-trigger').leanModal();
- });
-</script>
-
-<script>
-  $('#circle').circleProgress({
-    value: 0.75,
-    size: 250,
-    fill: {
-      gradient: ["#f0ce17", "#ffa200"]
-    }
-  });
-</script>

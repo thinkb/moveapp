@@ -1,3 +1,21 @@
+
+$(document).ready(function(){
+   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+   $('.modal-trigger').leanModal();
+ });
+
+ $('.button-collapse').sideNav({
+       menuWidth: 300, // Default is 240
+       edge: 'left', // Choose the horizontal origin
+       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+     }
+   );
+
+$(document).ready(function(){
+  $('ul.tabs').tabs();
+});
+
+
 $('#amigos-pag').click(function(){
   $('#main-intern-div').empty();
   $('#main-intern-div').load('amigos.html');
@@ -33,4 +51,29 @@ $('#conquistas-pag').click(function(){
   $("#amigos-pag").html("<img id='iconmenu1' class='icon_toolbar center' src='css/assets/amigosicon_blue.svg'> <p class='toolbar_text center'>Amigos</p>");
   $("#desafios-pag").html("<img id='iconmenu2' class='icon_toolbar center' src='css/assets/desafioicon_blue.svg'> <p class='toolbar_text center'>Desafios</p>");
 
+});
+
+$('#minhaarea_btn').click(function(){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafio_1.html');
+});
+
+$('#logout_btn').click(function(){
+});
+
+
+$('#circle').circleProgress({
+  value: 0.75,
+  size: 250,
+  fill: {
+    gradient: ["#f0ce17", "#ffa200"]
+  }
+});
+
+$('#circle1').circleProgress({
+  value: 0.75,
+  size: 250,
+  fill: {
+    gradient: ["#f0ce17", "#ffa200"]
+  }
 });
