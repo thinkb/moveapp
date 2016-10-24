@@ -14,7 +14,7 @@
                         <h5 class="user_name">Nome</h5>
                       <div class="row center">
                         <ul class="status_internal">
-                            <li class="pd_internal animated pulse"><span class="number_nav">0</span>pontos</li>
+                            <li class="pd_internal animated pulse"><span class="number_nav">0</span>pts</li>
                             <li class="days_internal animated pulse"><span class="number_nav">0</span>dias de treino</li>
                         </ul>
                       </div>
@@ -76,21 +76,40 @@
             </div>
             <div class="col center s4 ">
                 <div class="pds_monitor single">
-                    <p class="data-single"><span class="highlight-data">0</span> de 0 pontos</p>
+                    <p class="data-single"><span class="highlight-data">0</span> de 0 pts</p>
                 </div>
             </div>
           </div>
             <!-- Final dos indicadores -->
-          <div class="grafico-principal">
-            <div class="animation center">
-              <img class="gif_animation_center" src="css/assets/Animation/movie.png">
-            </div>
-            <div class="center" class="progress" id="progress"></div>
-          </div>
-          <a href="" class="btn_area"><img class="icon_change" src="css/assets/changeicon.svg"></a>
+      <div class="row">
+        <div id="circle" class="grafico center"></div>
+
+
+      </div>
+        <div class="row">
+          <a href="#modal1" class="modal-trigger">
+              <div class="btn-change">
+                <img class="icon_change" src="css/assets/changeicon.svg">
+              </div>
+          </a>
+        </div>
     </div>
 </div>
 </div>
+
+
+
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal bottom-sheet">
+   <div class="modal-content">
+     <h2>Escolha um desafio já aceito para torna-lo ativo</h2>
+     <p>A bunch of text</p>
+   </div>
+   <div class="modal-footer">
+     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ok</a>
+   </div>
+ </div>
+
 
     <!-- MENU -->
     <div class="menu_toolbar">
@@ -126,13 +145,20 @@ $('.button-collapse').sideNav({
     }
   );
 </script>
-<script type="text/javascript">
 
-          paceOptions = {
-            // Disable the 'elements' source
-              elements: {
-                  selectors: ['#circle']
-                }
-          }
+<script>
+$(document).ready(function(){
+   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+   $('.modal-trigger').leanModal();
+ });
+</script>
 
+<script>
+  $('#circle').circleProgress({
+    value: 0.75,
+    size: 250,
+    fill: {
+      gradient: ["#f0ce17", "#ffa200"]
+    }
+  });
 </script>

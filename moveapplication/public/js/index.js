@@ -13,6 +13,8 @@ $('#loginButton').click(function(){
   $.post( "/move/login", login)
     .done(function(){
       alert('Done');
+      $('body').removeClass('paternpurple');
+      $('#myMainDiv').load('minha_area.html');
     })
     .fail(function(){
       alert("fail");

@@ -105,6 +105,7 @@ nav .button-collapse {
 }
 
 .profile_pic {
+    margin-left: 5%;
     margin-top: 5%;
     width: 100%;
     border-radius: 50%;
@@ -175,6 +176,16 @@ nav .button-collapse {
     margin-top:-10px;
 }
 
+.btn-change{
+    float: right;
+    background-color: #5e4c95 !important;
+    padding: 2px;
+    border-radius: 10px;
+    width: 37px;
+    height: 37px;
+    margin-right: 20px;
+}
+
 .vertical {
     transform:rotate(-90deg) !important;
     -ms-transform:rotate(-90deg) !important; /* IE 9 */
@@ -210,6 +221,10 @@ nav .button-collapse {
 
 .pink{
     background-color:#d04386 !important;
+}
+
+.pink-text{
+    color:#d04386 !important;
 }
 
 .purple{
@@ -372,7 +387,7 @@ h2 {
 
 .data-single {
     font-family: "From Where You Are";
-    font-size: 12px;
+    font-size: 0.9em;
     color: #5e4c95;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -415,9 +430,6 @@ h2 {
     margin-top: -12px;
 }
 
-img.icon_change {
-    width: 20%;
-}
 
 .button-change {
     display: inline;
@@ -425,10 +437,11 @@ img.icon_change {
     font-size: 16px;
 }
 
-#circle canvas  {
+.grafico canvas {
         transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
+
 }
 
 .circle{
