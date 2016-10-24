@@ -139,7 +139,7 @@ nav .button-collapse {
 }
 
 .profile_pic_big {
-     margin-top: 10%;
+    margin-top: 5%;
     height:80px;
     border-radius: 50%;
     border: 4px solid #6451aa;
@@ -148,7 +148,7 @@ nav .button-collapse {
 
 .status_internal {
     float: left;
-    margin-left:20%;
+    margin-left:10%;
     display: inline;
     font-family: 'From Where You Are';
     font-weight: 100;
@@ -156,8 +156,8 @@ nav .button-collapse {
 }
 
 .user_name{
-        float: right;
-    margin-top: 20%;
+    float: right;
+    margin-top: 17%;
     margin-right: 30%;
     font-family: 'From Where You Are';
 }
@@ -179,11 +179,12 @@ nav .button-collapse {
     transform:rotate(-90deg) !important;
     -ms-transform:rotate(-90deg) !important; /* IE 9 */
     -webkit-transform:rotate(-90deg) !important;
-    margin-left: -35% !important;
-    height:35px !important;
+    height:25px !important;
+    width: 280px !important;
     border-radius: 20px !important;
     background-color:#dadada !important;
-    margin-top: -53% !important;
+    margin-top: 130px;
+    margin-left: -120px;
 }
 
 .progress .determinate{
@@ -195,6 +196,12 @@ nav .button-collapse {
   background-color:#dadada !important;
   width: 100%;
   height:12px !important;
+}
+
+.nivel_metrica{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
 }
 
 .blue{
@@ -222,8 +229,6 @@ nav .button-collapse {
     font-family: 'Mikado Regular';
     color:#bbbbbb;
     display:block;
-    margin-left:30%;
-    margin-top:18%;
 
 }
 
@@ -240,14 +245,13 @@ nav .button-collapse {
 
 
 a.btn_area {
-    background-color: #5e4c95;
+    background-color: #5e4c95 !important;
     border-radius: 20px;
     margin: 30px;
     text-align: center;
     color: #fff;
     font-family:"Mikado Regular";
     font-size:20px;
-    margin-top:50%;
 }
 
 a.btn_sair {

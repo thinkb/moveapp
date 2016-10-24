@@ -9,16 +9,25 @@
             </ul>
             <ul id="nav-mobile" class="side-nav">
                 <div class="status-settings">
-                    <div class="profile_big "><img class="profile_pic_big" src="images/profile.png" />
+                    <div class="row profile_big ">
+                        <img class="profile_pic_big" src="images/profile.png" />
                         <h5 class="user_name">Nome</h5>
+                      <div class="row center">
                         <ul class="status_internal">
-                            <li class="pd_internal animated pulse"><span class="number_nav">0</span>pt   </li>
+                            <li class="pd_internal animated pulse"><span class="number_nav">0</span>pontos</li>
                             <li class="days_internal animated pulse"><span class="number_nav">0</span>dias de treino</li>
                         </ul>
-                </div>
-                </div>
-                <!--<p class="desc-level">0 pd até<br><span class="pad-level"> o próximo </span></p> -->
+                      </div>
 
+                </div>
+                </div>
+              <div class="row nivel_metrica">
+                <div class="col s2">
+                <div class="progress vertical">
+                     <div class="determinate blue" style="width: 50%"></div>
+                 </div>
+               </div>
+                 <div class="col s10">
                 <ul class="data-status">
                     <li class="status-titles">5 - Mestre</li>
                     <li class="status-titles">4 - Medalista</li>
@@ -28,11 +37,8 @@
                     <li class="status-titles">0 - Oh Preguiça!</li>
                     <li class="status-titles">-1 - Dorminhoco</li>
                 </ul>
-                <div>
-                 <div class="progress vertical">
-                      <div class="determinate blue" style="width: 50%"></div>
-                  </div>
-
+              </div>
+            </div>
                 <a href="#home" class="btn_area">Minha área</a>
                 <a href="" class="btn_sair">sair</a>
             </ul>
@@ -70,7 +76,7 @@
             </div>
             <div class="col center s4 ">
                 <div class="pds_monitor single">
-                    <p class="data-single"><span class="highlight-data">0</span> de 0 pt</p>
+                    <p class="data-single"><span class="highlight-data">0</span> de 0 pontos</p>
                 </div>
             </div>
           </div>
@@ -79,7 +85,7 @@
             <div class="animation center">
               <img class="gif_animation_center" src="css/assets/Animation/movie.png">
             </div>
-            <div class="center" id="circle"></div>
+            <div class="center" class="progress" id="progress"></div>
           </div>
           <a href="" class="btn_area"><img class="icon_change" src="css/assets/changeicon.svg"></a>
     </div>
@@ -113,18 +119,13 @@
     <!--  Scripts-->
 <script src='/js/minha_area.js'> </script>
 <script>
-  $(document).ready(function(){
-   $('ul.tabs').tabs('select_tab', 'tab_id');
-  });
+$('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 240
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
 </script>
-
-<script type="text/javascript">
-        $(document).ready(function(){
-         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-         $('.modal-trigger').leanModal();
-        });
-  </script>
-
 <script type="text/javascript">
 
           paceOptions = {
@@ -135,4 +136,3 @@
           }
 
 </script>
-        <!-- modal -->

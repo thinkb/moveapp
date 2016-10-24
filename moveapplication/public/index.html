@@ -14,7 +14,6 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
    <script src="plugins/loading/pace.js"></script>
    <script src="js/init.js"></script>
-   <script src="plugins/circle_progressbar/circle-progress.js"></script>
   </head>
 
   <body class="paternpurple" >
@@ -59,8 +58,19 @@
 
   </div>
     <script src='/js/index.js'> </script>
+    <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>
   </div>
+    <script>
+  window.onload = function onLoad() {
+      var circle = new ProgressBar.Circle('#progress', {
+          color: '#FCB03C',
+          duration: 3000,
+          easing: 'easeInOut'
+      });
 
+      circle.animate(1);
+  };
+  </script>
   </body>
 
 </html>
