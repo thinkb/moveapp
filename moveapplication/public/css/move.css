@@ -402,7 +402,7 @@ h2 {
 
 .data-single {
     font-family: "From Where You Are";
-    font-size: 0.9em;
+    font-size: 0.9em !important;
     color: #5e4c95;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -618,9 +618,44 @@ text-align: left;
   width: 45%;
 }
 
- /*
-#circle canvas {
-    margin-left: 4%;
-    margin-bottom: 12%;
+h4{
+  font-family: 'From Where You Are';
+  font-size: 1.6em;
+  color: #5e4c95;
+}
 
-} */
+
+
+h5{
+  font-family: 'From Where You Are';
+  font-size: 1.3em;
+  color: #5e4c95;
+}
+
+.modal-content p{
+  font-size: 1.3em;
+}
+
+.icon_modal{
+    margin-top: -30px;
+    width: 25%;
+    position: fixed;
+    margin-left: -15px;
+}
+
+.tile-modal{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.img-modal{
+  width: 70%;
+}
+
+.dividor-horizontal{
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.amigos-modal{
+  width: 20%;
+}

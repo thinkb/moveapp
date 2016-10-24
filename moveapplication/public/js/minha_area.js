@@ -55,7 +55,7 @@ $('#conquistas-pag').click(function(){
 
 $('#minhaarea_btn').click(function(){
   $('#main-intern-div').empty();
-  $('#main-intern-div').load('desafio_1.html');
+  $('#main-intern-div').load('desafios_library/desafio_1.html');
 });
 
 $('#logout_btn').click(function(){
