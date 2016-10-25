@@ -161,6 +161,7 @@ nav .button-collapse {
     margin-top: 17%;
     margin-right: 30%;
     font-family: 'From Where You Are';
+    color:#FFF;
 }
 
 .side-nav li {float:left}
@@ -658,4 +659,7 @@ h5{
 
 .amigos-modal{
   width: 20%;
+  width: 20%;
+  position: relative;
+  border: 3px solid #5e5ca7;
 }
