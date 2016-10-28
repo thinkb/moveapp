@@ -187,6 +187,16 @@ nav .button-collapse {
     margin-right: 20px;
 }
 
+.btn-search{
+  float: right;
+  background-color: #5e4c95 !important;
+  padding: 2px;
+  border-radius: 10px;
+  width: 37px;
+  height: 37px;
+  margin-top: 7px;
+}
+
 .vertical {
     transform:rotate(-90deg) !important;
     -ms-transform:rotate(-90deg) !important; /* IE 9 */
@@ -522,7 +532,21 @@ h3{
 }
 
 .semmargin{
-  margin: 0px;
+  margin: 0px !important;
+}
+.collection p{
+  font-size: 1em;
+}
+
+.outlinee{
+  font-family: "Mikado Bold"
+  color: #5e4c95;
+}
+
+.title{
+font-family: 'From Where You Are';
+ font-size: 1.2em !important;
+ color: #5e4c95;
 }
 
 .icoplus{
