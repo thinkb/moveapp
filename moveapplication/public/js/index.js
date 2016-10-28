@@ -1,3 +1,5 @@
+var user;
+
 $('#beginRegister').click(function(){
   $('#myMainDiv').empty();
   $('#myMainDiv').load('register.html');
@@ -8,9 +10,9 @@ $('#loginButton').click(function(){
   var nickLogin = $('#nickLogin').val();
   var pwdLogin = $('#pwdLogin').val();
 
-  var login = {nick: nickLogin, pwd: pwdLogin};
+  user = {nick: nickLogin, pwd: pwdLogin};
 
-  $.post( "/move/login", login)
+  $.post( "/move/login", user)
     .done(function(){
       $('body').removeClass('paternpurple');
       $('#myMainDiv').load('minha_area.html');
