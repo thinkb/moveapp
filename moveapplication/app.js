@@ -18,7 +18,20 @@ var debugUser = {
   sloth: "Preguicinha"
 };
 
+var debugUser1 = {
+  name: "dsfasfd",
+  last: "asdfsdfsd",
+  age: 25,
+  email: "asdfasdf@gmail",
+  nick: "asdfadsfas",
+  pwd: "fabs",
+  sport: "asdfasdf",
+  sloth: "asdfasdf"
+};
+
 users.insert(debugUser);
+users.insert(debugUser1);
+
 // var f = users.find({nick: 'fabiano'});
 // if(f.length!=0){
 //   console.log(f);
@@ -42,7 +55,9 @@ router.route('/login')
 
     var findResults = users.find({nick: req.body.nick, pwd: req.body.pwd});
 
-    if(findResults.length!=0){
+    console.log(findResults);
+
+    if(findResults[0].nick == req.body.nick && findResults[0].pwd == req.body.pwd){
       res.sendStatus(200);
     } else {
       res.sendStatus(500);
