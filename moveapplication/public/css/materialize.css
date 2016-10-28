@@ -3154,6 +3154,7 @@ td, th {
   display: block;
   transition: .25s;
   color: #26a69a;
+  font-family: "from where you are"
 }
 
 .collection a.collection-item:not(.active):hover {
@@ -5265,6 +5266,11 @@ button.btn-floating {
   }
 }
 
+.escolherdesafio{
+
+
+}
+
 .modal h1, .modal h2, .modal h3, .modal h4 {
   margin-top: 0;
 }
@@ -5288,6 +5294,10 @@ button.btn-floating {
 .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
   float: right;
   margin: 6px 0;
+  color: #ffffff;
+  background-color: #6260a9;
+  font-family: "Mikado Regular";
+}
 }
 
 .lean-overlay {

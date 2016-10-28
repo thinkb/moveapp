@@ -338,6 +338,10 @@ a.btn_sair {
     border-right: 2px #2092b1 solid;
 }
 
+.escolherdesafio{
+  line-height: 17px;
+  text-align: center;
+}
 .menu-on{
  background-color: #5e5ca7;
  color:#f0ce17 !important;
