@@ -549,6 +549,10 @@ font-family: 'From Where You Are';
  color: #5e4c95;
 }
 
+.noneview{
+  display: none;
+}
+
 .icoplus{
   font-family: 'Mikado Bold';
   font-size: 50px;
