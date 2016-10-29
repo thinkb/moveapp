@@ -50,7 +50,7 @@ $('#registerNext').click(function(){
     } else {
       if ($('#registerDiv3').css('display') != 'none') {
 
-        var user = {
+        var u = {
           name: $('#name').val(),
           last: $('#last').val(),
           age: $('#age').val(),
@@ -62,9 +62,11 @@ $('#registerNext').click(function(){
 
         };
 
-        $.post( "/move/register", user, function( data ) {
-          $('#myMainDiv').empty();
-          $('#myMainDiv').load('minha_area.html');
+        $.post( "/move/register", u, function( data ) {
+
+          window.location.replace('index.html');
+          //$('html').empty();
+          //$('html').load('index.html');
           $('body').removeClass('paternpurple');
         }, "json");
 
