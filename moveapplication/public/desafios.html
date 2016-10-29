@@ -30,7 +30,32 @@
              </div>
             </div>
             <div class="col s2">
-              <a class="modal-trigger" href="#modal2"><span class="icoplus lebre"> + </span></a>
+              <a class="modal-trigger" href="#modal_pularcorda"><span class="icoplus lebre"> + </span></a>
+          </div>
+       </div>
+
+     </div>
+  <!-- fim listagem de desafio ativo -->
+
+  <!-- listagem de desafio ativo -->
+       <div class="list-desafio lebre noneview">
+         <div class="row semmargin">
+           <div class="col s2"> <img src="css/assets/lebre.svg">   </div>
+           <div class="col s10"><h3 class="title-desafio">bambolê</h3></div>
+         </div>
+         <div class="row semmargin">
+           <div class="col s12">
+               <p>Progresso <span>0</span> de 40 pontos</p>
+           </div>
+         </div>
+          <div class="row semmargin">
+            <div class="col s10">
+              <div class="progress horizontal">
+                <div class="determinate pink" style="width: 1%"></div>
+             </div>
+            </div>
+            <div class="col s2">
+              <a class="modal-trigger" href="#modal_bambole"><span class="icoplus lebre"> + </span></a>
           </div>
        </div>
 
@@ -38,55 +63,79 @@
   <!-- fim listagem de desafio ativo -->
 
  <!-- listagem de desafio ativo -->
-      <div class="list-desafio cachorro">
+      <div class="list-desafio cachorro noneview">
         <div class="row semmargin">
           <div class="col s2"> <img src="css/assets/cachorro.svg">   </div>
           <div class="col s10"><h3 class="title-desafio">Futebol</h3></div>
         </div>
         <div class="row semmargin">
           <div class="col s12">
-              <p>Progresso <span>10</span> de 40 pontos</p>
+              <p>Progresso <span>0</span> de 40 pontos</p>
           </div>
         </div>
          <div class="row semmargin">
            <div class="col s10">
              <div class="progress horizontal">
-               <div class="determinate orange" style="width: 20%"></div>
+               <div class="determinate orange" style="width: 1%"></div>
             </div>
            </div>
            <div class="col s2">
-             <a class="modal-trigger" href="#modal2"><span class="icoplus cachorro"> + </span></a>
+             <a class="modal-trigger" href="#modal_futebol"><span class="icoplus cachorro"> + </span></a>
          </div>
       </div>
     </div>
 <!-- fim listagem de desafio ativo -->
 
 <!-- listagem de desafio ativo -->
-     <div class="list-desafio guepardo">
+     <div id="des_basquete_ativo"  class="list-desafio cachorro noneview">
        <div class="row semmargin">
-         <div class="col s2"> <img src="css/assets/guepardo.svg">   </div>
-         <div class="col s10"><h3 class="title-desafio">Caminhada</h3></div>
+         <div class="col s2"> <img src="css/assets/cachorro.svg">   </div>
+         <div class="col s10"><h3 class="title-desafio">Basquete</h3></div>
        </div>
        <div class="row semmargin">
          <div class="col s12">
-             <p>Progresso <span>10</span> de 60 pontos</p>
+             <p>Progresso <span>0</span> de 40 pontos</p>
          </div>
        </div>
         <div class="row semmargin">
           <div class="col s10">
             <div class="progress horizontal">
-              <div class="determinate purple" style="width: 10%"></div>
+              <div class="determinate orange" style="width:1%"></div>
            </div>
           </div>
           <div class="col s2">
-            <a class="modal-trigger" href="#modal2"><span class="icoplus guepardo"> + </span></a>
+            <a class="modal-trigger" href="#modal_basquete"><span class="icoplus cachorro"> + </span></a>
         </div>
      </div>
    </div>
 <!-- fim listagem de desafio ativo -->
 
 <!-- listagem de desafio ativo -->
-     <div class="list-desafio guepardo noneview">
+     <div id="des_caminhada_ativo"  class="list-desafio guepardo noneview">
+       <div class="row semmargin">
+         <div class="col s2"> <img src="css/assets/guepardo.svg">   </div>
+         <div class="col s10"><h3 class="title-desafio">Caminhada</h3></div>
+       </div>
+       <div class="row semmargin">
+         <div class="col s12">
+             <p>Progresso <span>0</span> de 60 pontos</p>
+         </div>
+       </div>
+        <div class="row semmargin">
+          <div class="col s10">
+            <div class="progress horizontal">
+              <div class="determinate purple" style="width: 1%"></div>
+           </div>
+          </div>
+          <div class="col s2">
+            <a class="modal-trigger" href="#modal_caminhada"><span class="icoplus guepardo"> + </span></a>
+        </div>
+     </div>
+   </div>
+<!-- fim listagem de desafio ativo -->
+
+<!-- listagem de desafio ativo -->
+     <div  id="des_corrida_ativo"  class="list-desafio guepardo">
        <div class="row semmargin">
          <div class="col s2"> <img src="css/assets/guepardo.svg">   </div>
          <div class="col s10"><h3 class="title-desafio">Corrida</h3></div>
@@ -103,7 +152,7 @@
            </div>
           </div>
           <div class="col s2">
-            <a class="modal-trigger" href="#modal2"><span class="icoplus guepardo"> + </span></a>
+            <a class="modal-trigger" href="#modal_corrida"><span class="icoplus guepardo"> + </span></a>
         </div>
      </div>
    </div>
@@ -112,12 +161,12 @@
 <!-- TAB GUEPARDO  -->
      <div id="guepardo" class="col s12">
        <!-- listagem de desafio desativo -->
-            <div class="list-desafio guepardo">
+            <div id="des_caminhada_desativo" class="list-desafio guepardo">
               <div class="row semmargin">
                 <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
-                <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
+                <div class="col s8"><h3 class="title-desafio">Caminhada</h3></div>
                 <div class="col s2">
-                  <a class="modal-trigger" href="#modal2">
+                  <a class="modal-trigger" href="#modal_caminhada">
                   <img src="css/assets/seta_purple.svg">
                   </a>
                 </div>
@@ -125,12 +174,12 @@
             </div>
        <!-- fim listagem de desafio desativo -->
        <!-- listagem de desafio desativo -->
-            <div class="list-desafio guepardo">
+            <div id="des_corrida_desativo" class="list-desafio guepardo noneview">
               <div class="row semmargin">
                 <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
-                <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
+                <div class="col s8"><h3 class="title-desafio">Corrida</h3></div>
                 <div class="col s2">
-                  <a class="modal-trigger" href="#modal2">
+                  <a class="modal-trigger" href="#modal_corrida">
                   <img src="css/assets/seta_purple.svg">
                 </a>
                 </div>
@@ -142,12 +191,12 @@
 
 <!-- TAB LEBRE  -->
      <div id="lebre" class="col s12">
-                   <div class="list-desafio lebre">
+                   <div id="des_pularcorda_desativo" class="list-desafio lebre noneview">
                      <div class="row semmargin">
-                       <div class="col s2"> <img src="css/assets/lebreicon.svg">   </div>
+                       <div class="col s2"> <img src="css/assets/lebreicon.svg"></div>
                        <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
                        <div class="col s2">
-                         <a class="modal-trigger" href="#modal2">
+                         <a class="modal-trigger" href="#modal_pularcorda">
                          <img src="css/assets/seta_pink.svg">
                          </a>
                        </div>
@@ -155,12 +204,12 @@
                    </div>
               <!-- fim listagem de desafio desativo -->
               <!-- listagem de desafio desativo -->
-                   <div class="list-desafio lebre">
+                   <div  id="des_bambole_desativo" class="list-desafio lebre">
                      <div class="row semmargin">
                        <div class="col s2"> <img src="css/assets/lebreicon.svg">   </div>
-                       <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
+                       <div class="col s8"><h3 class="title-desafio">Bambolê</h3></div>
                        <div class="col s2">
-                         <a class="modal-trigger" href="#modal2">
+                         <a class="modal-trigger" href="#modal_bambole">
                          <img src="css/assets/seta_pink.svg">
                          </a>
                        </div>
@@ -172,25 +221,26 @@
 
 <!-- TAB CACHORRO  -->
      <div id="cachorro" class="col s12">
-       <div class="list-desafio cachorro">
+       <div  id="des_futebol_desativo" class="list-desafio cachorro">
          <div class="row semmargin">
            <div class="col s2"> <img src="css/assets/cachorroicon.svg"></div>
-           <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
+           <div class="col s8"><h3 class="title-desafio">Futebol</h3></div>
            <div class="col s2">
-             <a class="modal-trigger" href="#modal2">
+             <a class="modal-trigger" href="#modal_futebol">
              <img src="css/assets/seta_orange.svg">
              </a>
            </div>
          </div>
       </div>
   <!-- fim listagem de desafio desativo -->
+
   <!-- listagem de desafio desativo -->
-       <div class="list-desafio cachorro">
+       <div  id="des_basquete_desativo" class="list-desafio cachorro">
          <div class="row semmargin">
            <div class="col s2"> <img src="css/assets/cachorroicon.svg">   </div>
-           <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
+           <div class="col s8"><h3 class="title-desafio">Basquete</h3></div>
            <div class="col s2">
-             <a class="modal-trigger" href="#modal2">
+             <a class="modal-trigger" href="#modal_basquete">
              <img src="css/assets/seta_orange.svg">
              </a>
            </div>
@@ -206,15 +256,15 @@
      <div class="list-desafio lebre">
       <div class="row semmargin">
          <div class="col s12">
-        <p> Seu amigo <span class="lebre"> biscoito </span> te desafiou em: </p>
+        <p> Seu amigo <span class="cachorro"> Beatriz </span> te desafiou em: </p>
       </div>
       </div>
        <div class="row semmargin">
-         <div class="col s2"> <img src="css/assets/lebreicon.svg">   </div>
-         <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
+         <div class="col s2"> <img src="css/assets/cachorroicon.svg">   </div>
+         <div class="col s8"><h3 class="title-desafio cachorro">Futebol</h3></div>
          <div class="col s2">
-           <a class="modal-trigger" href="#modal2">
-           <img src="css/assets/seta_pink.svg">
+           <a class="modal-trigger" href="#modal_futebol">
+           <img src="css/assets/seta_orange.svg">
            </a>
          </div>
        </div>
@@ -224,14 +274,14 @@
      <div class="list-desafio guepardo">
        <div class="row semmargin">
           <div class="col s12">
-         <p> Seu amigo <span class="guepardo"> Paçoca </span> te desafiou em: </p>
+         <p> Seu amigo <span class="guepardo"> Bruna</span> te desafiou em: </p>
        </div>
        </div>
        <div class="row semmargin">
          <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
-         <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
+         <div class="col s8"><h3 class="title-desafio">Corrida</h3></div>
          <div class="col s2">
-           <a class="modal-trigger" href="#modal2">
+           <a class="modal-trigger" href="#modal_corrida">
            <img src="css/assets/seta_purple.svg">
            </a>
          </div>
@@ -245,8 +295,10 @@
  <!-- fim conteudo -->
 
 
-<!-- modais -->
- <div id="modal2" class="modal">
+<!-- modais desafios -->
+
+<!-- modal pular corda -->
+ <div id="modal_pularcorda" class="modal">
    <div class="icon_modal"><img src="css/assets/lebreicon.svg" alt="" /></div>
      <div class="modal-content">
        <div class="row center">
@@ -288,6 +340,240 @@
        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Desistir</a>
      </div>
+   </div>
+<!-- fim modal pular corda -->
+
+<!-- modal bambole -->
+ <div id="modal_bambole" class="modal">
+   <div class="icon_modal"><img src="css/assets/lebreicon.svg" alt="" /></div>
+     <div class="modal-content">
+       <div class="row center">
+          <h4 class="title-modal pink-text">Bambolê</h4>
+       </div>
+       <div class="row center dividor-horizontal">
+         <img class="img-modal" src="css/assets/animation/preguica1.svg" alt="" />
+       </div>
+       <div class="row dividor-horizontal">
+         <div class="col s6">
+           <img class="mini-icon" src="css/assets/amigosicon_vp.svg">
+           <p class="data-single"><span class="highlight-data">0</span>/0</p>
+         </div>
+         <div class="col s6">
+           <img class="mini-icon" src="css/assets/timeicon.svg">
+           <p class="data-single"><span class="highlight-data">0</span> dias restantes</p>
+         </div>
+       </div>
+       <div class="row dividor-horizontal">
+         <h5>Descrição</h5>
+         <p>
+           Pule corda com seus amigos até atingir as metas abaixo.
+         </p>
+       </div>
+       <div class="row dividor-horizontal">
+         <h5>Pontos de diversão</h5>
+         <div class="progress horizontal">
+           <div class="determinate pink" style="width: 50%"></div>
+        </div>
+       </div>
+       <div class="row dividor-horizontal">
+         <h5>Amigos</h5>
+         <img class="circle amigos-modal" src="images/user1.png" >
+         <img class="circle amigos-modal" src="images/user2.png" >
+       </div>
+
+     </div>
+     <div class="modal-footer">
+       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
+       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat ativo">Aceitar</a>
+     </div>
+   </div>
+<!-- fim modal pular corda -->
+
+<!--  modal pular basquete -->
+<div id="modal_basquete" class="modal">
+  <div class="icon_modal"><img src="css/assets/cachorroicon.svg" alt="" /></div>
+    <div class="modal-content">
+      <div class="row center">
+         <h4 class="title-modal orange-text">Basquete</h4>
+      </div>
+      <div class="row center dividor-horizontal">
+        <img class="img-modal" src="css/assets/animation/preguica1.svg" alt="" />
+      </div>
+      <div class="row dividor-horizontal">
+        <div class="col s6">
+          <img class="mini-icon" src="css/assets/amigosicon_vp.svg">
+          <p class="data-single"><span class="highlight-data">0</span>/0</p>
+        </div>
+        <div class="col s6">
+          <img class="mini-icon" src="css/assets/timeicon.svg">
+          <p class="data-single"><span class="highlight-data">0</span> dias restantes</p>
+        </div>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Descrição</h5>
+        <p>
+          Pule corda com seus amigos até atingir as metas abaixo.
+        </p>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Pontos de diversão</h5>
+        <div class="progress horizontal">
+          <div class="determinate orange" style="width: 50%"></div>
+       </div>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Amigos</h5>
+        <img class="circle amigos-modal" src="images/user1.png" >
+        <img class="circle amigos-modal" src="images/user2.png" >
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat ativar">Aceitar</a>
+    </div>
+  </div>
+<!-- fim modal basquete-->
+
+<!--  modal pular futebol -->
+<div id="modal_futebol" class="modal">
+  <div class="icon_modal"><img src="css/assets/cachorroicon.svg" alt="" /></div>
+    <div class="modal-content">
+      <div class="row center">
+         <h4 class="title-modal orange-text">Futebol</h4>
+      </div>
+      <div class="row center dividor-horizontal">
+        <img class="img-modal" src="css/assets/animation/preguica1.svg" alt="" />
+      </div>
+      <div class="row dividor-horizontal">
+        <div class="col s6">
+          <img class="mini-icon" src="css/assets/amigosicon_vp.svg">
+          <p class="data-single"><span class="highlight-data">0</span>/0</p>
+        </div>
+        <div class="col s6">
+          <img class="mini-icon" src="css/assets/timeicon.svg">
+          <p class="data-single"><span class="highlight-data">0</span> dias restantes</p>
+        </div>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Descrição</h5>
+        <p>
+          Pule corda com seus amigos até atingir as metas abaixo.
+        </p>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Pontos de diversão</h5>
+        <div class="progress horizontal">
+          <div class="determinate orange" style="width: 50%"></div>
+       </div>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Amigos</h5>
+        <img class="circle amigos-modal" src="images/user1.png" >
+        <img class="circle amigos-modal" src="images/user2.png" >
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Desistir</a>
+    </div>
+  </div>
+<!-- fim modal futebol-->
+
+<!--  modal corrida -->
+<div id="modal_corrida" class="modal">
+  <div class="icon_modal"><img src="css/assets/guepardoicon.svg" alt="" /></div>
+    <div class="modal-content">
+      <div class="row center">
+         <h4 class="title-modal purple-text">Corrida</h4>
+      </div>
+      <div class="row center dividor-horizontal">
+        <img class="img-modal" src="css/assets/animation/preguica1.svg" alt="" />
+      </div>
+      <div class="row dividor-horizontal">
+        <div class="col s6">
+          <img class="mini-icon" src="css/assets/amigosicon_vp.svg">
+          <p class="data-single"><span class="highlight-data">0</span>/0</p>
+        </div>
+        <div class="col s6">
+          <img class="mini-icon" src="css/assets/timeicon.svg">
+          <p class="data-single"><span class="highlight-data">0</span> dias restantes</p>
+        </div>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Descrição</h5>
+        <p>
+          Pule corda com seus amigos até atingir as metas abaixo.
+        </p>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Pontos de diversão</h5>
+        <div class="progress horizontal">
+          <div class="determinate purple" style="width: 50%"></div>
+       </div>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Amigos</h5>
+        <img class="circle amigos-modal" src="images/user1.png" >
+        <img class="circle amigos-modal" src="images/user2.png" >
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Desistir</a>
+    </div>
+  </div>
+<!-- fim modal corrida-->
+
+
+<!--  modalcaminhada -->
+<div id="modal_caminhada" class="modal">
+  <div class="icon_modal"><img src="css/assets/guepardoicon.svg" alt="" /></div>
+    <div class="modal-content">
+      <div class="row center">
+         <h4 class="title-modal purple-text">Caminhada</h4>
+      </div>
+      <div class="row center dividor-horizontal">
+        <img class="img-modal" src="css/assets/animation/preguica1.svg" alt="" />
+      </div>
+      <div class="row dividor-horizontal">
+        <div class="col s6">
+          <img class="mini-icon" src="css/assets/amigosicon_vp.svg">
+          <p class="data-single"><span class="highlight-data">0</span>/0</p>
+        </div>
+        <div class="col s6">
+          <img class="mini-icon" src="css/assets/timeicon.svg">
+          <p class="data-single"><span class="highlight-data">0</span> dias restantes</p>
+        </div>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Descrição</h5>
+        <p>
+          Pule corda com seus amigos até atingir as metas abaixo.
+        </p>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Pontos de diversão</h5>
+        <div class="progress horizontal">
+          <div class="determinate purple" style="width: 50%"></div>
+       </div>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5>Amigos</h5>
+        <img class="circle amigos-modal" src="images/user1.png" >
+        <img class="circle amigos-modal" src="images/user2.png" >
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
+      <a href="#!" id="btn_caminhada" class=" modal-action modal-close waves-effect waves-green btn-flat ativar">Aceitar</a>
+    </div>
+  </div>
+<!-- fim modal caminhada-->
+
 <script src='/js/desafios.js'> </script>
 <script>
      $(document).ready(function(){

@@ -63,8 +63,8 @@ $('#registerNext').click(function(){
         };
 
         $.post( "/move/register", u, function( data ) {
+          $('#sucesso').openModal();
 
-          window.location.replace('index.html');
           //$('html').empty();
           //$('html').load('index.html');
           $('body').removeClass('paternpurple');
@@ -74,4 +74,7 @@ $('#registerNext').click(function(){
     }
   }
 
+});
+$('#loginapp').click(function(){
+  window.location.replace('index.html');
 });

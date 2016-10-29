@@ -18,7 +18,7 @@ $('#loginButton').click(function(){
       $('#myMainDiv').load('minha_area.html');
     })
     .fail(function(){
-      alert("fail");
+      $('#errologin').openModal();
     });
 
   // $('#myMainDiv').empty();

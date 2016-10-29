@@ -57,10 +57,11 @@ $.post( "/move/user", user, function(res){
 
   $('#minhaarea_btn').click(function(){
     $('#main-intern-div').empty();
-    $('#main-intern-div').load('desafios_library/desafio_1.html');
+    $('#main-intern-div').load('desafios_library/des_corrida.html');
   });
 
   $('#logout_btn').click(function(){
+    window.location.replace('index.html');
   });
 
 
