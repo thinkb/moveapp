@@ -1,4 +1,19 @@
 var user;
+var cook = 1;
+
+$(document).ready(function(){
+  if(cook == 1){
+    $('#myMainDiv').load('tutorial.html');
+    $('body').removeClass('bgblue');
+    $('body').addClass('bgwrite');
+  }
+  else {
+    if(cook == 2){
+    $('#myMainDiv').load('login_user.html');
+    }
+  }
+});
+
 
 $('#beginRegister').click(function(){
   $('#myMainDiv').empty();
@@ -14,7 +29,7 @@ $('#loginButton').click(function(){
 
   $.post( "/move/login", user)
     .done(function(){
-      $('body').removeClass('paternpurple');
+      $('body').removeClass('bgblue');
       $('#myMainDiv').load('minha_area.html');
     })
     .fail(function(){

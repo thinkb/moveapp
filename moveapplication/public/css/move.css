@@ -17,7 +17,7 @@ body {
     background-color: #f4f5f6;
 }
 
-.paternpurple {
+.paternblue {
     background-image:url(assets/pattern-blue.png);
 }
 
@@ -310,6 +310,15 @@ a.btn_sair {
 
 .bgpurple{
   background-image:url(assets/pattern-purple.png);
+}
+
+
+.bgwrite{
+  background-image:url(assets/pattern-write.png);
+}
+
+.bgblue {
+    background-image:url(assets/pattern-blue.png);
 }
 
 
