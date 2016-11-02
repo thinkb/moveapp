@@ -156,6 +156,15 @@ nav .button-collapse {
         margin-top:-5%;
 }
 
+.tuto-text{
+line-height: 19px;
+
+}
+
+.tute-img{
+width: 75% !important;
+}
+
 .user_name{
     float: right;
     margin-top: 17%;

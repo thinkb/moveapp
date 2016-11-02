@@ -2,7 +2,7 @@ $('#backButton').click(function(){
 
   if($('#registerDiv1').css('display') != 'none') {
       $('#myMainDiv').empty();
-      $('#myMainDiv').load('index.html');
+      $('#myMainDiv').load('login_user.html');
   } else {
     if($('#registerDiv2').css('display') != 'none'){
       $('#registerDiv1').show();
@@ -76,5 +76,6 @@ $('#registerNext').click(function(){
 
 });
 $('#loginapp').click(function(){
-  window.location.replace('index.html');
+  $('#myMainDiv').empty();
+  $('#myMainDiv').load('login_user.html');
 });
