@@ -63,7 +63,13 @@ $('#registerNext').click(function(){
           sport: $('#sport').val(),
           sloth: $('#sloth').val(),
           points: "0",
-          level: "0"
+          level: "0",
+          bambole: 1,
+          basquete: 1,
+          caminhada: 1,
+          corrida: 1,
+          futebol: 1,
+          pular:1
         };
 
         $.post( "/move/register", u, function( data ) {

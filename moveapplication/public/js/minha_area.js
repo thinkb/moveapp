@@ -55,8 +55,6 @@ $.post( "/move/user", user, function(res){
   });
 
 
-
-
   $('#conquistas-pag').click(function(){
     $('#main-intern-div').empty();
     $('#main-intern-div').load('conquistas.html');
@@ -83,7 +81,7 @@ $.post( "/move/user", user, function(res){
     value: 0.75,
     size: 250,
     fill: {
-      gradient: ["#f0ce17", "#ffa200"]
+    gradient: ["#f0ce17", "#ffa200"]
     }
   });
 
@@ -99,5 +97,67 @@ $.post( "/move/user", user, function(res){
   $('.user_name').text(user.name);
   $('#nivel').text(user.level);
   $('#pontos').text(user.points);
+  $('#nivel2').text(user.level);
+  $('#pontos2').text(user.points);
+
+  var nivelbar = user.level;
+
+  //niveluser
+  if (nivelbar == -1){
+      $('#dorminhoco').addClass('active-status');
+      $( '#barlevel' ).css( 'width', '10%' );
+      $('#barlevel').removeClass('greenv');
+      $('#barlevel').removeClass('blue');
+      $('#barlevel').addClass('pink');
+  }
+
+  if (nivelbar == 0){
+      $('#preguica').addClass('active-status');
+      $( '#barlevel' ).css( 'width', '24%' );
+      $('#barlevel').removeClass('greenv');
+      $('#barlevel').removeClass('blue');
+      $('#barlevel').addClass('pink');
+  }
+
+  if (nivelbar == 1){
+      $('#novato').addClass('active-status');
+      $('#barlevel').removeClass('pink');
+      $('#barlevel').removeClass('greenv');
+      $('#barlevel').addClass('blue');
+  }
+
+  if (nivelbar == 2){
+      $('#ativo').addClass('active-status');
+      $( '#barlevel' ).css( 'width', '54%' );
+      $('#barlevel').removeClass('pink');
+      $('#barlevel').removeClass('greenv');
+      $('#barlevel').addClass('blue');
+
+  }
+
+  if (nivelbar == 3){
+      $('#atleta').addClass('active-status');
+      $( '#barlevel' ).css( 'width', '70%' );
+      $('#barlevel').removeClass('pink');
+      $('#barlevel').removeClass('greenv');
+      $('#barlevel').addClass('blue');
+
+  }
+
+  if (nivelbar == 4){
+      $('#medalhista').addClass('active-status');
+      $( '#barlevel' ).css( 'width', '84%' );
+      $('#barlevel').removeClass('pink');
+      $('#barlevel').removeClass('blue');
+      $('#barlevel').addClass('greenv');
+  }
+
+  if (nivelbar == 5){
+      $('#mestre').addClass('active-status');
+      $( '#barlevel' ).css( 'width', '100%' );
+      $('#barlevel').removeClass('pink');
+      $('#barlevel').removeClass('blue');
+      $('#barlevel').addClass('greenv');
+  }
 
 });

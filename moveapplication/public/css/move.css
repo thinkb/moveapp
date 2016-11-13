@@ -114,6 +114,8 @@ nav .button-collapse {
   border-radius: 10px;
 }
 
+
+
 .feedback{
   color:#D80F44;
   font-family: "Mikado Regular";
@@ -375,7 +377,7 @@ a.btn_sair {
   font-family: 'Mikado Regular';
   text-align: center;
   color: #0e5f72 !important;
-  margin-top: -15px;
+  margin-top: -11px;
   font-size: 1.3em;
 }
 .textmenu{

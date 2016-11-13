@@ -17,7 +17,14 @@ var debugUser = {
   sport: "comer",
   sloth: "Preguicinha",
   points: 30,
-  level: 2
+  level: 2,
+  bambole: 1,
+  basquete: 1,
+  caminhada: 1,
+  corrida: 1,
+  futebol: 1,
+  pular:1
+
 };
 
 var debugUser1 = {
@@ -30,7 +37,13 @@ var debugUser1 = {
   sport: "basquete",
   sloth: "meg",
   points: 30,
-  level: 2
+  level: 2,
+  bambole: 2,
+  basquete: 1,
+  caminhada: 1,
+  corrida: 2,
+  futebol: 1,
+  pular:1
 };
 
 users.insert(debugUser);

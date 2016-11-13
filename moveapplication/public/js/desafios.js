@@ -1,3 +1,6 @@
+$.post( "/move/user", user, function(res){
+    user = res;
+
   var num = 0;
 $('#btn_caminhada').click(function(){
   if (num == 0) {
@@ -16,4 +19,9 @@ $('#btn_caminhada').click(function(){
     $('#btn_caminhada').removeClass('desativar');
     num--;
   }
+});
+
+$('#teste').text(user.sloth);
+
+
 });
