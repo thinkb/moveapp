@@ -15,22 +15,36 @@ var debugUser = {
   nick: "fabiano",
   pwd: "fabs",
   sport: "comer",
-  sloth: "Preguicinha"
+  sloth: "Preguicinha",
+  points: 30,
+  level: 2
 };
 
 var debugUser1 = {
-  name: "dsfasfd",
-  last: "asdfsdfsd",
-  age: 25,
-  email: "asdfasdf@gmail",
-  nick: "asdfadsfas",
-  pwd: "fabs",
-  sport: "asdfasdf",
-  sloth: "asdfasdf"
+  name: "Beatriz",
+  last: "Andrade",
+  age: 12,
+  email: "beatriz@gmail.com",
+  nick: "bia",
+  pwd: "bia123",
+  sport: "basquete",
+  sloth: "meg",
+  points: 30,
+  level: 2
 };
 
 users.insert(debugUser);
 users.insert(debugUser1);
+
+var pais = db.addCollection('pais');
+var paisuser1 = {
+  namepai: "dsfasfd",
+  lastpai: "asdfsdfsd",
+  emailpai: "asdfasdf@gmail",
+  pwdpai: "fabs"
+};
+
+users.insert(paisuser1);
 
 // var f = users.find({nick: 'fabiano'});
 // if(f.length!=0){

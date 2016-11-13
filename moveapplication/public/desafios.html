@@ -13,7 +13,7 @@
 <!-- fim TAB GERAL  -->
      <div id="geral" class="col s12">
   <!-- listagem de desafio ativo -->
-       <div class="list-desafio lebre">
+       <div class="list-desafio lebre noneview">
          <div class="row semmargin">
            <div class="col s2"> <img src="css/assets/lebre.svg">   </div>
            <div class="col s10"><h3 class="title-desafio">Pular corda</h3></div>
@@ -135,7 +135,7 @@
 <!-- fim listagem de desafio ativo -->
 
 <!-- listagem de desafio ativo -->
-     <div  id="des_corrida_ativo"  class="list-desafio guepardo">
+     <div  id="des_corrida_ativo"  class="list-desafio guepardo noneview">
        <div class="row semmargin">
          <div class="col s2"> <img src="css/assets/guepardo.svg">   </div>
          <div class="col s10"><h3 class="title-desafio">Corrida</h3></div>
@@ -156,8 +156,91 @@
         </div>
      </div>
    </div>
-<!-- fim TAB GERAL  -->
-</div>
+
+                           <!-- desafios por ordem  -->
+<!-- listagem de desafio desativo -->
+     <div  id="des_basquete_desativo" class="list-desafio cachorro">
+       <div class="row semmargin">
+         <div class="col s2"> <img src="css/assets/cachorroicon.svg">   </div>
+         <div class="col s8"><h3 class="title-desafio">Acerte as Cestas</h3></div>
+         <div class="col s2">
+           <a class="modal-trigger" href="#modal_basquete">
+           <img src="css/assets/seta_orange.svg">
+           </a>
+         </div>
+       </div>
+     </div>
+<!-- fim listagem de desafio desativo -->
+ <div  id="des_bambole_desativo" class="list-desafio lebre">
+   <div class="row semmargin">
+     <div class="col s2"> <img src="css/assets/lebreicon.svg">   </div>
+     <div class="col s8"><h3 class="title-desafio">Bambolê</h3></div>
+     <div class="col s2">
+       <a class="modal-trigger" href="#modal_bambole">
+       <img src="css/assets/seta_pink.svg">
+       </a>
+     </div>
+   </div>
+ </div>
+ <!-- listagem de desafio desativo -->
+     <div id="des_caminhada_desativo" class="list-desafio guepardo">
+       <div class="row semmargin">
+         <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
+         <div class="col s8"><h3 class="title-desafio">Caminhada</h3></div>
+         <div class="col s2">
+           <a class="modal-trigger" href="#modal_caminhada">
+           <img src="css/assets/seta_purple.svg">
+           </a>
+         </div>
+       </div>
+     </div>
+<!-- fim listagem de desafio desativo -->
+<!-- listagem de desafio desativo -->
+     <div id="des_corrida_desativo" class="list-desafio guepardo">
+       <div class="row semmargin">
+         <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
+         <div class="col s8"><h3 class="title-desafio">Corrida</h3></div>
+         <div class="col s2">
+           <a class="modal-trigger" href="#modal_corrida">
+           <img src="css/assets/seta_purple.svg">
+         </a>
+         </div>
+       </div>
+     </div>
+
+          <div  id="des_futebol_desativo" class="list-desafio cachorro">
+            <div class="row semmargin">
+              <div class="col s2"> <img src="css/assets/cachorroicon.svg"></div>
+              <div class="col s8"><h3 class="title-desafio">Futebol</h3></div>
+              <div class="col s2">
+                <a class="modal-trigger" href="#modal_futebol">
+                <img src="css/assets/seta_orange.svg">
+                </a>
+              </div>
+            </div>
+         </div>
+     <!-- fim listagem de desafio desativo -->
+
+     <div id="des_pularcorda_desativo" class="list-desafio lebre">
+       <div class="row semmargin">
+         <div class="col s2"> <img src="css/assets/lebreicon.svg"></div>
+         <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
+         <div class="col s2">
+           <a class="modal-trigger" href="#modal_pularcorda">
+           <img src="css/assets/seta_pink.svg">
+           </a>
+         </div>
+       </div>
+     </div>
+    <!-- fim listagem de desafio desativo -->
+
+
+
+
+
+<!-- fim tab geral --></div>
+
+
 <!-- TAB GUEPARDO  -->
      <div id="guepardo" class="col s12">
        <!-- listagem de desafio desativo -->
@@ -174,7 +257,7 @@
             </div>
        <!-- fim listagem de desafio desativo -->
        <!-- listagem de desafio desativo -->
-            <div id="des_corrida_desativo" class="list-desafio guepardo noneview">
+            <div id="des_corrida_desativo" class="list-desafio guepardo">
               <div class="row semmargin">
                 <div class="col s2"> <img src="css/assets/guepardoicon.svg">   </div>
                 <div class="col s8"><h3 class="title-desafio">Corrida</h3></div>
@@ -191,7 +274,7 @@
 
 <!-- TAB LEBRE  -->
      <div id="lebre" class="col s12">
-                   <div id="des_pularcorda_desativo" class="list-desafio lebre noneview">
+                   <div id="des_pularcorda_desativo" class="list-desafio lebre">
                      <div class="row semmargin">
                        <div class="col s2"> <img src="css/assets/lebreicon.svg"></div>
                        <div class="col s8"><h3 class="title-desafio">Pular corda</h3></div>
@@ -253,7 +336,14 @@
 
 <!-- TAB Desafio amigos -->
      <div id="desafioamigos" class="col s12">
-     <div class="list-desafio lebre">
+       <div class="list-desafio lebre noneview">
+        <div class="row semmargin">
+           <div class="col s12">
+          <p> Seu amigo <span class="cachorro"> Beatriz </span> te desafiou em: </p>
+        </div>
+       </div>
+     </div>
+     <div class="list-desafio lebre noneview">
       <div class="row semmargin">
          <div class="col s12">
         <p> Seu amigo <span class="cachorro"> Beatriz </span> te desafiou em: </p>
@@ -271,7 +361,7 @@
      </div>
 <!-- fim listagem de desafio desativo -->
 <!-- listagem de desafio desativo -->
-     <div class="list-desafio guepardo">
+     <div class="list-desafio guepardo noneview">
        <div class="row semmargin">
           <div class="col s12">
          <p> Seu amigo <span class="guepardo"> Bruna</span> te desafiou em: </p>

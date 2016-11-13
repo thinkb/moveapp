@@ -27,8 +27,8 @@ $('#backButton').click(function(){
   }
 });
 
-
 $('#registerNext').click(function(){
+
   if($('#registerDiv1').css('display') != 'none') {
     $('#registerDiv1').hide();
     $('#registerDiv2').show();
@@ -37,8 +37,6 @@ $('#registerNext').click(function(){
     $('#step2').removeClass('wizard-off');
     $('#step1').addClass('wizard-complete');
     $('#step2').addClass('wizard-on');
-    formt++;
-    $("#registerNext").addClass('disabled');
   } else {
     if($('#registerDiv2').css('display') != 'none'){
       $('#registerDiv1').hide();
@@ -49,7 +47,6 @@ $('#registerNext').click(function(){
       $('#step3').removeClass('wizard-off');
       $('#step2').addClass('wizard-complete');
       $('#step3').addClass('wizard-on');
-        $("#registerNext").addClass('disabled');
     } else {
       if ($('#registerDiv3').css('display') != 'none') {
 
@@ -61,9 +58,8 @@ $('#registerNext').click(function(){
           nick: $('#nick').val(),
           pwd: $('#pwd').val(),
           sport: $('#sport').val(),
-          sloth: $('#sloth').val(),
-          points: "0",
-          level: "0"
+          sloth: $('#sloth').val()
+
         };
 
         $.post( "/move/register", u, function( data ) {
@@ -77,21 +73,19 @@ $('#registerNext').click(function(){
       }
     }
   }
-});
 
+});
 
 $('#loginapp').click(function(){
   $('#myMainDiv').empty();
   $('#myMainDiv').load('login_user.html');
 });
 
-var formt = 0;
 
-if(formt == 0) {
-  $("#registerNext").addClass('disabled');
-  formt++;
-}
-
+    var sEmail	= $("#email").val();
+		// filtros
+		var emailFilter=/^.+@.+\..{2,}$/;
+		var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/
 
 
 $(document).ready(function(){
@@ -102,7 +96,7 @@ $(document).ready(function(){
           $("#feedname").text("Pode nos dizer o seu nome?");
          }
      else{
-       $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
+       $(this).css({"border-color" : "#2FAED1","color" : "#2FAED1" });
        $("#feedname").empty();
      }
     });
@@ -114,7 +108,7 @@ $(document).ready(function(){
              $("#feedlast").text("Qual o seu sobrenome mesmo?");
          }
      else{
-       $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
+       $(this).css({"border-color" : "#2FAED1","color" : "#2FAED1" });
        $("#feedlast").empty();
      }
     });
@@ -124,10 +118,9 @@ $(document).ready(function(){
          {
              $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
              $("#feedage").text("Ops... Qual sua idade?");
-
          }
      else{
-       $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
+       $(this).css({"border-color" : "#2FAED1","color" : "#2FAED1" });
        $("#feedage").empty();
      }
     });
@@ -136,88 +129,47 @@ $(document).ready(function(){
      if($(this).val() == "")
          {
              $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
-             $("#feedemail").text("Por favor informe o seu e-mail");
-
+             $("#feedemail").text("Porfavor informe o seu e-mail");
          }
      else{
-       $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
-       $("#feedemail").empty();
-       $("#registerNext").removeClass('disabled');
+       $(this).css({"border-color" : "#2FAED1","color" : "#2FAED1" });
+       $("#feedage").empty();
      }
+
+     if(!(emailFilter.test(sEmail))||sEmail.match(illegalChars)){
+       $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
+       $("#feedemail").text("Insira um e-mail válido.");
+		}
+    else {
+      $(this).css({"border-color" : "#2FAED1","color" : "#2FAED1" });
+      $("#feedemail").empty();
+		}
+
 
     });
 
-
-    $("#nick").blur(function(){
+    $("#email").blur(function(){
      if($(this).val() == "")
          {
-             $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
-             $("#feednick").text("Escolha um apelido único.");
-
+           $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
+           $("#feedemail").text("Por favor informe o seu e-mail");
          }
      else{
-       $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
-       $("#feednick").empty();
+       $(this).css({"border-color" : "#2FAED1","color" : "#2FAED1" });
+       $("#feedage").empty();
      }
 
-    });
+     if(!(emailFilter.test(sEmail))||sEmail.match(illegalChars)){
+       $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
+       $("#feedemail").text("Insira um e-mail válido.");
+    }
+    else {
+      $(this).css({"border-color" : "#2FAED1","color" : "#2FAED1" });
+      $("#feedemail").empty();
+    }
 
-    $("#pwd").blur(function(){
-     if($(this).val() == "")
-         {
-             $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
-             $("#feedpwd").text("Crie um senha forte.");
-
-         }
-     else{
-       $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
-       $("#feedpwd").empty();
-     }
 
     });
-
-    $("#pwd").blur(function(){
-     if($(this).val() == "")
-         {
-             $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
-             $("#feedpwd").text("Crie um senha forte.");
-
-         }
-     else{
-       $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
-       $("#feedpwd").empty();
-     }
-         });
-
-     $("#pwd2").blur(function(){
-      if($(this).val() == "")
-          {
-              $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
-              $("#feedpwd2").text("Repita aqui a sua senha");
-
-          }
-      else{
-        $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
-        $("#feedpwd2").empty();
-           $("#registerNext").removeClass('disabled');
-      }
-          });
-
-      $("#sloth").blur(function(){
-       if($(this).val() == "")
-           {
-               $(this).css({"border-color" : "#D80F44","color" : "#D80F44" });
-               $("#feedsloth").text("Eii! Não esqueça do meu nome.");
-
-           }
-       else{
-         $(this).css({"border-color" : "#C2D843","color" : "#2FAED1" });
-         $("#feedsloth").empty();
-          $("#registerNext").removeClass('disabled');
-       }
-
-    });
-
 
 
 

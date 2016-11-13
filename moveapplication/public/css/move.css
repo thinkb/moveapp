@@ -1,6 +1,5 @@
 /* Custom Stylesheet for Misfit MOVE App*/
 
-
 /**
  * This file override Materialize files so you can update
  * the core Materialize files in the future
@@ -8,10 +7,7 @@
  * Made By Think B & Vini-C
  */
 
-
 /* General */
-
-
 
 body {
     background-color: #f4f5f6;
@@ -116,6 +112,23 @@ nav .button-collapse {
 .logoadm{
   width: 50%;
   border-radius: 10px;
+}
+
+.feedback{
+  color:#D80F44;
+  font-family: "Mikado Regular";
+}
+
+.textcadastro{
+  margin-top: 15px;
+  margin-bottom: 5px;
+ margin-left: 10px;
+}
+
+.titulodesativo{
+  color:#636363;
+  margin-top: 10%;
+  margin-bottom: 30px;
 }
 
 .sairicon{

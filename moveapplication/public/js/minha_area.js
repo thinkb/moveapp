@@ -42,6 +42,20 @@ $.post( "/move/user", user, function(res){
 
   });
 
+  $('#choosechalenge').click(function(){
+    $('#main-intern-div').empty();
+    $('#main-intern-div').load('desafios.html');
+    $('#menuitem1').removeClass('menu-on');
+    $('#menuitem3').removeClass('menu-on');
+    $('#menuitem2').addClass('menu-on');
+    $("#desafios-pag").html("<img id='iconmenu2' class='icon_toolbar center' src='css/assets/desafioicon_yellow.svg'> <p class='textmenu'>Desafios</p>");
+    $("#amigos-pag").html("<img id='iconmenu1' class='icon_toolbar center' src='css/assets/amigosicon_blue.svg'> <p class='toolbar_text center'>Amigos</p>");
+    $("#conquistas-pag").html("<img id='iconmenu3' class='icon_toolbar center' src='css/assets/conquistasicon_blue.svg'> <p class='toolbar_text center'>Conquistas</p>");
+
+  });
+
+
+
 
   $('#conquistas-pag').click(function(){
     $('#main-intern-div').empty();
@@ -83,5 +97,7 @@ $.post( "/move/user", user, function(res){
 
   //console.log(user);
   $('.user_name').text(user.name);
+  $('#nivel').text(user.level);
+  $('#pontos').text(user.points);
 
 });
