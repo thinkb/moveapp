@@ -141,7 +141,6 @@ $.post( "/move/user", user, function(res){
       $('#barlevel').removeClass('pink');
       $('#barlevel').removeClass('greenv');
       $('#barlevel').addClass('blue');
-
   }
 
   if (nivelbar == 4){
@@ -159,5 +158,144 @@ $.post( "/move/user", user, function(res){
       $('#barlevel').removeClass('blue');
       $('#barlevel').addClass('greenv');
   }
+
+// logica desafios
+var determinante = 0;
+
+
+var bambolev = user.bambole;
+var basquetev = user.basquete;
+var caminhadav = user.caminhada;
+var corridav = user.corrida;
+var futebolv = user.futebol;
+var pularv = user.pular;
+
+
+
+
+$(document).ready(function(){
+
+if (bambolev == 2){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_bambole.html');
+} else{
+
+  if (corridav == 2){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_corrida.html');
+}
+else{
+  if (basquetev == 2){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_basquete.html');
+}
+
+else{
+  if (caminhadav == 2){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_caminhada.html');
+}
+
+else{
+  if (futebolv == 2){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_futebol.html');
+}
+
+else{
+  if (pularv == 2){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_pularcorda.html');
+}
+
+}}}}}});
+
+$(document).ready(function(){
+if (bambolev == 1){
+  $('#bamboleview').hide();
+}
+if (bambolev == 2){
+  $('#bamboleview').show();
+}
+
+if (basquetev == 1){
+  $('#basqueteview').hide();
+}
+if (basquetev == 2){
+  $('#basqueteview').show();
+}
+
+if (caminhadav == 1){
+  $('#caminhadaview').hide();
+}
+if (caminhadav == 2){
+  $('#caminhadaview').show();
+}
+
+if (futebolv == 1){
+  $('#futebolview').hide();
+}
+if (futebolv == 2){
+  $('#futebolview').show();
+}
+
+if (corridav == 1){
+  $('#corridaview').hide();
+}
+if (corridav == 2){
+  $('#corridaview').show();
+}
+
+
+if (pularv == 1){
+  $('#pularview').hide();
+}
+if (pularv == 2){
+  $('#pularview').show();
+}
+
+});
+
+$('#corridaview').click(function(){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_corrida.html');
+  $('#modal1').modal('close');
+
+});
+
+$('#pularview').click(function(){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_pularcorda.html');
+  $('#modal1').modal('close');
+
+});
+
+$('#futebolview').click(function(){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_futebol.html');
+  $('#modal1').modal('close');
+
+});
+
+$('#caminhadaview').click(function(){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_caminhada.html');
+  $('#modal1').modal('close');
+
+});
+
+$('#basqueteview').click(function(){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_basquete.html');
+  $('#modal1').modal('close');
+
+});
+
+$('#bamboleview').click(function(){
+  $('#main-intern-div').empty();
+  $('#main-intern-div').load('desafios_library/des_bambole.html');
+  $('#modal1').modal('close');
+
+});
 
 });

@@ -65,9 +65,12 @@
   <div class="modal-content">
     <p class="semmargin escolherdesafio">Escolha um desafio já aceito para torna-lo ativo</p>
     <div class="collection">
-      <a href="#!" class="collection-item pink-text">Pular Corda<span class="badge"><img class="icon_category" src="css/assets/lebre.svg"></span></a>
-      <a href="#!" class="collection-item purple-text">Caminhada <span class="badge">  <img class="icon_category" src="css/assets/guepardo.svg"></span></a>
-      <a href="#!" class="collection-item orange-text">Futebol<span class="badge">  <img class="icon_category" src="css/assets/cachorro.svg"></span></a>
+      <a href="#!" id="basqueteview" class="collection-item orange-text">Acerte as cestas<span class="badge"><img class="icon_category" src="css/assets/cachorro.svg"></span></a>
+      <a href="#!" id="bamboleview" class="collection-item pink-text">Bambolê<span class="badge"><img class="icon_category" src="css/assets/lebre.svg"></span></a>
+      <a href="#!" id="caminhadaview" class="collection-item purple-text">Caminhada <span class="badge">  <img class="icon_category" src="css/assets/guepardo.svg"></span></a>
+      <a href="#!" id="corridaview" class="collection-item purple-text">Corrida<span class="badge"><img class="icon_category" src="css/assets/guepardo.svg"></span></a>
+      <a href="#!" id="futebolview" class="collection-item orange-text">Futebol<span class="badge">  <img class="icon_category" src="css/assets/cachorro.svg"></span></a>
+      <a href="#!" id="pularview" class="collection-item pink-text">Pular Corda<span class="badge"><img class="icon_category" src="css/assets/lebre.svg"></span></a>
   </div>
   </div>
   <div class="modal-footer">
@@ -102,6 +105,7 @@
     <!-- /MENU -->
     <!--  Scripts-->
 <script src='/js/minha_area.js'> </script>
+
 <script>
 window.onload = function onLoad() {
     var circle = new ProgressBar.Circle('#progress', {
