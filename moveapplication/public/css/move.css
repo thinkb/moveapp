@@ -569,6 +569,15 @@ h2 {
   color:#5e5ca7 !important;
 }
 
+.alerttext{
+  color: #2ba2c2;
+  font-size: 1.5em;
+}
+
+.alertimg{
+width: 50%;
+}
+
 .cachorro{
   color:#f79d1f !important;
 }
