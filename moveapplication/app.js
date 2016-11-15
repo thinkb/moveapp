@@ -16,15 +16,22 @@ var debugUser = {
   pwd: "fabs",
   sport: "comer",
   sloth: "Preguicinha",
-  points: 30,
-  level: 2,
+  points: 0,
+  level: 1,
   bambole: 1,
   basquete: 1,
   caminhada: 1,
   corrida: 1,
   futebol: 1,
-  pular:1
-
+  pular: 1,
+  s1: 1,
+  s2: 1,
+  s3: 1,
+  s4: 1,
+  s5: 1,
+  s6: 1,
+  s7: 1,
+  s8: 1
 };
 
 var debugUser1 = {
@@ -38,12 +45,20 @@ var debugUser1 = {
   sloth: "meg",
   points: 30,
   level: 2,
-  bambole: 2,
+  bambole: 1,
   basquete: 1,
   caminhada: 1,
   corrida: 2,
-  futebol: 1,
-  pular:1
+  futebol: 2,
+  pular:1,
+  s1: 1,
+  s2: 1,
+  s3: 2,
+  s4: 1,
+  s5: 1,
+  s6: 2,
+  s7: 1,
+  s8: 1
 };
 
 users.insert(debugUser);
@@ -109,6 +124,21 @@ router.route('/user')
       res.json(findResults[0]);
     });
 
+
+    router.route('/desafios')
+      .get(function(req, res){
+        //res.json(db);
+      })
+      .post(function(req, res) {
+
+        var findResults = users.find({nick: req.body.nick, pwd: req.body.pwd});
+
+        if(findResults[0].nick == req.body.nick && findResults[0].pwd == req.body.pwd){
+          res.sendStatus(200);
+        } else {
+          res.sendStatus(500);
+        }
+      });
 
 app.use('/move', router);
 app.listen(appEnv.port, '0.0.0.0', function() {

@@ -15,13 +15,13 @@
           <div class="col center s4 divisor2">
               <div class="friends_monitor single">
                   <img class="mini-icon" src="css/assets/amigosicon_vp.svg">
-                  <p class="data-single"><span class="highlight-data pink-text">0</span>/0</p>
+                  <p class="data-single"><span class="highlight-data pink-text">1</span>/1</p>
               </div>
           </div>
           <div class="col center s4 divisor2">
               <div class="time_monitor single">
                   <img class="mini-icon" src="css/assets/timeicon.svg">
-                  <p class="data-single"><span class="highlight-data pink-text">0</span> dias</p>
+                  <p class="data-single"><span class="highlight-data pink-text">5</span> dias</p>
               </div>
           </div>
           <div class="col center s4 ">
@@ -44,6 +44,15 @@
       </div>
   </div>
 </div>
+<script>
+  $('#circle').circleProgress({
+    value: 0.75,
+    size: 250,
+    fill: {
+      gradient: ["red", "orange"]
+    }
+  });
+</script>
 
 <script>
 $(document).ready(function(){

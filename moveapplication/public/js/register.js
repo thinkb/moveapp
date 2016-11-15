@@ -62,14 +62,22 @@ $('#registerNext').click(function(){
           pwd: $('#pwd').val(),
           sport: $('#sport').val(),
           sloth: $('#sloth').val(),
-          points: "0",
-          level: "0",
+          points: 0,
+          level: 1,
           bambole: 1,
           basquete: 1,
           caminhada: 1,
           corrida: 1,
           futebol: 1,
-          pular:1
+          pular: 1,
+          s1: 1,
+          s2: 1,
+          s3: 1,
+          s4: 1,
+          s5: 1,
+          s6: 1,
+          s7: 1,
+          s8: 1
         };
 
         $.post( "/move/register", u, function( data ) {

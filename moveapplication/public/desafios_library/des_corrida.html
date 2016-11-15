@@ -24,7 +24,7 @@
           </div>
           <div class="col center s4 ">
               <div class="pds_monitor single">
-                  <p class="data-single"><span class="highlight-data">35</span> de 50 pts</p>
+                  <p class="data-single"><span class="highlight-data">0</span> de 0 pts</p>
               </div>
           </div>
         </div>
@@ -43,19 +43,15 @@
   </div>
 </div>
 </div>
-
 <script>
-window.onload = function onLoad() {
-    var circle = new ProgressBar.Circle('#progress', {
-        color: '#FCB03C',
-        duration: 3000,
-        easing: 'easeInOut'
-    });
-
-    circle.animate(1);
-};
+  $('#circle').circleProgress({
+    value: 0.75,
+    size: 250,
+    fill: {
+      gradient: ["red", "orange"]
+    }
+  });
 </script>
-
 <script>
 $(document).ready(function(){
    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
