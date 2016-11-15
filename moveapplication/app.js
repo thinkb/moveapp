@@ -31,7 +31,13 @@ var debugUser = {
   s5: 1,
   s6: 1,
   s7: 1,
-  s8: 1
+  s8: 1,
+  corridavalor: 1,
+  cominhadavalor: 1,
+  bambolevalor: 1,
+  pularvalor: 1,
+  basquetevalor: 1,
+  futebolvalor: 1
 };
 
 var debugUser1 = {
@@ -58,7 +64,13 @@ var debugUser1 = {
   s5: 1,
   s6: 2,
   s7: 1,
-  s8: 1
+  s8: 1,
+  corridavalor: 75,
+  cominhadavalor: 1,
+  bambolevalor: 1,
+  pularvalor: 1,
+  basquetevalor: 1,
+  futebolvalor: 20
 };
 
 users.insert(debugUser);

@@ -1,4 +1,4 @@
-<div class="section content_app">
+<div class="section content_app animated slideInUp">
   <div class="content">
       <div class="row title_challenge">
         <div class="col s2">
@@ -44,13 +44,22 @@
 </div>
 </div>
 <script>
+$.post( "/move/user", user, function(res){
+  user = res;
+
+  var valor = user.corridavalor;
+
+  var newvalor = valor/100;
+
   $('#circle').circleProgress({
-    value: 0.75,
+    value: newvalor,
     size: 250,
     fill: {
-      gradient: ["red", "orange"]
+    gradient: ["#F1CE13", "#F89E1C"]
     }
   });
+
+});
 </script>
 <script>
 $(document).ready(function(){
