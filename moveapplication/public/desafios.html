@@ -15,18 +15,18 @@
   <!-- listagem de desafio ativo -->
        <div id="des_pular_ativo" class="list-desafio lebre">
          <div class="row semmargin">
-           <div class="col s2"> <img src="css/assets/lebre.svg">   </div>
+           <div class="col s2"><img src="css/assets/lebre.svg"></div>
            <div class="col s10"><h3 class="title-desafio">Pular corda</h3></div>
          </div>
          <div class="row semmargin">
            <div class="col s12">
-               <p>Progresso <span>30</span> de 40 pontos</p>
+               <p>Progresso <span id="pularpt">0</span> de 100 pontos</p>
            </div>
          </div>
           <div class="row semmargin">
             <div class="col s10">
               <div class="progress horizontal">
-                <div class="determinate pink" style="width: 50%"></div>
+                <div id="pularbar" class="determinate pink" style="width: 1%"></div>
              </div>
             </div>
             <div class="col s2">
@@ -40,18 +40,18 @@
   <!-- listagem de desafio ativo -->
        <div id="des_bambole_ativo" class="list-desafio lebre noneview">
          <div class="row semmargin">
-           <div class="col s2"> <img src="css/assets/lebre.svg">   </div>
+           <div class="col s2"> <img src="css/assets/lebre.svg"></div>
            <div class="col s10"><h3 class="title-desafio">Bambolê</h3></div>
          </div>
          <div class="row semmargin">
            <div class="col s12">
-               <p>Progresso <span>0</span> de 20 pontos</p>
+               <p>Progresso<span id="bambolept">0</span> de 100 pontos</p>
            </div>
          </div>
           <div class="row semmargin">
             <div class="col s10">
               <div class="progress horizontal">
-                <div class="determinate pink" style="width: 1%"></div>
+                <div id="bambolebar" class="determinate pink" style="width: 1%"></div>
              </div>
             </div>
             <div class="col s2">
@@ -70,13 +70,13 @@
         </div>
         <div class="row semmargin">
           <div class="col s12">
-              <p>Progresso <span>0</span> de 100 pontos</p>
+              <p>Progresso <span id="futebolpt">0</span> de 100 pontos</p>
           </div>
         </div>
          <div class="row semmargin">
            <div class="col s10">
              <div class="progress horizontal">
-               <div class="determinate orange" style="width: 1%"></div>
+               <div id="futebolbar" class="determinate orange" style="width: 1%"></div>
             </div>
            </div>
            <div class="col s2">
@@ -94,13 +94,13 @@
        </div>
        <div class="row semmargin">
          <div class="col s12">
-             <p>Progresso <span>0</span> de 40 pontos</p>
+             <p>Progresso <span id="basquetept" >0</span> de 100 pontos</p>
          </div>
        </div>
         <div class="row semmargin">
           <div class="col s10">
             <div class="progress horizontal">
-              <div class="determinate orange" style="width:1%"></div>
+              <div id="basquetebar" class="determinate orange" style="width:1%"></div>
            </div>
           </div>
           <div class="col s2">
@@ -118,13 +118,13 @@
        </div>
        <div class="row semmargin">
          <div class="col s12">
-             <p>Progresso <span>0</span> de 60 pontos</p>
+             <p>Progresso <span id="caminhadapt">0</span> de 100 pontos</p>
          </div>
        </div>
         <div class="row semmargin">
           <div class="col s10">
             <div class="progress horizontal">
-              <div class="determinate purple" style="width: 1%"></div>
+              <div id="caminhadabar" class="determinate purple" style="width: 1%"></div>
            </div>
           </div>
           <div class="col s2">
@@ -142,13 +142,13 @@
        </div>
        <div class="row semmargin">
          <div class="col s12">
-             <p>Progresso <span>0</span> de 50 pontos</p>
+             <p>Progresso <span id="corridapt">0</span> de 100 pontos</p>
          </div>
        </div>
         <div class="row semmargin">
           <div class="col s10">
             <div class="progress horizontal">
-              <div class="determinate purple" style="width: 1%"></div>
+              <div id="corridabar" class="determinate purple" style="width: 1%"></div>
            </div>
           </div>
           <div class="col s2">
@@ -161,8 +161,8 @@
 <!-- listagem de desafio desativo -->
      <div  id="des_basquete_desativo2" class="list-desafio cachorro">
        <div class="row semmargin">
-         <div class="col s2"> <img src="css/assets/cachorroicon.svg">   </div>
-         <div class="col s8"><h3 id="teste" class="title-desafio"> Basquete</h3></div>
+         <div class="col s2"><img src="css/assets/cachorroicon.svg"></div>
+         <div class="col s8"><h3 class="title-desafio"> Basquete</h3></div>
          <div class="col s2">
            <a class="modal-trigger" href="#modal_basquete">
            <img src="css/assets/seta_orange.svg">
@@ -425,8 +425,6 @@
            <div class="determinate pink" style="width: 50%"></div>
         </div>
        </div>
-
-
      </div>
      <div class="modal-footer">
        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>

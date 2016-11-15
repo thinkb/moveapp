@@ -762,3 +762,9 @@ h5{
   margin-left: 38px;
   height: 210px;
 }
+
+#backButton{
+  display: block;
+  height: 35px;
+  width: 35px;
+}

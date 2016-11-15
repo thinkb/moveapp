@@ -13,6 +13,14 @@ $.post( "/move/user", user, function(res){
   var futebol = user.futebol;
   var pular = user.pular;
 
+  var dadobam = user.bambolevalor;
+  var dadobas= user.basquetevalor;
+  var dadocam= user.caminhadavalor;
+  var dadocor = user.corridavalor;
+  var dadofut = user.futebolvalor;
+  var dadopul = user.pularvalor;
+
+
 if (pular == 1){
   $('#des_pular_ativo').addClass('noneview');
   $('#des_pularcorda_desativo').removeClass('noneview');

@@ -26,7 +26,7 @@
           </div>
           <div class="col center s4 ">
               <div class="pds_monitor single">
-                  <p class="data-single"><span class="highlight-data pink-text">0</span> de 0 pts</p>
+                  <p class="data-single"><span class="highlight-data pink-text" id="valorbam">0</span> de 100 pts</p>
               </div>
           </div>
         </div>
@@ -60,6 +60,9 @@ $.post( "/move/user", user, function(res){
       gradient: ["#D14286", "#B50F66"]
     }
   });
+  
+  $("#valorbam").text(valor);
+
 });
 </script>
 
