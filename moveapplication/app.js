@@ -12,8 +12,8 @@ var debugUser = {
   last: "Moraes",
   age: 25,
   email: "fabs@gmail",
-  nick: "fabiano",
-  pwd: "fabs",
+  nick: "fa",
+  pwd: "fa",
   sport: "comer",
   sloth: "Preguicinha",
   points: 0,
@@ -151,6 +151,38 @@ router.route('/user')
           res.sendStatus(500);
         }
       });
+	  
+	app.get('/TesteUpdate', function(request, response) {
+		 
+		var nick = request.query.nick;
+		var desafio = request.query.desafio;
+		var ativar = request.query.ativar;
+		var userUpdate = users.find({nick: nick});
+		
+		if(userUpdate)
+		{
+			console.log("valor anterior: "+userUpdate[0][desafio]);
+			console.log(ativar);
+			if(ativar == 'true'){				
+				userUpdate[0][desafio] = 2;
+			}
+			else
+			{
+				userUpdate[0][desafio] = 1;
+			}
+			
+			console.log(userUpdate[0][desafio]);
+			users.update(userUpdate);
+		}		
+		
+		var userUpdate2 = users.find({nick: nick});
+		if(userUpdate2)
+		{
+			console.log("valor atualizado: "+userUpdate[0][desafio]);
+		}		
+		response.send();
+		
+	});
 
 app.use('/move', router);
 app.listen(appEnv.port, '0.0.0.0', function() {
