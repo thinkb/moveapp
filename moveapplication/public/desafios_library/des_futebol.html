@@ -26,7 +26,7 @@
           </div>
           <div class="col center s4 ">
               <div class="pds_monitor single">
-                  <p class="data-single"><span class="highlight-data orange-text">0</span> de 0 pts</p>
+                  <p class="data-single"><span id="valorfute" class="highlight-data orange-text">0</span> de 100 pts</p>
               </div>
           </div>
         </div>
@@ -45,13 +45,25 @@
   </div>
 </div>
 <script>
+$.post( "/move/user", user, function(res){
+
+  user = res;
+
+  var valor = user.futebolvalor;
+
+  var newvalor = valor/100;
+
   $('#circle').circleProgress({
-    value: 0.75,
+    value: newvalor,
     size: 250,
     fill: {
       gradient: ["#C2D843", "#BACC0A"]
     }
   });
+
+$("#valorfute").text(valor);
+
+});
 </script>
 <script>
 $(document).ready(function(){

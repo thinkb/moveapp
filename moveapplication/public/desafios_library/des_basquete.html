@@ -45,13 +45,20 @@
   </div>
 </div>
 <script>
+$.post( "/move/user", user, function(res){
+    user = res;
+
+    var valor = user.basquetevalor;
+    var newvalor = valor/100;
+    
   $('#circle').circleProgress({
-    value: 0.75,
+    value: newvalor,
     size: 250,
     fill: {
       gradient: ["#C2D843", "#BACC0A"]
     }
   });
+});
 </script>
 <script>
 $(document).ready(function(){
