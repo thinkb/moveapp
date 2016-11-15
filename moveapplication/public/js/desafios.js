@@ -136,4 +136,20 @@ if (futebol == 2){
   $('#btn_futebol').addClass('desativar');
 }
 
+function fazerago () {
+  if($("#geraltab").hasClass("active")){
+    $("#geraltab").html("<img class='des-icon' src='css/assets/menuicon.svg'>");
+  }
+
+  if($("#guepardotab").hasClass("active")){
+    $("#guepardotab").html("<img class='des-icon' src='css/assets/guepardo.svg'>");
+  }
+}
+
+
+
+
+
+
+
 });

@@ -4807,9 +4807,9 @@ small {
 .tabs .indicator {
   position: absolute;
   bottom: 0;
-  height: 2px;
-  background-color: #f6b2b5;
   will-change: left, right;
+  height: 4px;
+  background-color: #2eadcf;
 }
 
 .material-tooltip {
