@@ -14,12 +14,25 @@ $.post( "/move/user", user, function(res){
   var pular = user.pular;
 
   var dadobam = user.bambolevalor;
-  var dadobas= user.basquetevalor;
-  var dadocam= user.caminhadavalor;
+  var dadobas = user.basquetevalor;
+  var dadocam = user.caminhadavalor;
   var dadocor = user.corridavalor;
   var dadofut = user.futebolvalor;
   var dadopul = user.pularvalor;
 
+  $("#bambolept").text(dadobam);
+  $("#basquetept").text(dadobas);
+  $("#caminhadapt").text(dadocam);
+  $("#corridapt").text(dadocor);
+  $("#futebolpt").text(dadofut);
+  $("#pularpt").text(dadopul);
+
+  $( '#bambolept' ).css( 'width', dadobam + "%");
+  $( '#basquetebar' ).css( 'width', dadobas + "%");
+  $( '#caminhadabar' ).css( 'width', dadocam + "%");
+  $( '#corridabar' ).css( 'width', dadocor + "%");
+  $( '#futebolbar' ).css( 'width', dadofut + "%");
+  $( '#pularbar' ).css( 'width', dadopul + "%");
 
 if (pular == 1){
   $('#des_pular_ativo').addClass('noneview');
