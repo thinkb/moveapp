@@ -428,7 +428,7 @@
      </div>
      <div class="modal-footer">
        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
-       <a href="#!" id="btn_pular" class=" modal-action modal-close waves-effect waves-green btn-flat">Desistir</a>
+       <a href="#!" id="btn_pular" class=" modal-action modal-close waves-effect waves-green btn-flat btn-desafio ativar">Desistir</a>
      </div>
    </div>
 <!-- fim modal pular corda -->
@@ -468,7 +468,7 @@
      </div>
      <div class="modal-footer">
        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
-       <a href="#!" id="btn_bambole" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceitar</a>
+       <a href="#!" id="btn_bambole" class=" modal-action modal-close waves-effect waves-green btn-flat btn-desafio ativar">Aceitar</a>
      </div>
    </div>
 <!-- fim modal pular corda -->
@@ -526,7 +526,7 @@
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
-      <a href="#!" id="btn_basquete" class=" modal-action modal-close waves-effect waves-green btn-flat ativar">Aceitar</a>
+      <a href="#!" id="btn_basquete" class=" modal-action modal-close waves-effect waves-green btn-flat btn-desafio ativar">Aceitar</a>
     </div>
   </div>
 <!-- fim modal basquete-->
@@ -585,7 +585,7 @@
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
-      <a href="#!" id="btn_futebol" class=" modal-action modal-close waves-effect waves-green btn-flat">Desistir</a>
+      <a href="#!" id="btn_futebol" class=" modal-action modal-close waves-effect waves-green btn-flat btn-desafio ativar">Desistir</a>
     </div>
   </div>
 <!-- fim modal futebol-->
@@ -632,7 +632,7 @@
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
-      <a href="#!" id="btn_corrida" class=" modal-action modal-close waves-effect waves-green btn-flat">Desistir</a>
+      <a href="#!" id="btn_corrida" class=" modal-action modal-close waves-effect waves-green btn-flat btn-desafio ativar">Desistir</a>
     </div>
   </div>
 <!-- fim modal corrida-->
@@ -661,7 +661,7 @@
       <div class="row dividor-horizontal">
         <h5>Descrição</h5>
         <p>
-        Andar é muito bom sabia?! Cominhe por 5km para vencer esse desafio.
+        Andar é muito bom sabia?! Caminhe por 5km para vencer esse desafio.
         </p>
       </div>
       <div class="row dividor-horizontal">
@@ -685,7 +685,7 @@
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
-      <a href="#!" id="btn_caminhada" class=" modal-action modal-close waves-effect waves-green btn-flat ativar">Aceitar</a>
+      <a href="#!" id="btn_caminhada" class=" modal-action modal-close waves-effect waves-green btn-flat btn-desafio ativar">Aceitar</a>
     </div>
   </div>
 <!-- fim modal caminhada-->
@@ -700,4 +700,15 @@
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal-trigger').leanModal();
       });
+	  
+	  $( ".btn-desafio" ).click(function() {
+		var desafio = this.id.split("_")[1];
+		var ativar = $( this ).hasClass("ativar");		
+		$.get("/TesteUpdate", {desafio: desafio, ativar: ativar, nick: user.nick},function (response) {
+			$('#main-intern-div').empty();
+            $('#main-intern-div').load('desafios.html');
+			console.log(response);
+		});
+	  });
+	  
 </script>
