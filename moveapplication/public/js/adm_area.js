@@ -4,19 +4,23 @@ $(document).ready(function(){
  });
 
 
- $(document).ready(function(){
-   $('.modal').modal();
- });
-
-
  $('#sairadm').click(function(){
    $('#myMainDiv').empty();
    $('#myMainDiv').load('login_user.html');
    $('body').addClass('bgblue');
  });
 
- $('#progresso').click(function(){
+ $('.progresso').click(function(){
    $('#main-intern-div').empty();
    $('#main-intern-div').load('progresso.html');
-   $('body').addClass('bgblue');
+ });
+
+ $('.criar').click(function(){
+   $('#main-intern-div').empty();
+   $('#main-intern-div').load('criardesafio.html');
+ });
+
+ $('#adicionar').click(function(){
+   $('#main-intern-div').empty();
+   $('#main-intern-div').load('adicionarconta.html');
  });

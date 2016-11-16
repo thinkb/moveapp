@@ -467,12 +467,11 @@ h2 {
     color: #00a5c1;
 }
 
-.btnadicionar{
-
-}
 
 .btn_adm{
-
+  width: 45px;
+ float: right;
+ margin-top: -40px;
 }
 
 .btn-fechar{
@@ -778,4 +777,18 @@ h5{
   width: 35px;
 }
 
-.
+.formpais{
+  border-radius: none;
+  border-top: 3px solid #5E5CA8 !important;
+  border-bottom: 3px solid #5E5CA8 !important;
+}
+
+
+
+.tituloadm{
+  margin-bottom: 20px;
+}
+
+.treinadorselect{
+  width: 50px;
+}
