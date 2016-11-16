@@ -783,7 +783,9 @@ h5{
   border-bottom: 3px solid #5E5CA8 !important;
 }
 
-
+.drag-target{
+  width: 10% !important;
+}
 
 .tituloadm{
   margin-bottom: 20px;
