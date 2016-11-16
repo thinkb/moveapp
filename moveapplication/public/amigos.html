@@ -2,35 +2,108 @@
   <form class="" action="" method="">
     <div class="row">
       <div class="col s10">
-          <input type="search" name="searchuser" placeholder="Procure mais amigos..." class="semmargin">
+          <input id="search_box" type="search" name="searchuser" placeholder="Procure mais amigos..." class="semmargin">
       </div>
       <div class="col s2">
-        <div class="btn-search">
+        <div class="btn-search" onclick="search()">
           <img class="icon_change" src="css/assets/search.svg">
         </div>
       </div>
     </div>
 
     </form>
-     <ul class="collection">
-   <li class="collection-item avatar">
-     <img class="circle amigos-modal" src="images/user4.png" />
-     <span class="title">João</span>
-     <p><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-   </li>
+    <ul id="friends_list" class="collection">
+	   <!-- <li class="collection-item avatar" onclick="">
+		 <img class="circle amigos-modal" src="images/user4.png" />
+		 <span class="title">João</span>
+		 <p><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
+	   </li>
 
-   <li class="collection-item avatar">
-     <img class="circle amigos-modal" src="images/user3.png" />
-     <span class="title">Isabela</span>
-     <p><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-     </p>
-   </li>
-   <li class="collection-item avatar">
-     <img class="circle amigos-modal" src="images/user1.png" />
-
-     <span class="title">Beatriz</span>
-     <p><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-     </p>
-   </li>
- </ul>
+	   <li class="collection-item avatar">
+		 <img class="circle amigos-modal" src="images/user3.png" />
+		 <span class="title">Isabela</span>
+		 <p><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
+		 </p>
+	   </li>
+	   <li class="collection-item avatar">
+		 <img class="circle amigos-modal" src="images/user1.png" />
+		 <span class="title">Beatriz</span>
+		 <p><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
+		 </p>
+	   </li> -->
+	</ul>
  </div>
+ 
+ <!-- Modal adiciona amigo -->
+ <div id="modal_add_amigo" class="modal">
+    <div class="modal-content">
+      <div class="row center">
+         <h4 class="title-modal orange-text">Adicionar amigo</h4>
+      </div>
+      <div class="row center dividor-horizontal">
+        <img class="img-modal" src="images/user1.png" alt="" />
+      </div>
+      <div class="row dividor-horizontal">
+        <h5></h5>
+        <p>
+          Adicionar <span id="nome-amigo"></span> à sua lista de amigos?
+        </p>
+      </div>   
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+      <a href="#!" id="btn_add_amigo" class=" modal-action modal-close waves-effect waves-green btn-flat"  onclick="addFriend()" >Adicionar</a>
+    </div>
+  </div>
+  
+  <!-- Fim Modal adiciona amigo -->
+ <script>  
+     $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('#modal_add_amigo').leanModal();
+      });
+	  
+	  function search(){
+			var nickBusca = $("#search_box").val();
+			$.get("/searchFriends", {nick: nickBusca},function (response) {
+			var html = "";
+			
+			if(response.length > 0)
+			{
+				response.forEach(function (res){
+					html +="<li class=\"collection-item avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
+					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
+					html += "	<span class=\"title\">"+res.nick+"</span>";
+					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
+					html +="</li>";
+				});				
+			}
+			else{
+				html +="<li class=\"collection-item avatar\">";
+				html += "	<span class=\"title\">Usuário não encontrado</span>";
+				html +="</li>";
+			}
+			$("#friends_list").html(html);
+			console.log(response);
+		});
+		
+	}	
+	
+	function addFriendModal(nick){
+		$("#nome-amigo").text(nick);
+		$("#btn_add_amigo").attr("onclick", "addFriend('"+nick+"')");
+		
+		$('#modal_add_amigo').openModal('open');
+	}
+	
+	function addFriend(friendName){
+		$.post("/addFriend", {nick: user.nick, friend: friendName},function (response) {
+			var html = "";
+			html +="<li class=\"collection-item avatar\">";
+			html += "	<span class=\"title\">Amigo adicionado com sucesso!</span>";
+			html +="</li>";
+			$("#friends_list").html(html);
+		});
+	}
+	  
+</script>

@@ -37,7 +37,8 @@ var debugUser = {
   bambolevalor: 1,
   pularvalor: 1,
   basquetevalor: 1,
-  futebolvalor: 1
+  futebolvalor: 1,
+  friends: []
 };
 
 var debugUser1 = {
@@ -72,9 +73,76 @@ var debugUser1 = {
   basquetevalor: 1,
   futebolvalor: 20
 };
+var debugUser2 = {
+  name: "Beatriz",
+  last: "Andrade",
+  age: 12,
+  email: "beatriz@gmail.com",
+  nick: "abianca",
+  pwd: "bia123",
+  sport: "basquete",
+  sloth: "meg",
+  points: 30,
+  level: 2,
+  bambole: 1,
+  basquete: 1,
+  caminhada: 1,
+  corrida: 2,
+  futebol: 2,
+  pular:1,
+  s1: 1,
+  s2: 1,
+  s3: 2,
+  s4: 1,
+  s5: 1,
+  s6: 2,
+  s7: 1,
+  s8: 1,
+  corridavalor: 75,
+  caminhadavalor: 1,
+  bambolevalor: 1,
+  pularvalor: 1,
+  basquetevalor: 1,
+  futebolvalor: 20
+};
+
+var debugUser3 = {
+  name: "Beatriz",
+  last: "Andrade",
+  age: 12,
+  email: "beatriz@gmail.com",
+  nick: "biabia",
+  pwd: "bia123",
+  sport: "basquete",
+  sloth: "meg",
+  points: 30,
+  level: 2,
+  bambole: 1,
+  basquete: 1,
+  caminhada: 1,
+  corrida: 2,
+  futebol: 2,
+  pular:1,
+  s1: 1,
+  s2: 1,
+  s3: 2,
+  s4: 1,
+  s5: 1,
+  s6: 2,
+  s7: 1,
+  s8: 1,
+  corridavalor: 75,
+  caminhadavalor: 1,
+  bambolevalor: 1,
+  pularvalor: 1,
+  basquetevalor: 1,
+  futebolvalor: 20
+};
 
 users.insert(debugUser);
 users.insert(debugUser1);
+users.insert(debugUser2);
+users.insert(debugUser3);
 
 var pais = db.addCollection('pais');
 var paisuser1 = {
@@ -151,6 +219,34 @@ router.route('/user')
           res.sendStatus(500);
         }
       });
+	  
+	app.get('/searchFriends', function(request, response){
+		
+		var nick = request.query.nick;
+		var user = users.find({'nick': { '$regex' : nick }});
+		response.send(user);
+	});
+	
+	app.post('/addFriend', function(request, response){
+		var nick = request.body.nick;
+		console.log(nick);
+		var friend = request.body.friend;
+		console.log(friend);
+		var userUpdate = users.find({nick: nick});
+		if(userUpdate)
+		{
+			console.log("list "+userUpdate[0].friends);
+			userUpdate[0].friends.push(friend);
+			users.update(userUpdate);
+		}
+		
+		var userUpdate2 = users.find({nick: nick});
+		if(userUpdate2)
+		{
+			console.log("valor atualizado: "+userUpdate[0].friends);
+		}		
+		response.send();
+	});
 	  
 	app.get('/TesteUpdate', function(request, response) {
 		 
