@@ -27,12 +27,52 @@ $.post( "/move/user", user, function(res){
   $("#futebolpt").text(dadofut);
   $("#pularpt").text(dadopul);
 
+
+
+// progresso
   $( '#bambolept' ).css( 'width', dadobam + "%");
   $( '#basquetebar' ).css( 'width', dadobas + "%");
   $( '#caminhadabar' ).css( 'width', dadocam + "%");
   $( '#corridabar' ).css( 'width', dadocor + "%");
   $( '#futebolbar' ).css( 'width', dadofut + "%");
   $( '#pularbar' ).css( 'width', dadopul + "%");
+
+// modal
+var cortempo = dadocor - (dadocor/2);
+
+$( '#corridatempo' ).css( 'width', cortempo + "%");
+$( '#corridapontos' ).css( 'width', dadocor + "%");
+
+var futtempo = dadofut - (dadofut/2);
+var futcal = dadofut + dadofut;
+
+$( '#futebolpontos' ).css( 'width', dadofut + "%");
+$( '#futeboltempo' ).css( 'width', futtempo  + "%");
+$( '#futebolcalorias' ).css( 'width', futcal  + "%");
+
+var pulcal = dadopul + dadopul;
+
+$( '#pularpontos' ).css( 'width', dadopul  + "%");
+$( '#pularcalorias' ).css( 'width', pulcal  + "%");
+
+
+$( '#bambolepontos' ).css( 'width', dadobam  + "%");
+
+var bastempo = dadobas - (dadobas/2);
+var bascal = dadobas + dadobas;
+
+$( '#basquetepontos' ).css( 'width', dadobas  + "%");
+$( '#basquetetempo' ).css( 'width', bastempo  + "%");
+$( '#basquetecal' ).css( 'width', bascal  + "%");
+
+var camtempo = dadocam - (dadocam/2);
+var campassos = dadocam + dadocam;
+
+$( '#caminhadapontos' ).css( 'width', dadocam  + "%");
+$( '#caminhadadistancia' ).css( 'width', camtempo  + "%");
+$( '#caminhadapassos' ).css( 'width', campassos  + "%");
+
+
 
 if (pular == 1){
   $('#des_pular_ativo').addClass('noneview');
@@ -135,18 +175,6 @@ if (futebol == 2){
   $("#btn_futebol").removeClass('ativar');
   $('#btn_futebol').addClass('desativar');
 }
-
-function fazerago () {
-  if($("#geraltab").hasClass("active")){
-    $("#geraltab").html("<img class='des-icon' src='css/assets/menuicon.svg'>");
-  }
-
-  if($("#guepardotab").hasClass("active")){
-    $("#guepardotab").html("<img class='des-icon' src='css/assets/guepardo.svg'>");
-  }
-}
-
-
 
 
 

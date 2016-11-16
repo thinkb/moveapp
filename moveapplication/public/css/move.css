@@ -472,7 +472,12 @@ h2 {
 }
 
 .btn_adm{
-  
+
+}
+
+.btn-fechar{
+  width: 40px;
+  float: left;
 }
 
 .mini-icon {

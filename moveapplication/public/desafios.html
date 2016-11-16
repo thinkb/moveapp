@@ -416,13 +416,13 @@
        <div class="row dividor-horizontal">
          <h5>Pontos de diversão</h5>
          <div class="progress horizontal">
-           <div class="determinate pink" style="width: 50%"></div>
+           <div id="pularpontos" class="determinate pink" style="width: 1%"></div>
         </div>
        </div>
        <div class="row dividor-horizontal">
          <h5>Calorias</h5>
          <div class="progress horizontal">
-           <div class="determinate pink" style="width: 50%"></div>
+           <div id="pularcalorias" class="determinate pink" style="width: 1%"></div>
         </div>
        </div>
      </div>
@@ -462,7 +462,7 @@
        <div class="row dividor-horizontal">
          <h5>Pontos de diversão</h5>
          <div class="progress horizontal">
-           <div class="determinate pink" style="width: 1%"></div>
+           <div id="bambolepontos" class="determinate pink" style="width: 1%"></div>
         </div>
        </div>
      </div>
@@ -502,25 +502,24 @@
       <div class="row dividor-horizontal">
         <h5>Pontos de diversão</h5>
         <div class="progress horizontal">
-          <div class="determinate orange" style="width: 1%"></div>
+          <div id="basquetepontos" class="determinate orange" style="width: 1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Tempo de jogo</h5>
         <div class="progress horizontal">
-          <div class="determinate orange" style="width: 1%"></div>
+          <div id="basquetetempo" class="determinate orange" style="width: 1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Calorias</h5>
         <div class="progress horizontal">
-          <div class="determinate orange" style="width: 1%"></div>
+          <div id="basquetecal" class="determinate orange" style="width: 1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Amigos</h5>
-        <img class="circle amigos-modal" src="images/user1.png" >
-        <img class="circle amigos-modal" src="images/user2.png" >
+        <a  href="#!" class="btn-floating btn-large waves-effect waves-light btnadicionar "><i class="material-icons semmargin">add</i></a>
       </div>
 
     </div>
@@ -560,25 +559,25 @@
       <div class="row dividor-horizontal">
         <h5>Pontos de diversão</h5>
         <div class="progress horizontal">
-          <div class="determinate orange" style="width: 1%"></div>
+          <div id="futebolpontos" class="determinate orange" style="width: 1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Tempo de jogo</h5>
-        <div class="progress horizontal">
-          <div class="determinate orange" style="width: 1%"></div>
+        <div  class="progress horizontal">
+          <div id="futeboltempo" class="determinate orange" style="width: 1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Calorias</h5>
         <div class="progress horizontal">
-          <div class="determinate orange" style="width: 1%"></div>
+          <div id="futebolcalorias" class="determinate orange" style="width: 1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Amigos</h5>
-        <img class="circle amigos-modal noneview" src="images/user1.png" >
-        <img class="circle amigos-modal noneview" src="images/user2.png" >
+        <!--<img class="circle amigos-modal noneview" src="images/user1.png" > -->
+        <!--  <img class="circle amigos-modal noneview" src="images/user2.png" >-->
         <a  href="#!" class="btn-floating btn-large waves-effect waves-light btnadicionar "><i class="material-icons semmargin">add</i></a>
       </div>
 
@@ -619,13 +618,13 @@
       <div class="row dividor-horizontal">
         <h5>Pontos de diversão</h5>
         <div class="progress horizontal">
-          <div class="determinate purple" style="width:75%"></div>
+          <div id="corridapontos" class="determinate purple" style="width:1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Tempo de corrida</h5>
         <div class="progress horizontal">
-          <div class="determinate purple" style="width:90%"></div>
+          <div id="corridatempo" class="determinate purple" style="width:1%"></div>
        </div>
       </div>
 
@@ -667,19 +666,19 @@
       <div class="row dividor-horizontal">
         <h5>Pontos de diversão</h5>
         <div class="progress horizontal">
-          <div class="determinate purple" style="width: 1%"></div>
+          <div id="caminhadapontos" class="determinate purple" style="width: 1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Distância percorrida</h5>
         <div class="progress horizontal">
-          <div class="determinate purple" style="width: 1%"></div>
+          <div id="caminhadadistancia" class="determinate purple" style="width: 1%"></div>
        </div>
       </div>
       <div class="row dividor-horizontal">
         <h5>Passos</h5>
         <div class="progress horizontal">
-          <div class="determinate purple" style="width: 1%"></div>
+          <div id="caminhadapassos" class="determinate purple" style="width: 1%"></div>
        </div>
       </div>
     </div>
@@ -700,15 +699,16 @@
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal-trigger').leanModal();
       });
-	  
+
 	  $( ".btn-desafio" ).click(function() {
 		var desafio = this.id.split("_")[1];
-		var ativar = $( this ).hasClass("ativar");		
+		var ativar = $( this ).hasClass("ativar");
 		$.get("/TesteUpdate", {desafio: desafio, ativar: ativar, nick: user.nick},function (response) {
 			$('#main-intern-div').empty();
-            $('#main-intern-div').load('desafios.html');
+        $('#main-intern-div').load('desafios.html');
+
 			console.log(response);
 		});
 	  });
-	  
+
 </script>
