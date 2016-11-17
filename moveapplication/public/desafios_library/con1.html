@@ -6,23 +6,42 @@
 </div>
 <div class="row">
   <div class="col s6">
+    <a class="modal-trigger" href="#s1" >
     <img id="sbamboleb2" class="sticker" src="css/assets/sticker_bambole_b.svg" alt="" />
     <img id="sbambole2" class="sticker noneview" src="css/assets/sticker_bambole.svg" alt="" />
+    </a>
   </div>
   <div class="col s6">
+    <a class="modal-trigger" href="#s2" >
       <img id="sfutebolb2" class="sticker" src="css/assets/sticker_futebol_b.svg" alt="" />
       <img id="sfutebol2" class="sticker noneview" src="css/assets/sticker_futebol.svg" alt="" />
+    </a>
   </div>
 </div>
 
 <div class="row">
   <div class="col s6">
+      <a class="modal-trigger" href="#s3" >
     <img id="sapitob2" class="sticker" src="css/assets/sticker_apito_b.svg" alt="" />
     <img id="sapito2"  class="sticker  noneview" src="css/assets/sticker_apito.svg" alt="" />
+      </a>
   </div>
   <div class="col s6">
+      <a class="modal-trigger" href="#s4" >
     <img id="scaminhab2" class="sticker" src="css/assets/sticker_caminhada_b.svg" alt="" />
     <img id="scaminha2"  class="sticker noneview" src="css/assets/sticker_caminhada.svg" alt="" />
+    </a>
   </div>
 </div>
+
+
 <script src='/js/conquistas.js'> </script>
+
+<script>
+
+$(document).ready(function(){
+   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+   $('.modal-trigger').leanModal();
+ });
+</script>
+<!-- Modal Structure -->

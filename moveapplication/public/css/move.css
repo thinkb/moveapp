@@ -794,3 +794,8 @@ h5{
 .treinadorselect{
   width: 50px;
 }
+
+.modalsticker{
+  border: 10px solid rgb(239, 239, 239);
+  border-radius: 30px;
+}

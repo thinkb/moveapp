@@ -86,4 +86,6 @@ if (stc8 == 2) {
   $('#sbasquete').removeClass('noneview');
   $('#sbasqueteb').addClass('noneview');
 }
+
+
 });

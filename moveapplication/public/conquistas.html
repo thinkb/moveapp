@@ -7,32 +7,50 @@
     </div>
     <div class="row">
       <div class="col s6">
-        <img id="sbamboleb" class="sticker" src="css/assets/sticker_bambole_b.svg" alt="" />
-        <img id="sbambole" class="sticker noneview" src="css/assets/sticker_bambole.svg" alt="" />
+          <a class="modal-trigger" href="#s1" >
+            <img id="sbamboleb" class="sticker" src="css/assets/sticker_bambole_b.svg" alt="" />
+            <img id="sbambole" class="sticker noneview" src="css/assets/sticker_bambole.svg" alt="" />
+          </a>
+
       </div>
       <div class="col s6">
-        <img id="sfutebolb" class="sticker" src="css/assets/sticker_futebol_b.svg" alt="" />
-        <img id="sfutebol" class="sticker noneview" src="css/assets/sticker_futebol.svg" alt="" />
+        <a class="modal-trigger" href="#s2" >
+          <img id="sfutebolb" class="sticker" src="css/assets/sticker_futebol_b.svg" alt="" />
+          <img id="sfutebol" class="sticker noneview" src="css/assets/sticker_futebol.svg" alt="" />
+        </a>
       </div>
     </div>
 
     <div class="row">
       <div class="col s6">
-        <img id="sapitob" class="sticker" src="css/assets/sticker_apito_b.svg" alt="" />
-        <img id="sapito"  class="sticker  noneview" src="css/assets/sticker_apito.svg" alt="" />
+        <a class="modal-trigger" href="#s3" >
+          <img id="sapitob" class="sticker" src="css/assets/sticker_apito_b.svg" alt="" />
+          <img id="sapito"  class="sticker  noneview" src="css/assets/sticker_apito.svg" alt="" />
+        </a>
       </div>
       <div class="col s6">
-        <img id="scaminhab" class="sticker" src="css/assets/sticker_caminhada_b.svg" alt="" />
-        <img id="scaminha"  class="sticker noneview" src="css/assets/sticker_caminhada.svg" alt="" />
+        <a class="modal-trigger" href="#s4" >
+          <img id="scaminhab" class="sticker" src="css/assets/sticker_caminhada_b.svg" alt="" />
+          <img id="scaminha"  class="sticker noneview" src="css/assets/sticker_caminhada.svg" alt="" />
+        </a>
       </div>
     </div>
   </div>
-
     <ul class="center pagination">
         <li id="ant" class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
         <li id="con2" class="active"><a href="#!">1</a></li>
         <li id="con3" class="waves-effect"><a href="#!">2</a></li>
         <li id="prox" class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-      </ul>
+    </ul>
 </div>
+
 <script src='/js/conquistas.js'> </script>
+
+<script>
+
+$(document).ready(function(){
+   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+   $('.modal-trigger').leanModal();
+ });
+</script>
+<!-- Modal Structure -->

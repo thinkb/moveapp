@@ -33,12 +33,13 @@
 	   </li> -->
 	</ul>
  </div>
- 
+
  <!-- Modal adiciona amigo -->
  <div id="modal_add_amigo" class="modal">
     <div class="modal-content">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green right btn-fechar"> <i class="material-icons">close</i></a>
       <div class="row center">
-         <h4 class="title-modal orange-text">Adicionar amigo</h4>
+         <h4 class="title-modalt">Adicionar amigo</h4>
       </div>
       <div class="row center dividor-horizontal">
         <img class="img-modal" src="images/user1.png" alt="" />
@@ -48,26 +49,25 @@
         <p>
           Adicionar <span id="nome-amigo"></span> à sua lista de amigos?
         </p>
-      </div>   
+      </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
       <a href="#!" id="btn_add_amigo" class=" modal-action modal-close waves-effect waves-green btn-flat"  onclick="addFriend()" >Adicionar</a>
     </div>
   </div>
-  
+
   <!-- Fim Modal adiciona amigo -->
- <script>  
+ <script>
      $(document).ready(function(){
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('#modal_add_amigo').leanModal();
       });
-	  
+
 	  function search(){
 			var nickBusca = $("#search_box").val();
 			$.get("/searchFriends", {nick: nickBusca},function (response) {
 			var html = "";
-			
+
 			if(response.length > 0)
 			{
 				response.forEach(function (res){
@@ -76,7 +76,7 @@
 					html += "	<span class=\"title\">"+res.nick+"</span>";
 					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
 					html +="</li>";
-				});				
+				});
 			}
 			else{
 				html +="<li class=\"collection-item avatar\">";
@@ -86,16 +86,16 @@
 			$("#friends_list").html(html);
 			console.log(response);
 		});
-		
-	}	
-	
+
+	}
+
 	function addFriendModal(nick){
 		$("#nome-amigo").text(nick);
 		$("#btn_add_amigo").attr("onclick", "addFriend('"+nick+"')");
-		
+
 		$('#modal_add_amigo').openModal('open');
 	}
-	
+
 	function addFriend(friendName){
 		$.post("/addFriend", {nick: user.nick, friend: friendName},function (response) {
 			var html = "";
@@ -105,5 +105,5 @@
 			$("#friends_list").html(html);
 		});
 	}
-	  
+
 </script>
