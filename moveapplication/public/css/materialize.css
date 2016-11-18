@@ -5250,7 +5250,7 @@ button.btn-floating {
   left: 0;
   right: 0;
   background-color: #fafafa;
-  padding: 0;
+  padding: 2px;
   max-height: 85%;
   width: 55%;
   margin: auto;
@@ -5276,6 +5276,7 @@ button.btn-floating {
 
 .modal .modal-content {
   padding: 11px;
+  padding-top: 20px;
 }
 
 .modal .modal-close {

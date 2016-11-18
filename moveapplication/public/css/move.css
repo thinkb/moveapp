@@ -787,8 +787,31 @@ h5{
   width: 10% !important;
 }
 
+#nome-amigo{
+  color:#2a9fbf;
+  font-weight: bold;
+}
+
 .tituloadm{
   margin-bottom: 20px;
+}
+
+.icoamigo{
+      font-family: 'Mikado Bold';
+      font-size: 50px;
+      margin-top: -35px;
+      position: absolute;
+      padding-left: 60%;
+      float: right;
+      color:#2eadcf;
+}
+
+.addamigo{
+  background-color: rgba(46, 173, 207, 0.14) !important;
+  line-height: 1.5rem !important;
+  margin: 0 !important;
+  /* color: #0089ec; */
+  border-bottom: 1px solid rgba(46, 173, 207, 0.47) !important;
 }
 
 .treinadorselect{

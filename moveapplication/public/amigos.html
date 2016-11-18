@@ -35,9 +35,10 @@
  </div>
 
  <!-- Modal adiciona amigo -->
- <div id="modal_add_amigo" class="modal">
+ <div id="modal_add_amigo" class="modal modalsticker">
+   <a href="#!" class=" modal-action modal-close waves-effect waves-green right btn-fechar"> <i class="material-icons">close</i></a>
+
     <div class="modal-content">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green right btn-fechar"> <i class="material-icons">close</i></a>
       <div class="row center">
          <h4 class="title-modalt">Adicionar amigo</h4>
       </div>
@@ -71,11 +72,12 @@
 			if(response.length > 0)
 			{
 				response.forEach(function (res){
-					html +="<li class=\"collection-item avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
+					html +="<li class=\"collection-item addamigo avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
 					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
 					html += "	<span class=\"title\">"+res.nick+"</span>";
 					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
-					html +="</li>";
+          html +="  <a href=\"#modal_pularcorda\"><span class=\"icoamigo\"> + </span></a>"
+          html +="</li>";
 				});
 			}
 			else{
