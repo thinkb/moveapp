@@ -2,11 +2,10 @@ var express = require('express');
 var cfenv = require('cfenv');
 var bodyParser = require('body-parser');
 var loki = require('lokijs');
-
 var app = express();
-
 var db = new loki('loki.json');
 var users = db.addCollection('users');
+
 var debugUser = {
   name: "Fabiano",
   last: "Moraes",
@@ -42,12 +41,12 @@ var debugUser = {
 };
 
 var debugUser1 = {
-  name: "Beatriz",
+  name: "Demonstração",
   last: "Andrade",
   age: 12,
-  email: "beatriz@gmail.com",
-  nick: "bia",
-  pwd: "bia123",
+  email: "demo@gmail.com",
+  nick: "demo",
+  pwd: "demo123",
   sport: "basquete",
   sloth: "meg",
   points: 30,
@@ -74,22 +73,22 @@ var debugUser1 = {
   futebolvalor: 20
 };
 var debugUser2 = {
-  name: "Beatriz",
-  last: "Andrade",
-  age: 12,
-  email: "beatriz@gmail.com",
-  nick: "abianca",
-  pwd: "bia123",
-  sport: "basquete",
-  sloth: "meg",
-  points: 30,
-  level: 2,
+  name: "Vinicius",
+  last: "Peixoto",
+  age: 6,
+  email: "vini@gmail.com",
+  nick: "vini",
+  pwd: "vini123",
+  sport: "tenis",
+  sloth: "Bolinha",
+  points: 50,
+  level: 3,
   bambole: 1,
   basquete: 1,
-  caminhada: 1,
-  corrida: 2,
-  futebol: 2,
-  pular:1,
+  caminhada: 2,
+  corrida: 1,
+  futebol: 1,
+  pular:2,
   s1: 1,
   s2: 1,
   s3: 2,
@@ -98,45 +97,45 @@ var debugUser2 = {
   s6: 2,
   s7: 1,
   s8: 1,
-  corridavalor: 75,
-  caminhadavalor: 1,
+  corridavalor: 1,
+  caminhadavalor: 14,
   bambolevalor: 1,
-  pularvalor: 1,
+  pularvalor: 35,
   basquetevalor: 1,
-  futebolvalor: 20
+  futebolvalor: 1
 };
 
 var debugUser3 = {
-  name: "Beatriz",
-  last: "Andrade",
+  name: "Karen",
+  last: "Cesar",
   age: 12,
-  email: "beatriz@gmail.com",
-  nick: "biabia",
-  pwd: "bia123",
-  sport: "basquete",
-  sloth: "meg",
-  points: 30,
+  email: "karen@gmail.com",
+  nick: "Ka",
+  pwd: "ka123",
+  sport: "volei",
+  sloth: "Hanna",
+  points: 34,
   level: 2,
   bambole: 1,
-  basquete: 1,
+  basquete: 2,
   caminhada: 1,
   corrida: 2,
   futebol: 2,
   pular:1,
   s1: 1,
   s2: 1,
-  s3: 2,
+  s3: 1,
   s4: 1,
   s5: 1,
   s6: 2,
   s7: 1,
   s8: 1,
-  corridavalor: 75,
+  corridavalor: 30,
   caminhadavalor: 1,
   bambolevalor: 1,
   pularvalor: 1,
-  basquetevalor: 1,
-  futebolvalor: 20
+  basquetevalor: 30,
+  futebolvalor: 38
 };
 
 users.insert(debugUser);
@@ -219,14 +218,14 @@ router.route('/user')
           res.sendStatus(500);
         }
       });
-	  
+
 	app.get('/searchFriends', function(request, response){
-		
+
 		var nick = request.query.nick;
 		var user = users.find({'nick': { '$regex' : nick }});
 		response.send(user);
 	});
-	
+
 	app.post('/addFriend', function(request, response){
 		var nick = request.body.nick;
 		console.log(nick);
@@ -239,45 +238,45 @@ router.route('/user')
 			userUpdate[0].friends.push(friend);
 			users.update(userUpdate);
 		}
-		
+
 		var userUpdate2 = users.find({nick: nick});
 		if(userUpdate2)
 		{
 			console.log("valor atualizado: "+userUpdate[0].friends);
-		}		
+		}
 		response.send();
 	});
-	  
+
 	app.get('/TesteUpdate', function(request, response) {
-		 
+
 		var nick = request.query.nick;
 		var desafio = request.query.desafio;
 		var ativar = request.query.ativar;
 		var userUpdate = users.find({nick: nick});
-		
+
 		if(userUpdate)
 		{
 			console.log("valor anterior: "+userUpdate[0][desafio]);
 			console.log(ativar);
-			if(ativar == 'true'){				
+			if(ativar == 'true'){
 				userUpdate[0][desafio] = 2;
 			}
 			else
 			{
 				userUpdate[0][desafio] = 1;
 			}
-			
+
 			console.log(userUpdate[0][desafio]);
 			users.update(userUpdate);
-		}		
-		
+		}
+
 		var userUpdate2 = users.find({nick: nick});
 		if(userUpdate2)
 		{
 			console.log("valor atualizado: "+userUpdate[0][desafio]);
-		}		
+		}
 		response.send();
-		
+
 	});
 
 app.use('/move', router);

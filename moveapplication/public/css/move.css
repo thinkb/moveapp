@@ -449,8 +449,9 @@ h2 {
 }
 
 .cadastro{
-  margin-left: -20%;
-  margin-top: 10px;
+  text-align: left;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .data-single {
