@@ -1,10 +1,10 @@
 $("#cadastropais").click(function(){
 
   var p = {
-    name: $('#namepai').val(),
-    last: $('#lastpai').val(),
-    email: $('#emailpai').val(),
-    pwd: $('#pwdpai').val()
+    namepai: $('#namepai').val(),
+    lastpai: $('#lastpai').val(),
+    emailpai: $('#emailpai').val(),
+    pwdpai: $('#pwdpai').val()
   };
 
   $.post( "/move/pais", p, function( data ) {

@@ -146,13 +146,13 @@ users.insert(debugUser3);
 
 var pais = db.addCollection('pais');
 var paisuser1 = {
-  namepai: "dsfasfd",
-  lastpai: "asdfsdfsd",
-  emailpai: "asdfasdf@gmail",
-  pwdpai: "fabs"
+  namepai: "fff",
+  lastpai: "fff",
+  emailpai: "fff",
+  pwdpai: "fff"
 };
 
-users.insert(paisuser1);
+pais.insert(paisuser1);
 
 // var f = users.find({nick: 'fabiano'});
 // if(f.length!=0){
@@ -204,6 +204,22 @@ router.route('/pais')
     pais.insert(req.body);
     console.log('Pai/adm cadastrado com sucesso!');
     res.json('');
+  });
+
+
+router.route('/loginpai')
+  .get(function(req, res){
+      //res.json(db);
+  })
+  .post(function(req, res) {
+
+    var findResults = pais.find({emailpai: req.body.emailpai, pwdpai: req.body.pwdpai});
+
+    if(findResults[0].emailpai == req.body.emailpai && findResults[0].pwdpai == req.body.pwdpai){
+      res.sendStatus(200);
+    } else {
+      res.sendStatus(500);
+    }
   });
 
 router.route('/user')
