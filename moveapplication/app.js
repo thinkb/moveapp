@@ -41,7 +41,7 @@ var debugUser = {
 };
 
 var debugUser1 = {
-  name: "Demonstração",
+  name: "Demonstracao",
   last: "Andrade",
   age: 12,
   email: "demo@gmail.com",
@@ -245,6 +245,28 @@ router.route('/user')
           res.sendStatus(500);
         }
       });
+
+app.get('/listFriends', function(request, response){
+    var nick = request.query.nick;
+    console.log(nick);
+    var user = users.find({'nick': nick});
+    //console.log(user);
+    if(user){
+        friendsList = [];
+        userFriends = user[0].friends;
+
+        for(i=0; i < userFriends.length; i++){
+            var friend = users.find({'nick': userFriends[i]});
+            console.log("friend "+ friend);
+            if(friend){
+                friendsList.push(friend[0]);
+            }
+        }
+
+        console.log("list final " +friendsList);
+    }
+    response.send(friendsList);
+});
 
 	app.get('/searchFriends', function(request, response){
 
