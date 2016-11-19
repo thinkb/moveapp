@@ -112,7 +112,8 @@ $('#registerNext').click(function(){
             bambolevalor: 1,
             pularvalor: 1,
             basquetevalor: 1,
-            futebolvalor: 1
+            futebolvalor: 1,
+            friends: []
           };
 
           $.post( "/move/register", u, function( data ) {

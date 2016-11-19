@@ -41,7 +41,7 @@ var debugUser = {
 };
 
 var debugUser1 = {
-  name: "Demonstração",
+  name: "Demo",
   last: "Andrade",
   age: 12,
   email: "demo@gmail.com",
@@ -70,7 +70,8 @@ var debugUser1 = {
   bambolevalor: 1,
   pularvalor: 1,
   basquetevalor: 1,
-  futebolvalor: 20
+  futebolvalor: 20,
+  friends: []
 };
 var debugUser2 = {
   name: "Vinicius",
@@ -102,7 +103,8 @@ var debugUser2 = {
   bambolevalor: 1,
   pularvalor: 35,
   basquetevalor: 1,
-  futebolvalor: 1
+  futebolvalor: 1,
+  friends: []
 };
 
 var debugUser3 = {
@@ -135,7 +137,8 @@ var debugUser3 = {
   bambolevalor: 1,
   pularvalor: 1,
   basquetevalor: 30,
-  futebolvalor: 38
+  futebolvalor: 38,
+  friends: []
 };
 
 users.insert(debugUser);
