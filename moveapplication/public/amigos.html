@@ -12,7 +12,7 @@
     </div>
 
     </form>
-    <ul id="friends_list" class="collection">
+    <ul id="search_results" class="collection">
 	   <!-- <li class="collection-item avatar" onclick="">
 		 <img class="circle amigos-modal" src="images/user4.png" />
 		 <span class="title">João</span>
@@ -32,6 +32,8 @@
 		 </p>
 	   </li> -->
 	</ul>
+  <ul id="friends_list" class ="collection">
+  </ul>
  </div>
 
  <!-- Modal adiciona amigo -->
@@ -61,35 +63,36 @@
  <script>
      $(document).ready(function(){
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        console.log(user.nick);
+        listFriends(user.nick);
         $('#modal_add_amigo').leanModal();
       });
 
 	  function search(){
 			var nickBusca = $("#search_box").val();
 			$.get("/searchFriends", {nick: nickBusca},function (response) {
-			var html = "";
+      			var html = "";
 
-			if(response.length > 0)
-			{
-				response.forEach(function (res){
-					html +="<li class=\"collection-item addamigo avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
-					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
-					html += "	<span class=\"title\">"+res.nick+"</span>";
-					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
-          html +="  <a href=\"#modal_pularcorda\"><span class=\"icoamigo\"> + </span></a>"
-          html +="</li>";
-				});
-			}
-			else{
-				html +="<li class=\"collection-item avatar\">";
-				html += "	<span class=\"title\">Usuário não encontrado</span>";
-				html +="</li>";
-			}
-			$("#friends_list").html(html);
-			console.log(response);
-		});
-
-	}
+      			if(response.length > 0)
+      			{
+      				response.forEach(function (res){
+      					html +="<li class=\"collection-item addamigo avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
+      					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
+      					html += "	<span class=\"title\">"+res.nick+"</span>";
+      					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
+                html +="  <a href=\"#modal_pularcorda\"><span class=\"icoamigo\"> + </span></a>"
+                html +="</li>";
+      				});
+      			}
+      			else{
+      				html +="<li class=\"collection-item avatar\">";
+      				html += "	<span class=\"title\">Usuário não encontrado</span>";
+      				html +="</li>";
+      			}
+      			$("#search_results").html(html);
+      			console.log(response);
+      	});
+      }
 
 	function addFriendModal(nick){
 		$("#nome-amigo").text(nick);
@@ -107,5 +110,32 @@
 			$("#friends_list").html(html);
 		});
 	}
+
+  function listFriends(nick){
+    var nickBusca = $("#search_box").val();
+    $.get("/listFriends", {nick: nick},function (response) {
+          var html = "";
+          if(response.length > 0)
+          {
+            response.forEach(function (res){
+              html +="<li class=\"collection-item avatar\" onclick=\"\" >";
+              html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
+              html += "	<span class=\"title\">"+res.nick+"</span>";
+              html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
+              html +="  "
+              html +="</li>";
+            });
+          }
+          else{
+            html +="<li class=\"collection-item avatar\">";
+            html += "	<span class=\"title\">Você ainda não tem amigos</span>";
+            html +="</li>";
+          }
+          $("#friends_list").html(html);
+          console.log(response);
+    });
+  }
+
+
 
 </script>
