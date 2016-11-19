@@ -10,6 +10,11 @@ $(document).ready(function(){
    $('body').addClass('bgblue');
  });
 
+ $('#home').click(function(){
+   $('#myMainDiv').empty();
+   $('#myMainDiv').load('adm_area.html');
+ });
+
  $('.progresso').click(function(){
    $('#main-intern-div').empty();
    $('#main-intern-div').load('progresso.html');

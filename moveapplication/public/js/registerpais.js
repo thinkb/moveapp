@@ -20,11 +20,22 @@ $("#cadastropais").click(function(){
 
     $.post( "/move/pais", p, function( data ) {
       //$('#sucesso').openModal();
-
-      alert('success!');
+      $('#sucesso2').openModal();
 
     }, "json");
 
   }
-
 });
+
+$('#backButton').click(function(){
+  $('#myMainDiv').empty();
+  $('#myMainDiv').load('login_user.html');
+   $('body').addClass('bgblue');
+  });
+
+
+  $('#loginapp2').click(function(){
+    $('#myMainDiv').empty();
+    $('#myMainDiv').load('login_user.html');
+    $('body').addClass('bgblue');
+  });

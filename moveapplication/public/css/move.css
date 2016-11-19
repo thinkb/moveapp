@@ -3,7 +3,8 @@ body {
 }
 
 .paternblue {
-    background-image:url(assets/pattern-blue.png);
+    background-image:url(assets/pattern-blue.svg);
+    background-size: 204px 157px;
 }
 
 
@@ -82,7 +83,8 @@ nav .button-collapse {
 }
 
 .headeruser{
-  background-image:url(assets/pattern-blue.png);
+  background-image:url(assets/pattern-blue.svg);
+  background-size: 204px 157px;
 }
 
 .profile {
@@ -155,7 +157,8 @@ nav .button-collapse {
 
 
 .status-settings {
-    background-image:url(assets/pattern-blue.png);
+    background-image:url(assets/pattern-blue.svg);
+    background-size: 204px 157px;
     height:25%;
 }
 
@@ -338,16 +341,19 @@ a.btn_sair {
 }
 
 .bgpurple{
-  background-image:url(assets/pattern-purple.png);
+  background:url(assets/pattern-purple.svg) ;
+  background-size: 204px 157px;
 }
 
 
 .bgwrite{
-  background-image:url(assets/pattern-write.png);
+  background:url(assets/pattern-write.svg);
+  background-size: 204px 157px;
 }
 
 .bgblue {
-    background-image:url(assets/pattern-blue.png);
+    background:url(assets/pattern-blue.svg);
+    background-size: 204px 157px;
 }
 
 
@@ -446,6 +452,10 @@ h2 {
     font-size: 17px;
     color: #2eadcf;
     margin:0px;
+}
+
+.back{
+  font-size: 40px !important;
 }
 
 .cadastro{

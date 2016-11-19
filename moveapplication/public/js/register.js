@@ -40,6 +40,7 @@ $('#registerNext').click(function(){
     if(nc || lc || ac || ec ) {
       //nada
     } else {
+      $("#registerNext").addClass('disabled');
       $('#registerDiv1').hide();
       $('#registerDiv2').show();
       $('#registerDiv3').hide();
@@ -48,18 +49,19 @@ $('#registerNext').click(function(){
       $('#step1').addClass('wizard-complete');
       $('#step2').addClass('wizard-on');
       formt++;
-      $("#registerNext").addClass('disabled');
+
     }
   } else {
-    if($('#registerDiv2').css('display') != 'none'){
 
+    if($('#registerDiv2').css('display') != 'none'){
+      $("#registerNext").addClass('disabled');
       var nc = $("#nick").val() == "";
       var lc = $("#pwd").val() == "";
       var ac = $("#pwd2").val() == "";
       var ec = $("#sport").val() == "";
 
       if(nc || lc || ac || ec ) {
-        //nada
+    $("#registerNext").addClass('disabled');
       } else {
         $('#registerDiv1').hide();
         $('#registerDiv2').hide();

@@ -7,15 +7,15 @@ $('#loginadm').click(function(){
 
   $.post( "/move/loginpai", pai)
     .done(function(){
-
-      alert('Success');
-
+      $('#myMainDiv').empty();
+      $('#myMainDiv').load('adm_area.html');
+      $('body').removeClass('bgpurple');
       //$('body').removeClass('bgblue');
       //$('#myMainDiv').load('minha_area.html');
     })
     .fail(function(){
 
-      alert('Fail');
+      $('#errologin').openModal();
 
       //$('#errologin').openModal();
     });
