@@ -195,6 +195,17 @@ router.route('/register')
     res.json('');
   });
 
+router.route('/pais')
+  .get(function(req, res){
+
+    //
+
+  }).post(function(req, res){
+    pais.insert(req.body);
+    console.log('Pai/adm cadastrado com sucesso!');
+    res.json('');
+  });
+
 router.route('/user')
   .get(function(req, res){
       //res.json();
@@ -219,14 +230,14 @@ router.route('/user')
           res.sendStatus(500);
         }
       });
-	  
+
 	app.get('/searchFriends', function(request, response){
-		
+
 		var nick = request.query.nick;
 		var user = users.find({'nick': { '$regex' : nick }});
 		response.send(user);
 	});
-	
+
 	app.post('/addFriend', function(request, response){
 		var nick = request.body.nick;
 		console.log(nick);
@@ -239,45 +250,45 @@ router.route('/user')
 			userUpdate[0].friends.push(friend);
 			users.update(userUpdate);
 		}
-		
+
 		var userUpdate2 = users.find({nick: nick});
 		if(userUpdate2)
 		{
 			console.log("valor atualizado: "+userUpdate[0].friends);
-		}		
+		}
 		response.send();
 	});
-	  
+
 	app.get('/TesteUpdate', function(request, response) {
-		 
+
 		var nick = request.query.nick;
 		var desafio = request.query.desafio;
 		var ativar = request.query.ativar;
 		var userUpdate = users.find({nick: nick});
-		
+
 		if(userUpdate)
 		{
 			console.log("valor anterior: "+userUpdate[0][desafio]);
 			console.log(ativar);
-			if(ativar == 'true'){				
+			if(ativar == 'true'){
 				userUpdate[0][desafio] = 2;
 			}
 			else
 			{
 				userUpdate[0][desafio] = 1;
 			}
-			
+
 			console.log(userUpdate[0][desafio]);
 			users.update(userUpdate);
-		}		
-		
+		}
+
 		var userUpdate2 = users.find({nick: nick});
 		if(userUpdate2)
 		{
 			console.log("valor atualizado: "+userUpdate[0][desafio]);
-		}		
+		}
 		response.send();
-		
+
 	});
 
 app.use('/move', router);
