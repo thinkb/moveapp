@@ -803,6 +803,46 @@ h5{
   height: 210px;
 }
 
+@media screen and (width: 375px) {
+  .img-desafio{
+    position: absolute;
+  z-index: 12;
+  margin-top: -230px;
+  margin-left: 68px;
+  height: 210px;
+}
+  }
+
+@media screen and (width: 414px) {
+  .img-desafio {
+      position: absolute;
+      z-index: 12;
+      margin-top: -230px;
+      margin-left: 88px;
+      height: 210px;}
+}
+}
+
+@media screen and (width: 412px) {
+  .img-desafio {
+      position: absolute;
+      z-index: 12;
+      margin-top: -230px;
+      margin-left: 88px;
+      height: 210px;}
+}
+
+@media screen and (width: 360px) {
+.img-desafio {
+    position: absolute;
+    z-index: 12;
+    margin-top: -230px;
+    margin-left: 60px;
+    height: 210px;
+}}
+
+
+
 #backButton{
   display: block;
   height: 35px;
