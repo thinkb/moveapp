@@ -286,7 +286,6 @@ router.route('/user')
 
 app.get('/listFriends', function(request, response){
     var nick = request.query.nick;
-    console.log(nick);
     var user = users.find({'nick': nick});
     //console.log(user);
     if(user){
@@ -296,14 +295,14 @@ app.get('/listFriends', function(request, response){
 
             for(i=0; i < userFriends.length; i++){
                 var friend = users.find({'nick': userFriends[i]});
-                console.log("friend "+ friend);
+                //console.log("friend "+ friend);
                 if(friend){
                     friendsList.push(friend[0]);
                 }
             }
         }
 
-        console.log("list final " +friendsList);
+        //console.log("list final " +friendsList);
     }
     response.send(friendsList);
 });
@@ -317,13 +316,13 @@ app.get('/listFriends', function(request, response){
 
 	app.post('/addFriend', function(request, response){
 		var nick = request.body.nick;
-		console.log(nick);
+		//console.log(nick);
 		var friend = request.body.friend;
-		console.log(friend);
+		//console.log(friend);
 		var userUpdate = users.find({nick: nick});
 		if(userUpdate)
 		{
-			console.log("list "+userUpdate[0].friends);
+			//console.log("list "+userUpdate[0].friends);
 			userUpdate[0].friends.push(friend);
 			users.update(userUpdate);
 		}
@@ -331,22 +330,24 @@ app.get('/listFriends', function(request, response){
 		var userUpdate2 = users.find({nick: nick});
 		if(userUpdate2)
 		{
-			console.log("valor atualizado: "+userUpdate[0].friends);
+			//console.log("valor atualizado: "+userUpdate[0].friends);
 		}
 		response.send();
 	});
 
-	app.get('/TesteUpdate', function(request, response) {
+	app.get('/UpdateDesafio', function(request, response) {
 
 		var nick = request.query.nick;
 		var desafio = request.query.desafio;
 		var ativar = request.query.ativar;
+        var amigos = request.query.amigos;
+
 		var userUpdate = users.find({nick: nick});
 
 		if(userUpdate)
 		{
-			console.log("valor anterior: "+userUpdate[0][desafio]);
-			console.log(ativar);
+			//console.log("valor anterior: "+userUpdate[0][desafio]);
+			//console.log(ativar);
 			if(ativar == 'true'){
 				userUpdate[0][desafio] = 2;
 			}
@@ -355,15 +356,47 @@ app.get('/listFriends', function(request, response){
 				userUpdate[0][desafio] = 1;
 			}
 
-			console.log(userUpdate[0][desafio]);
+			//console.log(userUpdate[0][desafio]);
 			users.update(userUpdate);
 		}
 
 		var userUpdate2 = users.find({nick: nick});
 		if(userUpdate2)
 		{
-			console.log("valor atualizado: "+userUpdate[0][desafio]);
+			//console.log("valor atualizado: "+userUpdate[0][desafio]);
 		}
+
+        if(amigos){
+            for(i=0; i < amigos.length; i++){
+                //console.log("atualizando "+amigos[i]);
+                var userUpdate = users.find({nick: amigos[i]});
+
+                if(userUpdate)
+        		{
+        			//console.log("valor anterior: "+userUpdate[0][desafio]);
+        			//console.log(ativar);
+        			if(ativar == 'true'){
+        				userUpdate[0][desafio] = 2;
+        			}
+        			else
+        			{
+        				userUpdate[0][desafio] = 1;
+        			}
+
+        			//console.log(userUpdate[0][desafio]);
+        			users.update(userUpdate);
+        		}
+
+        		var userUpdate2 = users.find({nick: nick});
+        		if(userUpdate2)
+        		{
+        			//console.log("valor atualizado: "+userUpdate[0][desafio]);
+        		}
+            }
+
+        }
+
+
 		response.send();
 
 	});

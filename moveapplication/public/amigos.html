@@ -63,7 +63,7 @@
  <script>
      $(document).ready(function(){
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        console.log(user.nick);
+        //console.log(user.nick);
         listFriends(user.nick);
         $('#modal_add_amigo').leanModal();
       });
@@ -76,12 +76,14 @@
       			if(response.length > 0)
       			{
       				response.forEach(function (res){
-      					html +="<li class=\"collection-item addamigo avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
-      					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
-      					html += "	<span class=\"title\">"+res.nick+"</span>";
-      					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
-                        html +="  <a href=\"#modal_pularcorda\"><span class=\"icoamigo\"> + </span></a>"
-                        html +="</li>";
+                        if(user.friends.indexOf(res.nick) == -1){
+                            html +="<li class=\"collection-item addamigo avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
+          					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
+          					html += "	<span class=\"title\">"+res.nick+"</span>";
+          					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
+                            html +="  <a href=\"#modal_pularcorda\"><span class=\"icoamigo\"> + </span></a>"
+                            html +="</li>";
+                        }
       				});
       			}
       			else{
@@ -90,7 +92,7 @@
       				html +="</li>";
       			}
       			$("#search_results").html(html);
-      			console.log(response);
+      			//console.log(response);
       	});
       }
 
@@ -114,7 +116,6 @@
 	}
 
   function listFriends(nick){
-    var nickBusca = $("#search_box").val();
     $.get("/listFriends", {nick: nick},function (response) {
           var html = "";
           if(response.length > 0)
@@ -134,7 +135,7 @@
             html +="</li>";
           }
           $("#friends_list").html(html);
-          console.log(response);
+          //console.log(response);
     });
   }
 

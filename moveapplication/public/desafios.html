@@ -521,8 +521,8 @@
       </div>
       <div class="row dividor-horizontal">
         <h5>Amigos</h5>
-        <a  href="#modal-friends" class="btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger modalchange" onclick="listFriends()"><i class="material-icons semmargin">add</i></a>
-        <div id="div-amigos"></div>
+        <a  href="#modal-friends" class="btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger modalchange" onclick="listFriends('basquete')"><i class="material-icons semmargin">add</i></a>
+        <div id="div-amigos-basquete"></div>
       </div>
 
     </div>
@@ -581,8 +581,8 @@
         <h5>Amigos</h5>
         <!--<img class="circle amigos-modal noneview" src="images/user1.png" > -->
         <!--  <img class="circle amigos-modal noneview" src="images/user2.png" >-->
-        <a  href="#modal-friends" class="btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger " onclick="listFriends()"><i class="material-icons semmargin">add</i></a>
-        <div id="div-amigos"></div>
+        <a  href="#modal-friends" class="btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger " onclick="listFriends('futebol')"><i class="material-icons semmargin">add</i></a>
+        <div id="div-amigos-futebol"></div>
       </div>
 
     </div>
@@ -699,7 +699,7 @@
     <div id="refresh" class="collection">
     <ul id="friends_list" class="collection">
     </ul>
-    <a href="#!"  onclick="mostraAmigos()" class="modal-action modal-close waves-effect waves-light btn">Ok</a>
+    <a href="#!" onclick="mostraAmigos()" class="modal-action modal-close waves-effect waves-light btn">Ok</a>
   </div>
   </div>
 </div>
@@ -707,9 +707,10 @@
 <script src='/js/desafios.js'> </script>
 <script>
     var amigos = [];
-     $(document).ready(function(){
+    var desafioAceito = "";
+    $(document).ready(function(){
        $('ul.tabs').tabs();
-     });
+    });
 
      $(document).ready(function(){
 
@@ -719,18 +720,21 @@
       });
 
 	  $( ".btn-desafio" ).click(function() {
+        //console.log(amigos);
 		var desafio = this.id.split("_")[1];
 		var ativar = $( this ).hasClass("ativar");
-		$.get("/TesteUpdate", {desafio: desafio, ativar: ativar, nick: user.nick},function (response) {
+		$.get("/UpdateDesafio", {desafio: desafio, ativar: ativar, nick: user.nick, amigos: amigos},function (response) {
 			$('#main-intern-div').empty();
             $('#main-intern-div').load('desafios.html');
-			console.log(response);
+			//console.log(response);
 		});
 	  });
 
-      function listFriends(){
-        //amigos = [];
+      function listFriends(desafio){
+        if(desafio != desafioAceito)
+            amigos = [];
 
+        desafioAceito = desafio;
         var nickBusca = $("#search_box").val();
         $.get("/listFriends", {nick: user.nick},function (response) {
               var html = "";
@@ -738,7 +742,7 @@
               {
 
                   response.forEach(function (res){
-                      console.log(amigos.indexOf(res.nick));
+                      //console.log(amigos.indexOf(res.nick));
                       if(amigos.indexOf(res.nick) >-1)
                       {
                           html +="<li id=\"li-"+res.nick+"\" onclick=\"addAmigoDesafio('"+res.nick+"')\" class=\"collection-item  addamigo avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
@@ -760,12 +764,12 @@
                 html +="</li>";
               }
               $("#friends_list").html(html);
-              console.log(response);
+              //console.log(response);
         });
       }
 
     function addAmigoDesafio(nick){
-        console.log($('#li-'+nick).hasClass('addamigo'));
+        //console.log($('#li-'+nick).hasClass('addamigo'));
         if($('#li-'+nick).hasClass("addamigo")){
             $('#li-'+nick).removeClass("addamigo");
             list = [];
@@ -780,17 +784,18 @@
             amigos.push(nick);
             $('#li-'+nick).addClass("addamigo");
         }
-        console.log(amigos);
+        //console.log(amigos);
     }
 
     function mostraAmigos(){
         html = "";
-        $("#div-amigos").html("");
+        $("#div-amigos-"+desafioAceito).html("");
         for(i=0; i < amigos.length; i++){
             html += "<span class=\"btn-floating btn-large btn-amigo \">"+amigos[i]+"</span>";
         }
 
-        $("#div-amigos").append(html);
+        //console.log(desafioAceito);
+        $("#div-amigos-"+desafioAceito).append(html);
 
     }
 
