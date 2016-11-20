@@ -80,8 +80,8 @@
       					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
       					html += "	<span class=\"title\">"+res.nick+"</span>";
       					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
-                html +="  <a href=\"#modal_pularcorda\"><span class=\"icoamigo\"> + </span></a>"
-                html +="</li>";
+                        html +="  <a href=\"#modal_pularcorda\"><span class=\"icoamigo\"> + </span></a>"
+                        html +="</li>";
       				});
       			}
       			else{
@@ -108,6 +108,8 @@
 			html += "	<span class=\"title\">Amigo adicionado com sucesso!</span>";
 			html +="</li>";
 			$("#friends_list").html(html);
+            $('#main-intern-div').empty();
+            $('#main-intern-div').load('amigos.html');
 		});
 	}
 

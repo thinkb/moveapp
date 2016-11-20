@@ -256,13 +256,15 @@ app.get('/listFriends', function(request, response){
     //console.log(user);
     if(user){
         friendsList = [];
-        userFriends = user[0].friends;
+        if(user[0].friends){
+            userFriends = user[0].friends;
 
-        for(i=0; i < userFriends.length; i++){
-            var friend = users.find({'nick': userFriends[i]});
-            console.log("friend "+ friend);
-            if(friend){
-                friendsList.push(friend[0]);
+            for(i=0; i < userFriends.length; i++){
+                var friend = users.find({'nick': userFriends[i]});
+                console.log("friend "+ friend);
+                if(friend){
+                    friendsList.push(friend[0]);
+                }
             }
         }
 
@@ -274,7 +276,7 @@ app.get('/listFriends', function(request, response){
 	app.get('/searchFriends', function(request, response){
 
 		var nick = request.query.nick;
-		var user = users.find({'nick': { '$regex' : nick }});
+		var user = users.find({'nick': { '$regex' : [nick, 'i'] }});
 		response.send(user);
 	});
 
