@@ -521,7 +521,8 @@
       </div>
       <div class="row dividor-horizontal">
         <h5>Amigos</h5>
-        <a  href="#!" class="btn-floating btn-large waves-effect waves-light btnadicionar "><i class="material-icons semmargin">add</i></a>
+        <a  href="#modal-friends" class="btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger " onclick="listFriends()"><i class="material-icons semmargin">add</i></a>
+        <div id="div-amigos"></div>
       </div>
 
     </div>
@@ -580,7 +581,8 @@
         <h5>Amigos</h5>
         <!--<img class="circle amigos-modal noneview" src="images/user1.png" > -->
         <!--  <img class="circle amigos-modal noneview" src="images/user2.png" >-->
-        <a  href="#!" class="btn-floating btn-large waves-effect waves-light btnadicionar "><i class="material-icons semmargin">add</i></a>
+        <a  href="#modal-friends" class="btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger " onclick="listFriends()"><i class="material-icons semmargin">add</i></a>
+        <div id="div-amigos"></div>
       </div>
 
     </div>
@@ -690,13 +692,28 @@
   </div>
 <!-- fim modal caminhada-->
 
+<div id="modal-friends" class="modal bottom-sheet">
+  <div class="modal-content">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green right btn-fechar"> <i class="material-icons">close</i></a>
+    <p class="semmargin escolherdesafio">Adicione amigos para este desafio</p>
+    <div id="refresh" class="collection">
+    <ul id="friends_list" class="collection">
+    </ul>
+    <a href="#!"  onclick="mostraAmigos()" class="modal-action modal-close waves-effect waves-green btn-flat ativar">Ok</a>
+  </div>
+  </div>
+</div>
+
 <script src='/js/desafios.js'> </script>
 <script>
+    var amigos = [];
      $(document).ready(function(){
        $('ul.tabs').tabs();
      });
 
      $(document).ready(function(){
+
+         var amigos = [];
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal-trigger').leanModal();
       });
@@ -706,10 +723,75 @@
 		var ativar = $( this ).hasClass("ativar");
 		$.get("/TesteUpdate", {desafio: desafio, ativar: ativar, nick: user.nick},function (response) {
 			$('#main-intern-div').empty();
-        $('#main-intern-div').load('desafios.html');
-
+            $('#main-intern-div').load('desafios.html');
 			console.log(response);
 		});
 	  });
+
+      function listFriends(){
+        //amigos = [];
+
+        var nickBusca = $("#search_box").val();
+        $.get("/listFriends", {nick: user.nick},function (response) {
+              var html = "";
+              if(response.length > 0)
+              {
+
+                  response.forEach(function (res){
+                      console.log(amigos.indexOf(res.nick));
+                      if(amigos.indexOf(res.nick) >-1)
+                      {
+                          html +="<li id=\"li-"+res.nick+"\" onclick=\"addAmigoDesafio('"+res.nick+"')\" class=\"collection-item  addamigo avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
+                      }
+                      else{
+                          html +="<li id=\"li-"+res.nick+"\" onclick=\"addAmigoDesafio('"+res.nick+"')\" class=\"collection-item  avatar\" onclick=\"addFriendModal('"+res.nick+"')\" >";
+                      }
+
+                      html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
+                      html += "	<span class=\"title\">"+res.nick+"</span>";
+                      html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
+                      //html +="  <a href=\"#modal_pularcorda\"><span class=\"icoamigo\"> + </span></a>"
+                      html +="</li>";
+                  });
+              }
+              else{
+                html +="<li class=\"collection-item avatar\">";
+                html += "	<span class=\"title\">Você ainda não tem amigos</span>";
+                html +="</li>";
+              }
+              $("#friends_list").html(html);
+              console.log(response);
+        });
+      }
+
+    function addAmigoDesafio(nick){
+        console.log($('#li-'+nick).hasClass('addamigo'));
+        if($('#li-'+nick).hasClass("addamigo")){
+            $('#li-'+nick).removeClass("addamigo");
+            list = [];
+            for(i=0; i < amigos.length; i++){
+                if(amigos[i] != nick){
+                    list.push(amigos[i] );
+                }
+            }
+            amigos = list;
+        }
+        else{
+            amigos.push(nick);
+            $('#li-'+nick).addClass("addamigo");
+        }
+        console.log(amigos);
+    }
+
+    function mostraAmigos(){
+        html = "";
+        $("#div-amigos").html("");
+        for(i=0; i < amigos.length; i++){
+            html += "<span class=\"btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger \">"+amigos[i]+"</span>";
+        }
+
+        $("#div-amigos").append(html);
+
+    }
 
 </script>
