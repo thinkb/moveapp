@@ -841,7 +841,9 @@ h5{
     height: 210px;
 }}
 
-
+#div-amigos-futebol {
+    float: left;
+}
 
 #backButton{
   display: block;
