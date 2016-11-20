@@ -11,8 +11,8 @@ var debugUser = {
   last: "Moraes",
   age: 25,
   email: "fabs@gmail",
-  nick: "fa",
-  pwd: "fa",
+  nick: "fabs",
+  pwd: "fabs",
   sport: "comer",
   sloth: "Preguicinha",
   points: 0,
@@ -41,12 +41,8 @@ var debugUser = {
 };
 
 var debugUser1 = {
-<<<<<<< HEAD
-  name: "Demo",
-=======
-  name: "Demonstracao",
->>>>>>> 2d1811ef2493b7c7a4a10e48bef81fabf7c126fe
-  last: "Andrade",
+  name: "demo",
+  last: "demo",
   age: 12,
   email: "demo@gmail.com",
   nick: "demo",
@@ -116,7 +112,7 @@ var debugUser3 = {
   last: "Cesar",
   age: 12,
   email: "karen@gmail.com",
-  nick: "Ka",
+  nick: "ka",
   pwd: "ka123",
   sport: "volei",
   sloth: "Hanna",
