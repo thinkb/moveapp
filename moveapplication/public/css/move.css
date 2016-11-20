@@ -273,6 +273,27 @@ width: 75% !important;
 .pink-text{
     color:#d04386 !important;
 }
+.btn-amigo{
+background-color: #1dadd0;
+border: 2px solid #5e5ca7;
+margin: 2px;
+
+}
+
+.modalchange{
+  float: left;
+}
+
+#div-amigos{
+  float: left;
+}
+
+#modal-friends{
+  max-height: 90%;
+}
+.migo{
+  background-color:
+}
 
 .purple{
     background-color:#5e5ca7 !important;

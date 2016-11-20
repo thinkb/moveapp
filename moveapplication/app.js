@@ -141,10 +141,45 @@ var debugUser3 = {
   friends: []
 };
 
+var debugUser4 = {
+  name: "Bruna",
+  last: "Andrade",
+  age: 1,
+  email: "bru@gmail.com",
+  nick: "Bru",
+  pwd: "bru123",
+  sport: "volei",
+  sloth: "Meg",
+  points: 23,
+  level: 2,
+  bambole: 2,
+  basquete: 1,
+  caminhada: 1,
+  corrida: 1,
+  futebol: 1,
+  pular:1,
+  s1: 1,
+  s2: 1,
+  s3: 1,
+  s4: 1,
+  s5: 1,
+  s6: 2,
+  s7: 1,
+  s8: 1,
+  corridavalor: 1,
+  caminhadavalor: 1,
+  bambolevalor: 30,
+  pularvalor: 1,
+  basquetevalor: 1,
+  futebolvalor: 1,
+  friends: []
+};
+
 users.insert(debugUser);
 users.insert(debugUser1);
 users.insert(debugUser2);
 users.insert(debugUser3);
+users.insert(debugUser4);
 
 var pais = db.addCollection('pais');
 var paisuser1 = {

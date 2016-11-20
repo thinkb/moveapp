@@ -521,7 +521,7 @@
       </div>
       <div class="row dividor-horizontal">
         <h5>Amigos</h5>
-        <a  href="#modal-friends" class="btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger " onclick="listFriends()"><i class="material-icons semmargin">add</i></a>
+        <a  href="#modal-friends" class="btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger modalchange" onclick="listFriends()"><i class="material-icons semmargin">add</i></a>
         <div id="div-amigos"></div>
       </div>
 
@@ -699,7 +699,7 @@
     <div id="refresh" class="collection">
     <ul id="friends_list" class="collection">
     </ul>
-    <a href="#!"  onclick="mostraAmigos()" class="modal-action modal-close waves-effect waves-green btn-flat ativar">Ok</a>
+    <a href="#!"  onclick="mostraAmigos()" class="modal-action modal-close waves-effect waves-light btn">Ok</a>
   </div>
   </div>
 </div>
@@ -787,7 +787,7 @@
         html = "";
         $("#div-amigos").html("");
         for(i=0; i < amigos.length; i++){
-            html += "<span class=\"btn-floating btn-large waves-effect waves-light btnadicionar modal-trigger \">"+amigos[i]+"</span>";
+            html += "<span class=\"btn-floating btn-large btn-amigo \">"+amigos[i]+"</span>";
         }
 
         $("#div-amigos").append(html);
