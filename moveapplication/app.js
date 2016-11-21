@@ -186,7 +186,8 @@ var paisuser1 = {
   namepai: "fff",
   lastpai: "fff",
   emailpai: "fff",
-  pwdpai: "fff"
+  pwdpai: "fff",
+  listaContas: [{'lista': ['joao', 'ze'], 'nome': "test1"}  , {'lista': ['maria', 'ana'], 'nome': "test2"}]
 };
 
 pais.insert(paisuser1);
@@ -253,7 +254,8 @@ router.route('/loginpai')
     var findResults = pais.find({emailpai: req.body.emailpai, pwdpai: req.body.pwdpai});
 
     if(findResults[0].emailpai == req.body.emailpai && findResults[0].pwdpai == req.body.pwdpai){
-      res.sendStatus(200);
+      res.status(200);
+      res.send(findResults);
     } else {
       res.sendStatus(500);
     }

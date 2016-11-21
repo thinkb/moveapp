@@ -1,3 +1,5 @@
+var pais;
+
 $('#loginadm').click(function(){
 
   var epl = $('#emailPaiLogin').val();
@@ -6,7 +8,9 @@ $('#loginadm').click(function(){
   var pai = {emailpai: epl, pwdpai: ppl};
 
   $.post( "/move/loginpai", pai)
-    .done(function(){
+    .done(function(res){
+        console.log(res);
+        pais = res;
       $('#myMainDiv').empty();
       $('#myMainDiv').load('adm_area.html');
       $('body').removeClass('bgpurple');
