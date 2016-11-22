@@ -15,7 +15,8 @@ $("#cadastropais").click(function(){
       namepai: $('#namepai').val(),
       lastpai: $('#lastpai').val(),
       emailpai: $('#emailpai').val(),
-      pwdpai: $('#pwdpai').val()
+      pwdpai: $('#pwdpai').val(),
+	  listaContas: []
     };
 
     $.post( "/move/pais", p, function( data ) {

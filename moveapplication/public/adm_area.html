@@ -14,101 +14,13 @@
     <div class="section content_app">
       <h2 class="center tituloadm">Contas cadastradas</h2>
        <ul id="grupos" class="collapsible" data-collapsible="accordion">
-          <li>
-            <div class="collapsible-header active">Grupo - Classe 2B</div>
-            <div class="collapsible-body">
-                <ul class="collection">
-                    <li class="collection-item avatar">
-                        <img class="circle amigos-modal" src="images/user4.png" />
-                        <span class="title">João</span>
-                        <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-                        <a href="#" class="progresso"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-                        <a href="#" class="criar"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-                    </li>
-
-                    <li class="collection-item avatar">
-                        <img class="circle amigos-modal" src="images/user3.png" />
-                        <span class="title">Isabela</span>
-                        <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-                        <a href="#"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-                        <a href="#"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-                    </li>
-                    <li class="collection-item avatar">
-                        <img class="circle amigos-modal" src="images/user1.png" />
-                        <span class="title">Beatriz</span>
-                        <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-                        <a href="#"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-                        <a href="#"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-                    </li>
-                </ul>
-            </div>
-          </li>
-        <li>
-          <div class="collapsible-header">Filhos</div>
-          <div class="collapsible-body">
-            <ul class="collection">
-          <li class="collection-item avatar">
-            <img class="circle amigos-modal" src="images/user4.png" />
-            <span class="title">João</span>
-            <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-            <a href="#"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-            <a href="#"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-          </li>
-
-          <li class="collection-item avatar">
-            <img class="circle amigos-modal" src="images/user3.png" />
-            <span class="title">Isabela</span>
-            <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-            <a href="#"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-            <a href="#"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-          </li>
-          <li class="collection-item avatar">
-            <img class="circle amigos-modal" src="images/user1.png" />
-            <span class="title">Beatriz</span>
-            <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-            <a href="#"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-            <a href="#"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-          </li>
-          </ul>
-
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header">Amigos</div>
-          <div class="collapsible-body">
-            <ul class="collection">
-          <li class="collection-item avatar">
-            <img class="circle amigos-modal" src="images/user4.png" />
-            <span class="title">João</span>
-            <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-            <a href="#"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-            <a href="#"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-          </li>
-
-          <li class="collection-item avatar">
-            <img class="circle amigos-modal" src="images/user3.png" />
-            <span class="title">Isabela</span>
-            <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-            <a href="#"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-            <a href="#"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-          </li>
-
-          <li class="collection-item avatar">
-            <img class="circle amigos-modal" src="images/user1.png" />
-            <span class="title">Beatriz</span>
-            <p class="semmargin"><span class="outlinee">1</span> Nível | <span class="outlinee">20</span> pts </p>
-            <a href="#"><img class="btn_adm" src="css/assets/graficoicon.svg" alt="" /></a>
-            <a href="#"><img class="btn_adm" src="css/assets/lapisicon.svg" alt="" /></a>
-          </li>
-          </ul>
-
-          </div>
-        </li>
-  </ul>
+          
+		</ul>
   </div>
 
 <div class="row center">
-  <a class="modal-trigger waves-effect waves-light btn center"  href="#adicionars"><i class="material-icons right">add</i>Adicionar conta</a>
+  <a class="modal-trigger waves-effect waves-light btn center"  href="#modal_add_conta"><i class="material-icons right">add</i>Adicionar conta</a>
+
 </div>
 </div>
 
@@ -122,5 +34,58 @@
          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">concluido </a>
        </div>
      </div>
+	 
+<!-- Modal adiciona contas -->
+ <div id="modal_add_conta" class="modal modalsticker">
+	 <div class="row">
+	   <a href="#!" class=" modal-action modal-close waves-effect waves-green right btn-fechar"> <i class="material-icons">close</i></a>
+	</div>
+
+    <div class="modal-content">
+		<h4 class="title-modalt center">Adicionar contas</h4>
+		<div class="row">
+		  <div class="col s10">
+			  <input id="search_box" type="search" name="searchuser" placeholder="Procure mais amigos..." class="semmargin">
+		  </div>
+		  <div class="col s2">
+			<div class="btn-search" onclick="search()">
+			  <img class="icon_change" src="css/assets/search.svg">
+			</div>
+		  </div>
+		  <div>
+			<input type="text" id="group_name" placeholder="Nome do grupo" class="semmargin">
+		  </div>
+		</div>	
+      <!--div class="row center">
+         
+      </div-->
+      <div class="row center dividor-horizontal">
+        <ul id="search_results" class="collection">
+		</ul>
+      </div>
+      <div class="row dividor-horizontal">
+        <h5></h5>
+        <p>
+          Adicionados <span id="nome-amigo"></span> à este grupo:
+        </p>
+		<ul id="lista_grupo" class="collection">
+		</ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="btn_add_amigo" class=" modal-action modal-close waves-effect waves-green btn-flat"  onclick="addLista()" >Adicionar</a>
+    </div>
+  </div>
+
+  <!-- Fim Modal adiciona contas -->
 
     <script src='/js/adm_area.js'> </script>
+
+	<script>
+
+	$(document).ready(function(){
+
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+      });
+	</script>
