@@ -414,7 +414,12 @@ app.get('/listFriends', function(request, response){
 		
 		console.log(findResults);
 		novoGrupo = {'lista': grupo, 'nome': nomeGrupo} ;
-		findResults[0].listaContas.push(novoGrupo);
+		if(findResults[0].listaContas)
+			findResults[0].listaContas.push(novoGrupo);
+		else{
+			findResults[0].listaContas = [];
+			findResults[0].listaContas.push(novoGrupo);
+		}
 		pais.update(findResults);
 		
 		var findResults2 = pais.find({namepai: nomePai});
