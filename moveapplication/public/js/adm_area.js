@@ -45,6 +45,10 @@ $(document).ready(function(){
 	$('#adicionars').openModal('open');
  }
 
+ function desempenho() {
+ $('#desempenho').openModal('open');
+ }
+
 function mostraContas(){
     //console.log(pais[0].listaContas[0]);
 
