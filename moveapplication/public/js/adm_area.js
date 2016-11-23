@@ -45,10 +45,6 @@ $(document).ready(function(){
 	$('#adicionars').openModal('open');
  }
 
- function desempenho() {
- $('#desempenho').openModal('open');
- }
-
 function mostraContas(){
     //console.log(pais[0].listaContas[0]);
 
@@ -96,6 +92,7 @@ function search(){
           					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
           					html += "	<span class=\"title\">"+res.nick+"</span>";
           					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
+          				
 														html +="</li>";
       				});
       			}
