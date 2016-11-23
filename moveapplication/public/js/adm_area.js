@@ -39,10 +39,10 @@ $(document).ready(function(){
 function mostraContas(){
     //console.log(pais[0].listaContas[0]);
     var html = "<h4> Nenhum conta adicionada</h4>";
-	if(pais[0].listaContas){
-		
-		for(i = 0; i < pais[0].listaContas.length; i++){
-			html = "";
+
+	if(pais[0].listaContas.length > 1){
+		html = "";
+		for(i = 1; i < pais[0].listaContas.length; i++){
 			console.log(pais[0].listaContas[i].nome);
 			console.log(pais[0].listaContas[i].lista[0]);
 
@@ -119,10 +119,16 @@ function addLista(){
 	var nomeGrupo = $("#group_name").val();
 	console.log(nomeGrupo);
 	console.log(pais[0].namepai);
+	console.log(lista);
+	if(lista.length == 0 || nomeGrupo == "")
+		return;
 	$.post("/addContasLista", {nomeGrupo: nomeGrupo, namePai: pais[0].namepai, grupo: lista}, function(res){
 		console.log(res);
 		pais = res;
 		mostraContas();
+		lista = [];
+		$("#lista_grupo").html("");
+		$("#search_box").val("");
+		$("#group_name").val("");
 	});
-	
 }
