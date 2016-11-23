@@ -1,11 +1,17 @@
 
 
 var lista = [];
+
+$(document).ready(function() {
+    $('select').material_select();
+  });
+
 $(document).ready(function(){
 	lista = [];
     mostraContas();
    $('.collapsible').collapsible();
    $('#modal_add_conta').leanModal();
+	$('#adicionars').leanModal();
 
  });
 
@@ -36,11 +42,15 @@ $(document).ready(function(){
    $('#main-intern-div').load('adicionarconta.html');
  });
 
+ function criarde() {
+	$('#adicionars').openModal('open');
+ }
+
 function mostraContas(){
     //console.log(pais[0].listaContas[0]);
-    var html = "<h4> Nenhum conta adicionada</h4>";
+    var html = "<span class=\"title center\"> Nenhum conta adicionada</span>";
 	if(pais[0].listaContas){
-		
+
 		for(i = 0; i < pais[0].listaContas.length; i++){
 			html = "";
 			console.log(pais[0].listaContas[i].nome);
@@ -57,16 +67,17 @@ function mostraContas(){
 				html +="                <img class=\"circle amigos-modal\" src=\"images/user4.png\" />";
 				html +="                <span class=\"title\">"+l+"</span>";
 				html +="                <p class=\"semmargin\"><span class=\"outlinee\">1</span> Nível | <span class=\"outlinee\">20</span> pts </p>";
+				html +="	 							<a href=\"#\"><img class=\"btn_adm\" onclick=\"criarde ()\" src=\"css/assets/lapisicon.svg\" /></a>";
 				html +="            </li>";
 			});
 			html +="        </ul>";
 			html +="    </div>";
 			html +="</li>";
-			
-		}		
+
+		}
 	}
 	$("#grupos").html(html);
-    
+
 }
 
 function search(){
@@ -85,7 +96,7 @@ function search(){
       				});
       			}
       			else{
-      				html +="<li class=\"collection-item avatar\">";
+      				html +="<li class=\"collection-item\">";
       				html += "	<span class=\"title\">Usuário não encontrado</span>";
       				html +="</li>";
       			}
@@ -95,13 +106,13 @@ function search(){
 }
 
 function sendToList(nick){
-	
+
 	lista.push(nick);
 	console.log(lista);
 	$("#lista_grupo").append($("#li-"+nick));
 	$("#li-"+nick).removeClass("addamigo");
 	$("#li-"+nick).attr("onclick", "removeFromList('"+nick+"')");
-	
+
 }
 function removeFromList(nick){
 			listTemp = [];
@@ -124,5 +135,5 @@ function addLista(){
 		pais = res;
 		mostraContas();
 	});
-	
+
 }

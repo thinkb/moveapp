@@ -788,6 +788,20 @@ h5{
     margin-left: -15px;
 }
 
+.modal-criar{
+    padding: 0px !important;
+    padding-top: 5px !important;
+
+}
+
+.escolher{
+  padding-bottom: 5px;
+}
+
+.title-modalt{
+  font-size: 1.3em !important;
+}
+
 .tile-modal{
   margin-top: 10px;
   margin-left: 10px;
@@ -806,6 +820,11 @@ h5{
   width: 20%;
   position: relative;
   border: 3px solid #5e5ca7;
+}
+
+
+.modal-adicionar-conta{
+  padding-top: 6px;
 }
 
 .img-desafio{

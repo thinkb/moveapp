@@ -14,7 +14,7 @@
     <div class="section content_app">
       <h2 class="center tituloadm">Contas cadastradas</h2>
        <ul id="grupos" class="collapsible" data-collapsible="accordion">
-          
+
 		</ul>
   </div>
 
@@ -24,21 +24,93 @@
 </div>
 </div>
 
-     <!-- Modal Structure -->
-     <div id="adicionars" class="modal">
-       <div class="modal-content">
-         <h4>Adicionar conquistas</h4>
-         <p>Escolha os usuários que deseja adicionar ou que já foram adicionados com seu e-mail.</p>
-       </div>
+     <!-- Criar desafio -->
+     <div id="adicionars" class="modal ">
+       <div class="modal-content modal-criar">
+         <div class="row semmargin">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green right btn-fechar"> <i class="material-icons">close</i></a>
+         </div>
+         <h4 class="center title-modalt">Criar desafios</h4>
+         <div class="row center">
+           <div class="row semmargin">
+             <input id='namepai' class="formpais" type='text' placeholder="Nome do desafio"></input>
+           </div>
+           <div class="row semmargin">
+             <input id='namepai' class="formpais" type='text' placeholder="Descrição"></input>
+           </div>
+           <div class="row semmargin">
+              <p class="semmargin escolher">Escolha um treinador: </p>
+             <div class="row">
+               <div class="col s4">
+                 <img class="treinadorselect" src="css/assets/guepardoicon.svg" alt="" />
+               </div>
+               <div class="col s4">
+                 <img class="treinadorselect" src="css/assets/lebreicon.svg" alt="" />
+               </div>
+               <div class="col s4">
+                 <img class="treinadorselect" src="css/assets/cachorroicon.svg" alt="" />
+               </div>
+
+             </div>
+           </div>
+
+           <div class="row semmargin">
+             <p class="semmargin escolher">Tempo de realização: </p>
+             <div class="input-field col s12 semmargin">
+              <select>
+                <option value="1">1 dia</option>
+                <option value="2">2 dias</option>
+                <option value="3">3 dias</option>
+                <option value="3">6 dias</option>
+                <option value="3">10 dias</option>
+              </select>
+              </div>
+
+           </div>
+
+           <div class="row semmargin">
+             <p class="semmargin escolher">Metas: </p>
+
+               <div class="input-field col s6 semmargin">
+                <select>
+                  <option value="" disabled selected>Valor</option>
+                  <option value="1">50</option>
+                  <option value="2">100</option>
+                  <option value="3">150</option>
+                  <option value="3">200</option>
+                  <option value="3">250</option>
+                  <option value="3">300</option>
+                  <option value="3">350</option>
+                </select>
+                </div>
+                <div class="input-field col s6 semmargin">
+                 <select>
+                   <option value="" disabled selected>Tipo</option>
+                   <option value="1">Calorias</option>
+                   <option value="2">Passos</option>
+                 </select>
+                 </div>
+             </div>
+
+           <div class="row semmargin">
+             <p class="semmargin escolher">Recompensa: </p>
+             <div class="input-field col s12 semmargin">
+              <select>
+                <option value="1">50 pts</option>
+                <option value="2">70 pts</option>
+                <option value="3">100 pts</option>
+              </select>
+              </div>
+           </div>
+             </div>
+         </div>
        <div class="modal-footer">
          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">concluido </a>
        </div>
      </div>
-	 
-<!-- Modal adiciona contas -->
- <div id="modal_add_conta" class="modal modalsticker">
-	 
 
+<!-- Modal adiciona contas -->
+ <div id="modal_add_conta" class="modal modal-adicionar-conta">
     <div class="modal-content modalsempadding">
 		<div class="row semmargin">
 		   <a href="#!" class=" modal-action modal-close waves-effect waves-green right btn-fechar"> <i class="material-icons">close</i></a>
@@ -56,9 +128,9 @@
 		  <div>
 			<input type="text" id="group_name" placeholder="Nome do grupo" class="semmargin">
 		  </div>
-		</div>	
+		</div>
       <!--div class="row center">
-         
+
       </div-->
       <div class="row center dividor-horizontal">
         <ul id="search_results" class="collection">
