@@ -240,6 +240,7 @@ router.route('/pais')
 
   }).post(function(req, res){
     pais.insert(req.body);
+	console.log(req.body);
     console.log('Pai/adm cadastrado com sucesso!');
     res.json('');
   });
@@ -401,6 +402,39 @@ app.get('/listFriends', function(request, response){
 
 		response.send();
 
+	});
+
+	app.post('/addContasLista', function(request, response) {
+		var nomeGrupo = request.body.nomeGrupo;
+		var nomePai = request.body.namePai;		
+		var grupo = request.body.grupo;	
+		console.log(nomePai);
+
+		var findResults = pais.find({namepai: nomePai});
+		
+		console.log(findResults);
+		novoGrupo = {'lista': grupo, 'nome': nomeGrupo} ;
+		if(findResults[0].listaContas)
+			findResults[0].listaContas.push(novoGrupo);
+		else{
+			findResults[0].listaContas = [];
+			findResults[0].listaContas.push(novoGrupo);
+		}
+		pais.update(findResults);
+		
+		var findResults2 = pais.find({namepai: nomePai});
+		
+		console.log(findResults2[0].listaContas);
+		
+		response.send(findResults2);
+		
+		
+		
+	});
+	
+	app.get('/searchPai', function(request, response){
+		var findResults = pais.find({namepai: request.query.namepai});
+		response.send(findResults);
 	});
 
 app.use('/move', router);

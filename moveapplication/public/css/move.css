@@ -768,6 +768,19 @@ h5{
   font-size: 1.3em;
 }
 
+.input-modal{
+	padding: 0px !important;
+}
+
+.modalsempadding{
+	padding-top: 0px !important;
+}
+
+.btn-search-modal{
+	position: relative !important;
+    left: 18px !important;
+}
+
 .icon_modal{
     margin-top: -30px;
     width: 25%;
