@@ -48,7 +48,7 @@ $(document).ready(function(){
 function mostraContas(){
     //console.log(pais[0].listaContas[0]);
 
-  var html = "<h4> Nenhum conta adicionada</h4>";
+  var html = "<span class=\"title center\"> Nenhum conta adicionada</span>";
 
 	if(pais[0].listaContas.length > 1){
 		html = "";
@@ -92,7 +92,7 @@ function search(){
           					html +="	<img class=\"circle amigos-modal\" src=\"images/user1.png\" />";
           					html += "	<span class=\"title\">"+res.nick+"</span>";
           					html +="	<p><span class=\"outlinee\">"+res.level+"</span> Nível | <span class=\"outlinee\">"+res.points+"</span> pts </p>";
-                            html +="</li>";
+														html +="</li>";
       				});
       			}
       			else{
